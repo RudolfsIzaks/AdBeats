@@ -160,7 +160,7 @@ function Home() {
                             className="p-10 rounded-md text-left w-3/5"
                         >
                             {/* Progress Bar */}
-                            <div className="w-full bg-stone-700 h-2 rounded-full mb-6">
+                            <div className="w-full bg-stone-700 h-2 rounded-full mb-6 mx-10">
                                 <div
                                     className="bg-blue h-2 rounded-full transition-all duration-300"
                                     style={{ width: `${progress}%` }}
