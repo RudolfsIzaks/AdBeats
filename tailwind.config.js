@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        comic: ["Comic Neue", "cursive"],
       },
       fontSize: {
         'headline-1': '64px',

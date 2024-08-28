@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,4 +49,19 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 2s infinite;
+}
+
+.comic_btn {
+  box-shadow: -5px 8px 0px 1px rgb(225, 14, 14);
+}
+
+.comic_btn:hover {
+  box-shadow: -10px 10px 0px 1px rgb(225, 14, 14);
+}
+.comic_btn_inv {
+  box-shadow: -5px 8px 0px 1px rgb(14, 102, 225);
+}
+
+.comic_btn_inv:hover {
+  box-shadow: -10px 10px 0px 1px rgb(14, 102, 225);
 }
