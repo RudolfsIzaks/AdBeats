@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../index.css";
 import Adbeats from "../assets/AdBeats.png";
 import AG1 from "../assets/ag1.webp";
@@ -6,8 +6,8 @@ import AG1Logo from "../assets/ag1logo.svg";
 import Manscaped from "../assets/Manscaped.avif";
 import Manscaped_logo from "../assets/Manscaped_logo.svg";
 import sideImg1 from "../assets/sideImg1.png";
-import email_img from '../assets/email.png';
-import exl from '../assets/exl.png';
+import email_img from "../assets/email.png";
+import exl from "../assets/exl.png";
 import sideIMG3 from "../assets/sideIMG3.png";
 import sideIMG4 from "../assets/sideIMG4.png";
 import sideIMG5 from "../assets/sideIMG5.png";
@@ -16,11 +16,16 @@ import sideIMG7 from "../assets/sideIMG7.png";
 import sideIMG8 from "../assets/sideIMG8.png";
 import sideIMG9 from "../assets/sideIMG9.png";
 import sideIMG10 from "../assets/sideIMG10.png";
+import sampleAudio from "../assets/sample.mp3"; // Example audio file
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
   const [loading, setLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null); // Reference for the audio element
 
   const [formData, setFormData] = useState({
     name: "",
@@ -35,77 +40,30 @@ function Home() {
     additionalInfo: "",
   });
 
-    // Define the questions array
-    const questions = [
-      {
-        question: "What’s your name?",
-        type: "text",
-        name: "name",
-        image: AG1,
-        imageLogo: AG1Logo,
-        songName: "AG1 Supplements",
-        sideImg: sideImg1,
-      },
-      {
-        question: "What’s your best email?",
-        type: "email",
-        name: "email",
-        image: Manscaped,
-        imageLogo: Manscaped_logo,
-        songName: "Manscaped Grooming",
-        sideImg: email_img,
-      },
-      {
-        question: "Brand Name:",
-        type: "text",
-        name: "brandName",
-        sideImg: sideIMG3,
-      },
-      {
-        question: "Website (URL):",
-        type: "url",
-        name: "website",
-        sideImg: sideIMG4,
-      },
-      {
-        question: "What’s your primary target audience?",
-        type: "text",
-        name: "targetAudience",
-        sideImg: sideIMG5,
-      },
-      {
-        question: "What problem are you solving for them?",
-        type: "text",
-        name: "problem",
-        sideImg: sideIMG6,
-      },
-      {
-        question: "What product are you selling, and what makes it unique?",
-        type: "text",
-        name: "product",
-        sideImg: sideIMG7,
-      },
-      {
-        question: "What emotion should the ad/track convey?",
-        type: "text",
-        name: "emotion",
-        sideImg: sideIMG8,
-      },
-      {
-        question: "What’s the goal of the ad?",
-        type: "radio",
-        name: "goal",
-        options: ["Sales", "Engagement", "Brand Recognition", "Other"],
-        sideImg: sideIMG9,
-      },
-      {
-        question:
-          "Is there anything else we need to know about the ad? (Optional)",
-        type: "textarea",
-        name: "additionalInfo",
-        sideImg: sideIMG10,
-      },
-    ];
+  // Define the questions array
+  const questions = [
+    {
+      question: "What’s your name?",
+      type: "text",
+      name: "name",
+      image: AG1,
+      imageLogo: AG1Logo,
+      songName: "AG1 Supplements",
+      sideImg: sideImg1,
+      audio: sampleAudio, // Example audio
+    },
+    {
+      question: "What’s your best email?",
+      type: "email",
+      name: "email",
+      image: Manscaped,
+      imageLogo: Manscaped_logo,
+      songName: "Manscaped Grooming",
+      sideImg: email_img,
+      audio: sampleAudio, // Example audio
+    },
+    // Add other questions here, with their corresponding audio files if needed
+  ];
 
   const imageList = [
     Adbeats,
@@ -149,12 +107,24 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCarouselIndex((prevIndex) => (prevIndex + 1) % questions.length);
-    }, 3000);
+    if (!isPlaying) {
+      const interval = setInterval(() => {
+        setCarouselIndex((prevIndex) => (prevIndex + 1) % questions.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [questions.length, isPlaying]);
 
-    return () => clearInterval(interval);
-  }, [questions.length]);
+  const handleAudioPlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -167,10 +137,12 @@ function Home() {
     setCurrentQuestion((prevQuestion) =>
       Math.min(prevQuestion + 1, questions.length - 1)
     );
+    setIsPlaying(false); // Stop playing when moving to the next question
   };
 
   const handlePrevQuestion = () => {
     setCurrentQuestion((prevQuestion) => Math.max(prevQuestion - 1, 0));
+    setIsPlaying(false); // Stop playing when moving to the previous question
   };
 
   const handleSubmit = (e) => {
@@ -236,29 +208,39 @@ function Home() {
                         required
                       />
                     ) : questions[currentQuestion].type === "radio" ? (
-                      questions[currentQuestion].options.map((option, index) => (
-                        <div
-                          key={index}
-                          className={`border flex items-center mb-2 rounded-md shadow-md w-64 p-3 border-blue cursor-pointer transition ${
-                            formData[questions[currentQuestion].name] === option ? 'border bg-blue text-black transition' : ''
-                          }`}
-                          onClick={() =>
-                            setFormData({ ...formData, [questions[currentQuestion].name]: option })
-                          }
-                        >
-                          <input
-                            type="radio"
-                            name={questions[currentQuestion].name}
-                            value={option}
-                            checked={formData[questions[currentQuestion].name] === option}
-                            onChange={handleChange}
-                            className="hidden" // Hides the radio input
-                          />
-                          <span className="text-stone-200">{option}</span>
-                        </div>
-                      ))
-                    )
-                     : questions[currentQuestion].type === "textarea" ? (
+                      questions[currentQuestion].options.map(
+                        (option, index) => (
+                          <div
+                            key={index}
+                            className={`border flex items-center mb-2 rounded-md shadow-md w-64 p-3 border-blue cursor-pointer transition ${
+                              formData[questions[currentQuestion].name] ===
+                              option
+                                ? "border bg-blue text-black transition"
+                                : ""
+                            }`}
+                            onClick={() =>
+                              setFormData({
+                                ...formData,
+                                [questions[currentQuestion].name]: option,
+                              })
+                            }
+                          >
+                            <input
+                              type="radio"
+                              name={questions[currentQuestion].name}
+                              value={option}
+                              checked={
+                                formData[questions[currentQuestion].name] ===
+                                option
+                              }
+                              onChange={handleChange}
+                              className="hidden" // Hides the radio input
+                            />
+                            <span className="text-stone-200">{option}</span>
+                          </div>
+                        )
+                      )
+                    ) : questions[currentQuestion].type === "textarea" ? (
                       <textarea
                         name={questions[currentQuestion].name}
                         value={formData[questions[currentQuestion].name]}
@@ -285,11 +267,23 @@ function Home() {
                             key={i}
                             className="flex-shrink-0 w-full flex items-center"
                           >
+                            <div className="flex items-center justify-center relative">
                             <img
                               src={q.image}
                               alt=""
-                              className="w-20 h-20 rounded-md mr-4"
+                              className="w-20 h-20 rounded-md mr-4 opacity-50"
                             />
+                            {q.audio && (
+                                <div className="absolute right-[40%]">
+                                  <audio ref={audioRef} src={q.audio} />
+                                  <FontAwesomeIcon
+                                    icon={isPlaying ? faPause : faPlay}
+                                    onClick={handleAudioPlayPause}
+                                    className="cursor-pointer text-blue-500 text-4xl text-stone-200"
+                                  />
+                                </div>
+                              )}
+                            </div>
                             <div>
                               <img
                                 src={q.imageLogo}
