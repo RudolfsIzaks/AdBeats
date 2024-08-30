@@ -213,7 +213,7 @@ function Home() {
               {/* Progress Bar */}
               <div className="w-full bg-stone-700 h-2 rounded-full mb-6 mx-10">
                 <div
-                  className="bg-sideIMG3 h-2 rounded-full transition-all duration-300"
+                  className="bg-blue h-2 rounded-full transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
@@ -238,8 +238,9 @@ function Home() {
                     ) : questions[currentQuestion].type === "radio" ? (
                       questions[currentQuestion].options.map(
                         (option, index) => (
-                          <div key={index} className="flex items-center mb-2">
+                          <div key={index} className="flex items-center mb-2 bg-stone-600 rounded-md shadow-md p-3">
                             <input
+                              
                               type="radio"
                               name={questions[currentQuestion].name}
                               value={option}
@@ -248,9 +249,9 @@ function Home() {
                                 option
                               }
                               onChange={handleChange}
-                              className="mr-2"
+                              className="mr-2 appearance-none outline-none border-blue focus:bg-blue active:bg-blue checked:bg-blue transition"
                             />
-                            <label className="text-gray-700">{option}</label>
+                            <label className="text-stone-200">{option}</label>
                           </div>
                         )
                       )
