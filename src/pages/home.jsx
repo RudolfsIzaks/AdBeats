@@ -35,83 +35,46 @@ function Home() {
     additionalInfo: "",
   });
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const questions = [
-    {
-      question: "What’s your name?",
-      type: "text",
-      name: "name",
-      image: AG1,
-      imageLogo: AG1Logo,
-      songName: "AG1 Supplements",
-      sideImg: sideImg1,
-    },
-    {
-      question: "What’s your best email?",
-      type: "email",
-      name: "email",
-      image: Manscaped,
-      imageLogo: Manscaped_logo,
-      songName: "Manscaped Grooming",
-      sideImg: email_img,
-    },
-    {
-      question: "Brand Name:",
-      type: "text",
-      name: "brandName",
-      sideImg: sideIMG3,
-    },
-    {
-      question: "Website (URL):",
-      type: "url",
-      name: "website",
-      sideImg: sideIMG4,
-    },
-    {
-      question: "What’s your primary target audience?",
-      type: "text",
-      name: "targetAudience",
-      sideImg: sideIMG5,
-    },
-    {
-      question: "What problem are you solving for them?",
-      type: "text",
-      name: "problem",
-      sideImg: sideIMG6,
-    },
-    {
-      question: "What product are you selling, and what makes it unique?",
-      type: "text",
-      name: "product",
-    },
-    {
-      question: "What emotion should the ad/track convey?",
-      type: "text",
-      name: "emotion",
-      sideImg: sideIMG7,
-    },
-    {
-      question: "What’s the goal of the ad?",
-      type: "radio",
-      name: "goal",
-      options: ["Sales", "Engagement", "Brand Recognition", "Other"],
-      sideImg: sideIMG8,
-    },
-    {
-      question:
-        "Is there anything else we need to know about the ad? (Optional)",
-      type: "textarea",
-      name: "additionalInfo",
-      sideImg: sideIMG9,
-    },
+  const imageList = [
+    Adbeats,
+    AG1,
+    AG1Logo,
+    Manscaped,
+    Manscaped_logo,
+    sideImg1,
+    email_img,
+    exl,
+    sideIMG3,
+    sideIMG4,
+    sideIMG5,
+    sideIMG6,
+    sideIMG7,
+    sideIMG8,
+    sideIMG9,
+    sideIMG10,
   ];
+
+  useEffect(() => {
+    // Preload all images
+    const preloadImages = imageList.map((src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    // When all images are loaded, set loading to false
+    Promise.all(preloadImages)
+      .then(() => {
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load images", err);
+        setLoading(false); // You may still want to hide the loader even if some images fail to load
+      });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -157,7 +120,6 @@ function Home() {
           </div>
         </div>
       ) : (
-        
         <div className="relative bg-black">
           <img src={exl} className="absolute top-10 left-10 w-32" alt="" />
           <div className="fixed inset-0 bg-black z-50 animate-split"></div>
@@ -225,13 +187,13 @@ function Home() {
                         name={questions[currentQuestion].name}
                         value={formData[questions[currentQuestion].name]}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border-b focus:outline-none focus:border-sideIMG3"
+                        className="w-full px-3 py-2 border-b focus:outline-none focus:border-blue"
                       />
                     ) : null}
                   </div>
                   <div>
                     <h2 className="text-white md:text-2xl font-inter font-bold mb-3">
-                      Ads That <i className="font-black text-sideIMG3">Beat</i> The
+                      Ads That <i className="font-black text-blue">Beat</i> The
                       System...
                     </h2>
                     <div className="bg-stone-800 p-4 rounded-md mb-6 overflow-hidden">
@@ -289,7 +251,7 @@ function Home() {
                           ? handleSubmit
                           : handleNextQuestion
                       }
-                      className="bg-sideIMG3 comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-sideIMG3 transition hover:text-sideIMG3 hover:scale-110"
+                      className="bg-blue comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-blue transition hover:text-blue hover:scale-110"
                     >
                       {currentQuestion === questions.length - 1
                         ? "Submit"
