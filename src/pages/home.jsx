@@ -6,9 +6,17 @@ import AG1Logo from "../assets/ag1logo.svg";
 import Manscaped from "../assets/Manscaped.avif";
 import Manscaped_logo from "../assets/Manscaped_logo.svg";
 import sideImg1 from "../assets/sideImg1.png";
-import blue from "../assets/blue.webp";
+import sideIMG3 from "../assets/sideIMG3.webp";
 import email_img from '../assets/email.png';
 import exl from '../assets/exl.png';
+import sideIMG3 from "../assets/sideIMG3.png";
+import sideIMG4 from "../assets/sideIMG4.png";
+import sideIMG5 from "../assets/sideIMG5.png";
+import sideIMG6 from "../assets/sideIMG6.png";
+import sideIMG7 from "../assets/sideIMG7.png";
+import sideIMG8 from "../assets/sideIMG8.png";
+import sideIMG9 from "../assets/sideIMG9.png";
+import sideIMG10 from "../assets/sideIMG10.png";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -59,23 +67,25 @@ function Home() {
       question: "Brand Name:",
       type: "text",
       name: "brandName",
-      sideImg: blue,
+      sideImg: sideIMG3,
     },
     {
       question: "Website (URL):",
       type: "url",
       name: "website",
-      sideImg: blue,
+      sideImg: sideIMG4,
     },
     {
       question: "What’s your primary target audience?",
       type: "text",
       name: "targetAudience",
+      sideImg: sideIMG5,
     },
     {
       question: "What problem are you solving for them?",
       type: "text",
       name: "problem",
+      sideImg: sideIMG6,
     },
     {
       question: "What product are you selling, and what makes it unique?",
@@ -86,18 +96,21 @@ function Home() {
       question: "What emotion should the ad/track convey?",
       type: "text",
       name: "emotion",
+      sideImg: sideIMG7,
     },
     {
       question: "What’s the goal of the ad?",
       type: "radio",
       name: "goal",
       options: ["Sales", "Engagement", "Brand Recognition", "Other"],
+      sideImg: sideIMG8,
     },
     {
       question:
         "Is there anything else we need to know about the ad? (Optional)",
       type: "textarea",
       name: "additionalInfo",
+      sideImg: sideIMG9,
     },
   ];
 
@@ -167,7 +180,7 @@ function Home() {
               {/* Progress Bar */}
               <div className="w-full bg-stone-700 h-2 rounded-full mb-6 mx-10">
                 <div
-                  className="bg-blue h-2 rounded-full transition-all duration-300"
+                  className="bg-sideIMG3 h-2 rounded-full transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
@@ -186,7 +199,7 @@ function Home() {
                         name={questions[currentQuestion].name}
                         value={formData[questions[currentQuestion].name]}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-transparent text-white border-b focus:outline-none focus:border-blue"
+                        className="w-full px-3 py-2 bg-transparent text-white border-b focus:outline-none focus:border-sideIMG3"
                         required
                       />
                     ) : questions[currentQuestion].type === "radio" ? (
@@ -213,13 +226,13 @@ function Home() {
                         name={questions[currentQuestion].name}
                         value={formData[questions[currentQuestion].name]}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border-b focus:outline-none focus:border-blue"
+                        className="w-full px-3 py-2 border-b focus:outline-none focus:border-sideIMG3"
                       />
                     ) : null}
                   </div>
                   <div>
                     <h2 className="text-white md:text-2xl font-inter font-bold mb-3">
-                      Ads That <i className="font-black text-blue">Beat</i> The
+                      Ads That <i className="font-black text-sideIMG3">Beat</i> The
                       System...
                     </h2>
                     <div className="bg-stone-800 p-4 rounded-md mb-6 overflow-hidden">
@@ -277,7 +290,7 @@ function Home() {
                           ? handleSubmit
                           : handleNextQuestion
                       }
-                      className="bg-blue comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-blue transition hover:text-blue hover:scale-110"
+                      className="bg-sideIMG3 comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-sideIMG3 transition hover:text-sideIMG3 hover:scale-110"
                     >
                       {currentQuestion === questions.length - 1
                         ? "Submit"
