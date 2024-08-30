@@ -35,6 +35,78 @@ function Home() {
     additionalInfo: "",
   });
 
+    // Define the questions array
+    const questions = [
+      {
+        question: "What’s your name?",
+        type: "text",
+        name: "name",
+        image: AG1,
+        imageLogo: AG1Logo,
+        songName: "AG1 Supplements",
+        sideImg: sideImg1,
+      },
+      {
+        question: "What’s your best email?",
+        type: "email",
+        name: "email",
+        image: Manscaped,
+        imageLogo: Manscaped_logo,
+        songName: "Manscaped Grooming",
+        sideImg: email_img,
+      },
+      {
+        question: "Brand Name:",
+        type: "text",
+        name: "brandName",
+        sideImg: sideIMG3,
+      },
+      {
+        question: "Website (URL):",
+        type: "url",
+        name: "website",
+        sideImg: sideIMG4,
+      },
+      {
+        question: "What’s your primary target audience?",
+        type: "text",
+        name: "targetAudience",
+        sideImg: sideIMG5,
+      },
+      {
+        question: "What problem are you solving for them?",
+        type: "text",
+        name: "problem",
+        sideImg: sideIMG6,
+      },
+      {
+        question: "What product are you selling, and what makes it unique?",
+        type: "text",
+        name: "product",
+        sideImg: sideIMG7,
+      },
+      {
+        question: "What emotion should the ad/track convey?",
+        type: "text",
+        name: "emotion",
+        sideImg: sideIMG8,
+      },
+      {
+        question: "What’s the goal of the ad?",
+        type: "radio",
+        name: "goal",
+        options: ["Sales", "Engagement", "Brand Recognition", "Other"],
+        sideImg: sideIMG9,
+      },
+      {
+        question:
+          "Is there anything else we need to know about the ad? (Optional)",
+        type: "textarea",
+        name: "additionalInfo",
+        sideImg: sideIMG10,
+      },
+    ];
+
   const imageList = [
     Adbeats,
     AG1,
