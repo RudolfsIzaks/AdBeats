@@ -65,3 +65,33 @@
 .comic_btn_inv:hover {
   box-shadow: -10px 10px 0px 1px rgb(14, 102, 225);
 }
+
+.radio-fade {
+  appearance: none;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.radio-fade:checked {
+  background-color: #1e90ff; /* Your blue color */
+  border-color: #1e90ff;
+}
+
+.radio-fade:checked::before {
+  background-color: #1e90ff; /* Inner circle or check mark color */
+}
+
+.radio-fade:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.3); /* Blue shadow when focused */
+}
+
+.radio-fade::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+

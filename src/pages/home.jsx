@@ -232,35 +232,38 @@ function Home() {
                         name={questions[currentQuestion].name}
                         value={formData[questions[currentQuestion].name]}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-transparent text-white border-b focus:outline-none focus:border-sideIMG3"
+                        className="w-full px-3 py-2 bg-transparent text-white border-b focus:outline-none focus:border-blue"
                         required
                       />
                     ) : questions[currentQuestion].type === "radio" ? (
-                      questions[currentQuestion].options.map(
-                        (option, index) => (
-                          <div key={index} className="flex items-center mb-2 bg-stone-600 rounded-md shadow-md p-3">
-                            <input
-                              
-                              type="radio"
-                              name={questions[currentQuestion].name}
-                              value={option}
-                              checked={
-                                formData[questions[currentQuestion].name] ===
-                                option
-                              }
-                              onChange={handleChange}
-                              className="mr-2 appearance-none outline-none border-blue focus:bg-blue active:bg-blue checked:bg-blue transition"
-                            />
-                            <label className="text-stone-200">{option}</label>
-                          </div>
-                        )
-                      )
-                    ) : questions[currentQuestion].type === "textarea" ? (
+                      questions[currentQuestion].options.map((option, index) => (
+                        <div
+                          key={index}
+                          className={`border flex items-center mb-2 rounded-md shadow-md w-64 p-3 border-blue cursor-pointer transition ${
+                            formData[questions[currentQuestion].name] === option ? 'border bg-blue text-black transition' : ''
+                          }`}
+                          onClick={() =>
+                            setFormData({ ...formData, [questions[currentQuestion].name]: option })
+                          }
+                        >
+                          <input
+                            type="radio"
+                            name={questions[currentQuestion].name}
+                            value={option}
+                            checked={formData[questions[currentQuestion].name] === option}
+                            onChange={handleChange}
+                            className="hidden" // Hides the radio input
+                          />
+                          <span className="text-stone-200">{option}</span>
+                        </div>
+                      ))
+                    )
+                     : questions[currentQuestion].type === "textarea" ? (
                       <textarea
                         name={questions[currentQuestion].name}
                         value={formData[questions[currentQuestion].name]}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border-b focus:outline-none focus:border-blue"
+                        className="w-full px-3 py-2 border-b bg-transparent text-white appearance-none focus:outline-none focus:border-blue"
                       />
                     ) : null}
                   </div>
