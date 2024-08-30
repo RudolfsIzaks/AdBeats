@@ -40,7 +40,6 @@ function Home() {
     additionalInfo: "",
   });
 
-  // Define the questions array
   const questions = [
     {
       question: "What’s your name?",
@@ -50,7 +49,7 @@ function Home() {
       imageLogo: AG1Logo,
       songName: "AG1 Supplements",
       sideImg: sideImg1,
-      audio: sampleAudio, // Example audio
+      audio: sampleAudio,
     },
     {
       question: "What’s your best email?",
@@ -60,9 +59,58 @@ function Home() {
       imageLogo: Manscaped_logo,
       songName: "Manscaped Grooming",
       sideImg: email_img,
-      audio: sampleAudio, // Example audio
+      audio: sampleAudio,
     },
-    // Add other questions here, with their corresponding audio files if needed
+    {
+      question: "Brand Name:",
+      type: "text",
+      name: "brandName",
+      sideImg: sideIMG3,
+    },
+    {
+      question: "Website (URL):",
+      type: "url",
+      name: "website",
+      sideImg: sideIMG4,
+    },
+    {
+      question: "What’s your primary target audience?",
+      type: "text",
+      name: "targetAudience",
+      sideImg: sideIMG5,
+    },
+    {
+      question: "What problem are you solving for them?",
+      type: "text",
+      name: "problem",
+      sideImg: sideIMG6,
+    },
+    {
+      question: "What product are you selling, and what makes it unique?",
+      type: "text",
+      name: "product",
+      sideImg: sideIMG7,
+    },
+    {
+      question: "What emotion should the ad/track convey?",
+      type: "text",
+      name: "emotion",
+      sideImg: sideIMG8,
+    },
+    {
+      question: "What’s the goal of the ad?",
+      type: "radio",
+      name: "goal",
+      options: ["Sales", "Engagement", "Brand Recognition", "Other"],
+      sideImg: sideIMG9,
+    },
+    {
+      question:
+        "Is there anything else we need to know about the ad? (Optional)",
+      type: "textarea",
+      name: "additionalInfo",
+      sideImg: sideIMG10,
+    },
   ];
 
   const imageList = [
