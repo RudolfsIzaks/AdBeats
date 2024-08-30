@@ -6,7 +6,6 @@ import AG1Logo from "../assets/ag1logo.svg";
 import Manscaped from "../assets/Manscaped.avif";
 import Manscaped_logo from "../assets/Manscaped_logo.svg";
 import sideImg1 from "../assets/sideImg1.png";
-import sideIMG3 from "../assets/sideIMG3.webp";
 import email_img from '../assets/email.png';
 import exl from '../assets/exl.png';
 import sideIMG3 from "../assets/sideIMG3.png";
