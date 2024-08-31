@@ -15,6 +15,8 @@ import Northface from '../assets/Northface.webp';
 import Northface_logo from '../assets/Northface_logo.svg';
 import Uber from '../assets/Uber.webp';
 import Uber_logo from '../assets/Uber_logo.svg';
+import Nike from '../assets/Nike.webp';
+import Nike_logo from '../assets/Nike_logo.svg';
 import sideImg1 from "../assets/sideImg1.png";
 import email_img from "../assets/email.png";
 import exl from "../assets/exl.png";
@@ -127,6 +129,9 @@ function Home() {
       type: "text",
       name: "emotion",
       sideImg: sideIMG8,
+      image: Nike,
+      imageLogo: Nike_logo,
+      songName: "Nike Footwear",
     },
     {
       question: "What’s the goal of the ad?",
