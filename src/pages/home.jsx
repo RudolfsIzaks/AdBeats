@@ -9,7 +9,7 @@ import Equinox_logo from '../assets/Equinox-Logo-1.svg';
 import Equinox from '../assets/Equinox.png';
 import Skillshare from '../assets/Skillshare.png';
 import Skillshare_logo from '../assets/Skillshare_logo.svg';
-import Petco from '../assets/Petco.jpg';
+import Petco from '../assets/Petco.jpeg';
 import Petco_logo from '../assets/Petco_logo.svg';
 import Northface from '../assets/Northface.jpeg';
 import Northface_logo from '../assets/Northface_logo.svg';
