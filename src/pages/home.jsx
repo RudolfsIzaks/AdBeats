@@ -11,7 +11,7 @@ import Skillshare from '../assets/Skillshare.png';
 import Skillshare_logo from '../assets/Skillshare_logo.svg';
 import Petco from '../assets/Petco.png';
 import Petco_logo from '../assets/Petco_logo.svg';
-import Northface from '../assets/Northface.jpeg';
+import Northface from '../assets/Northface.webp';
 import Northface_logo from '../assets/Northface_logo.svg';
 import Uber from '../assets/Uber.webp';
 import Uber_logo from '../assets/Uber_logo.svg';
