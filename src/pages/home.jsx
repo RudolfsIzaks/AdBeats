@@ -27,7 +27,7 @@ import sideIMG8 from "../assets/sideIMG8.png";
 import sideIMG9 from "../assets/sideIMG9.png";
 import sideIMG10 from "../assets/sideIMG10.png";
 import sampleAudio from "../assets/sample.mp3";
-import Petco_audio from '../assets/Petco.mp3';
+import Petco_audio from '../assets/Petco_audio.mp3';
 import NorthFace_audio from '../assets/NorthFace.mp3';
 import Equinox_audio from '../assets/Equinox.mp3';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
