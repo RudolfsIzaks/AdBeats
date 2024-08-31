@@ -5,6 +5,16 @@ import AG1 from "../assets/ag1.webp";
 import AG1Logo from "../assets/ag1logo.svg";
 import Manscaped from "../assets/Manscaped.avif";
 import Manscaped_logo from "../assets/Manscaped_logo.svg";
+import Equinox_logo from '../assets/Equinox-Logo-1.svg';
+import Equinox from '../assets/Equinox.png';
+import Skillshare from '../assets/Skillshare.png';
+import Skillshare_logo from '../assets/Skillshare_logo.svg';
+import Petco from '../assets/Petco.jpg';
+import Petco_logo from '../assets/Petco_logo.svg';
+import Northface from '../assets/Northface.jpeg';
+import Northface_logo from '../assets/Northface_logo.svg';
+import Uber from '../assets/Uber.webp';
+import Uber_logo from '../assets/Uber_logo.svg';
 import sideImg1 from "../assets/sideImg1.png";
 import email_img from "../assets/email.png";
 import exl from "../assets/exl.png";
@@ -16,7 +26,10 @@ import sideIMG7 from "../assets/sideIMG7.png";
 import sideIMG8 from "../assets/sideIMG8.png";
 import sideIMG9 from "../assets/sideIMG9.png";
 import sideIMG10 from "../assets/sideIMG10.png";
-import sampleAudio from "../assets/sample.mp3"; // Example audio file
+import sampleAudio from "../assets/sample.mp3";
+import Petco_audio from '../assets/Petco.mp3';
+import NorthFace_audio from '../assets/NorthFace.mp3';
+import Equinox_audio from '../assets/Equinox.mp3';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,8 +37,8 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null); // Reference for the audio element
+  const [isPlaying, setIsPlaying] = useState(null); // Track which audio is playing
+  const audioRefs = useRef([]); // Array of audio refs
 
   const [formData, setFormData] = useState({
     name: "",
@@ -66,30 +79,48 @@ function Home() {
       type: "text",
       name: "brandName",
       sideImg: sideIMG3,
+      image: Equinox,
+      imageLogo: Equinox_logo,
+      songName: "Equinox Fitness",
+      audio: Equinox_audio,
     },
     {
       question: "Website (URL):",
       type: "url",
       name: "website",
       sideImg: sideIMG4,
+      image: Skillshare,
+      imageLogo: Skillshare_logo,
+      songName: "Skillshare Education",
     },
     {
       question: "What’s your primary target audience?",
       type: "text",
       name: "targetAudience",
       sideImg: sideIMG5,
+      image: Petco,
+      imageLogo: Petco_logo,
+      songName: "Petco Goods",
+      audio: Petco_audio,
     },
     {
       question: "What problem are you solving for them?",
       type: "text",
       name: "problem",
       sideImg: sideIMG6,
+      image: Northface,
+      imageLogo: Northface_logo,
+      songName: "NorthFace Clothing",
+      audio: NorthFace_audio,
     },
     {
       question: "What product are you selling, and what makes it unique?",
       type: "text",
       name: "product",
       sideImg: sideIMG7,
+      image: Uber,
+      imageLogo: Uber_logo,
+      songName: "Uber Transportation",
     },
     {
       question: "What emotion should the ad/track convey?",
@@ -119,6 +150,16 @@ function Home() {
     AG1Logo,
     Manscaped,
     Manscaped_logo,
+    Skillshare,
+    Skillshare_logo,
+    Equinox,
+    Equinox_logo,
+    Uber,
+    Uber_logo,
+    Petco,
+    Petco_logo,
+    Northface,
+    Northface_logo,
     sideImg1,
     email_img,
     exl,
@@ -155,7 +196,7 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    if (!isPlaying) {
+    if (isPlaying === null) {
       const interval = setInterval(() => {
         setCarouselIndex((prevIndex) => (prevIndex + 1) % questions.length);
       }, 3000);
@@ -163,14 +204,19 @@ function Home() {
     }
   }, [questions.length, isPlaying]);
 
-  const handleAudioPlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
+  const handleAudioPlayPause = (index) => {
+    const currentAudioRef = audioRefs.current[index];
+    if (currentAudioRef) {
+      if (isPlaying === index) {
+        currentAudioRef.pause();
+        setIsPlaying(null);
       } else {
-        audioRef.current.play();
+        if (isPlaying !== null) {
+          audioRefs.current[isPlaying].pause(); // Pause the currently playing audio
+        }
+        currentAudioRef.play();
+        setIsPlaying(index);
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
@@ -220,17 +266,16 @@ function Home() {
               <img src={Adbeats} alt="Logo" className="w-64" />
             </div>
           </div>
-          <div className="min-h-screen bg-stone-900 flex flex-row-reverse items-center justify-between">
+          <div className="min-h-screen w-screen bg-stone-900 flex flex-row-reverse items-center justify-between">
             <img
               src={questions[currentQuestion].sideImg}
               alt=""
-              className="h-screen"
+              className="h-screen md:w-1/2"
             />
             <form
               onSubmit={handleSubmit}
-              className="p-10 rounded-md text-left w-3/5"
+              className="p-10 rounded-md text-left w-1/2"
             >
-              {/* Progress Bar */}
               <div className="w-full bg-stone-700 h-2 rounded-full mb-6 mx-10">
                 <div
                   className="bg-blue h-2 rounded-full transition-all duration-300"
@@ -313,20 +358,20 @@ function Home() {
                         {questions.map((q, i) => (
                           <div
                             key={i}
-                            className="flex-shrink-0 w-full flex items-center"
+                            className="flex-shrink-0 flex w-full items-center"
                           >
                             <div className="flex items-center justify-center relative">
                             <img
                               src={q.image}
                               alt=""
-                              className="w-20 h-20 rounded-md mr-4 opacity-50"
+                              className="w-20 h-20 object-cover rounded-md mr-4 opacity-50"
                             />
                             {q.audio && (
                                 <div className="absolute right-[40%]">
-                                  <audio ref={audioRef} src={q.audio} />
+                                  <audio ref={(el) => (audioRefs.current[i] = el)} src={q.audio} />
                                   <FontAwesomeIcon
-                                    icon={isPlaying ? faPause : faPlay}
-                                    onClick={handleAudioPlayPause}
+                                    icon={isPlaying === i ? faPause : faPlay}
+                                    onClick={() => handleAudioPlayPause(i)}
                                     className="cursor-pointer text-blue-500 text-4xl text-stone-200"
                                   />
                                 </div>
@@ -344,6 +389,7 @@ function Home() {
                             </div>
                           </div>
                         ))}
+
                       </div>
                     </div>
                   </div>
