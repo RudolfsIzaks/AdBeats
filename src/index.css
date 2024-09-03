@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-backgroundblack
+}
+
+.flowin {
+  overflow-x: hidden;
+}
 
 
 @keyframes split {
@@ -37,6 +46,10 @@
   50% {
     opacity: 0.5;
   }
+}
+
+.hr-gradient {
+  background: radial-gradient(circle, rgba(226,226,226,1) 50%, rgba(0,0,0,0) 80%);
 }
 
 .animate-split {
@@ -95,3 +108,10 @@
   transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+.red-shadow {
+  box-shadow: -5px 5px 0px red;
+}
+
+.green-shadow {
+  box-shadow: -5px 5px 0px rgb(1, 180, 1);
+}

@@ -10,10 +10,12 @@ module.exports = {
       colors: {
         blue: '#0CC0DF',  // Blue
         secondary: '#FFA800',
+        backgroundblack: '#0A0A0A',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         comic: ["Comic Neue", "cursive"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       fontSize: {
         'headline-1': '64px',
