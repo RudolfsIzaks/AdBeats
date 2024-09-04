@@ -248,7 +248,7 @@ function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
-    if(formData != null) {
+    
       axios.post('https://aqueous-tor-91749-7319d44de38a.herokuapp.com/form-submit', formData).then((response) => {
         setFormData({
           name: "",
@@ -265,7 +265,7 @@ function Home() {
         navigate('/thank-you');
         console.log(response);
     })
-    }
+    
   };
 
   // Calculate the progress as a percentage
