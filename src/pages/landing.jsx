@@ -138,7 +138,7 @@ function Landing() {
       </div>
       <div className="flex items-center justify-center relative min-h-[70dvh]">
         <img src={comic_splash} alt="" className="absolute z-0"/>
-        <p className="z-10 font-comic font-bold -rotate-12"> It’s all about grabbing and holding attention!
+        <p className="z-10 font-comic w-64 text-2xl font-bold -rotate-12"> It’s all about grabbing and holding attention!
         </p>
       </div>
       <div className="flex flex-col gap-10 items-center">

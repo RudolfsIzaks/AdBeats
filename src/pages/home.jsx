@@ -34,6 +34,7 @@ import NorthFace_audio from '../assets/NorthFace.mp3';
 import Equinox_audio from '../assets/Equinox.mp3';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import axios from "axios";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -247,6 +248,24 @@ function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
+    if(formData != null) {
+      axios.post('https://aqueous-tor-91749-7319d44de38a.herokuapp.com/form-submit', formData).then((response) => {
+        setFormData({
+          name: "",
+          email: "",
+          brandName: "",
+          website: "",
+          targetAudience: "",
+          problem: "",
+          product: "",
+          emotion: "",
+          goal: "",
+          additionalInfo: "",
+        });
+        navigate('/thank-you');
+        console.log(response);
+    })
+    }
   };
 
   // Calculate the progress as a percentage
@@ -441,6 +460,7 @@ function Home() {
                   </button>
                 </div>
               )}
+              
             </form>
           </div>
         </div>
