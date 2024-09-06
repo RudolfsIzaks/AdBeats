@@ -248,28 +248,41 @@ function Home() {
     setIsPlaying(false); // Stop playing when moving to the previous question
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
-    
-      axios.post('https://aqueous-tor-91749-7319d44de38a.herokuapp.com/form-submit', formData).then((response) => {
-        setFormData({
-          name: "",
-          email: "",
-          brandName: "",
-          website: "",
-          targetAudience: "",
-          problem: "",
-          product: "",
-          emotion: "",
-          goal: "",
-          additionalInfo: "",
-        });
-        console.log(response);
-        navigate("/confirmation", { state: { response: response } })
-    })
-    
+  
+    try {
+      // Make the POST request using async/await
+      const response = await axios.post(
+        'https://aqueous-tor-91749-7319d44de38a.herokuapp.com/form-submit', 
+        formData
+      );
+  
+      // Reset the form data after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        brandName: "",
+        website: "",
+        targetAudience: "",
+        problem: "",
+        product: "",
+        emotion: "",
+        goal: "",
+        additionalInfo: "",
+      });
+  
+      console.log(response);
+  
+      // Navigate to the confirmation page with the response data
+      navigate("/confirmation", { state: { response: response.data } });
+    } catch (error) {
+      // Handle any error that occurs during the API call
+      console.error("Error submitting the form:", error);
+    }
   };
+  
 
   // Calculate the progress as a percentage
   const progress = (currentQuestion / (questions.length - 1)) * 100;
