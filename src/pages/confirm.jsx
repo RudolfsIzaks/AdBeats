@@ -50,15 +50,16 @@ function Confirm() {
   return (
     <>
       <div className="h-screen flex items-center justify-center">
-        <div>
+        <div className="p-10 flex flex-col gap-5 bg-stone-800 border-stone-600">
           <h1 className="text-blue font-comic font-bold text-headline-2">
             Free Song Order Confirmed!
           </h1>
-          <p className="text-white font-montserrat text-subheadline-3">
+          <p className="text-white font-montserrat text-subheadline-4">
             Your Order ID is: {apiResponse.id}
           </p>
-          <form onSubmit={handleSendOut} action="submit">
-            <label htmlFor="email">Your email to recieve Order ID</label>
+          <form onSubmit={handleSendOut} action="submit" className="flex flex-col items-center gap-10">
+            <div className="flex gap-5 items-center">
+            <label htmlFor="email" className="text-white font-montserrat text-lg">Your email to recieve Order ID:</label>
             <input
               type="email"
               required
@@ -67,6 +68,7 @@ function Confirm() {
               onChange={handleChange}
               className="bg-transparent outline-none border-b border-b-blue"
             />
+            </div>
             <button
               type="submit"
               className="bg-blue comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-blue transition hover:text-blue hover:scale-110"
