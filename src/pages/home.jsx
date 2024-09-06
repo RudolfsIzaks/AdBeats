@@ -265,8 +265,8 @@ function Home() {
           goal: "",
           additionalInfo: "",
         });
-        navigate('/thank-you');
         console.log(response);
+        navigate("/confirmation", { state: { response: response } })
     })
     
   };

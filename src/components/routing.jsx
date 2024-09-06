@@ -10,6 +10,7 @@ function RouterSetup() {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/qualify" element={<Home />}/>
+        <Route path="/confirmation" element={<Confirm />}/>
       </Routes>
     </Router>
   );
