@@ -237,11 +237,20 @@ function Home() {
   };
 
   const handleNextQuestion = () => {
+    const currentField = questions[currentQuestion].name;
+    
+    // Check if the current field is required and if it is empty
+    if (!formData[currentField]) {
+      alert("Please fill out this field before continuing.");
+      return; // Stop here if the field is empty
+    }
+    
     setCurrentQuestion((prevQuestion) =>
       Math.min(prevQuestion + 1, questions.length - 1)
     );
     setIsPlaying(false); // Stop playing when moving to the next question
   };
+  
 
   const handlePrevQuestion = () => {
     setCurrentQuestion((prevQuestion) => Math.max(prevQuestion - 1, 0));
