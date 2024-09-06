@@ -362,6 +362,7 @@ function Home() {
                               type="radio"
                               name={questions[currentQuestion].name}
                               value={option}
+                              required
                               checked={
                                 formData[questions[currentQuestion].name] ===
                                 option
@@ -378,6 +379,7 @@ function Home() {
                         name={questions[currentQuestion].name}
                         value={formData[questions[currentQuestion].name]}
                         onChange={handleChange}
+                        required
                         className="w-full px-3 py-2 border-b bg-transparent text-white appearance-none focus:outline-none focus:border-blue"
                       />
                     ) : null}
@@ -451,13 +453,13 @@ function Home() {
                           : "button"
                       }
                       onClick={
-                        currentQuestion === questions.length - 1
+                        currentQuestion === questions.length
                           ? handleSubmit
                           : handleNextQuestion
                       }
                       className="bg-blue comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-blue transition hover:text-blue hover:scale-110"
                     >
-                      {currentQuestion === questions.length - 1
+                      {currentQuestion === questions.length
                         ? "Submit"
                         : "Continue"}
                     </button>

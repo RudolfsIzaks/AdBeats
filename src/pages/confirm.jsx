@@ -1,10 +1,11 @@
 import React from "react";
 import "../index.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
 function Confirm() {
+  const navigate = useNavigate();
   const location = useLocation();
   const apiResponse = location.state?.response;
 
