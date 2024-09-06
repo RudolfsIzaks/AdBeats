@@ -54,7 +54,7 @@ function Confirm() {
           <h1 className="text-blue font-comic font-bold text-headline-2">
             Free Song Order Confirmed!
           </h1>
-          <p className="text-white font-montserrat text-subheadline-4">
+          <p className="text-white font-montserrat text-subheadline-4 text-center">
             Your Order ID is: {apiResponse.id}
           </p>
           <form onSubmit={handleSendOut} action="submit" className="flex flex-col items-center gap-10">
@@ -66,7 +66,7 @@ function Confirm() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="bg-transparent outline-none border-b border-b-blue"
+              className="bg-transparent outline-none border-b border-b-blue text-white"
             />
             </div>
             <button
