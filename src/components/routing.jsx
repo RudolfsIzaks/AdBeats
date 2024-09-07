@@ -19,7 +19,7 @@ function RouterSetup() {
         <Route path="/okvcvdsdv3wfdzx" element={<AdminLogin />} />
         <Route path="/orders/:id" element={
             <PrivateRoute>
-              <AdminDashboard />
+              <AdminOrder />
             </PrivateRoute>
           }
         />
