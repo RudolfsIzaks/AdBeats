@@ -4,6 +4,9 @@ import App from "../App";
 import "../index.css";
 import Home from "../pages/home";
 import Confirm from "../pages/confirm";
+import AdminLogin from "../pages/adminlog";
+import PrivateRoute from "./PrivateRoute";
+import AdminDashboard from "../pages/admin";
 
 function RouterSetup() {
   return (
@@ -12,6 +15,15 @@ function RouterSetup() {
         <Route path="/" element={<App />} />
         <Route path="/qualify" element={<Home />}/>
         <Route path="/confirmation" element={<Confirm />}/>
+        <Route path="/okvcvdsdv3wfdzx" element={<AdminLogin />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <PrivateRoute>
+              <AdminDashboard />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );
