@@ -6,14 +6,12 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // Import r
 import { auth } from "../firebaseConfig"; // Import your Firebase auth instance
 import { initializeFirebase } from "../firebaseConfig"; 
 
-// Call this in protected pages (e.g., admin pages)
-const { auth } = initializeFirebase();
-
 
 function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const { auth } = initializeFirebase();
 
   const handleAdminLogin = async (e) => {
     e.preventDefault();
