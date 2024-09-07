@@ -24,7 +24,6 @@ import splash_grey from '../assets/splash_grey.png';
 import splash_red from '../assets/splash_red.png';
 import splash_purple from '../assets/splash_purple.png';
 import comic_splash from '../assets/comic_splash.png';
-import { Link } from "react-router-dom";
 
 function Landing() {
 
