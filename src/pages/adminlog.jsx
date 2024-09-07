@@ -3,7 +3,12 @@ import "../index.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // Import required auth functions
-import { auth } from "../../firebaseConfig"; // Import your Firebase auth instance
+import { auth } from "../firebaseConfig"; // Import your Firebase auth instance
+import { initializeFirebase } from "../firebaseConfig"; 
+
+// Call this in protected pages (e.g., admin pages)
+const { auth } = initializeFirebase();
+
 
 function AdminLogin() {
   const [email, setEmail] = useState("");
