@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import "../index.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // Import required auth functions
-import { auth } from "../firebaseConfig"; // Import your Firebase auth instance
-import { initializeFirebase } from "../firebaseConfig"; 
-
+import { signInWithEmailAndPassword } from "firebase/auth"; // Import required auth functions
+import { initializeFirebase } from "../firebaseConfig"; // Import initializeFirebase
 
 function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  // Initialize Firebase and get auth
   const { auth } = initializeFirebase();
 
   const handleAdminLogin = async (e) => {
@@ -18,7 +18,7 @@ function AdminLogin() {
 
     try {
       // Sign in using Firebase Authentication (Modular SDK)
-      const userCredential = await signInWithEmailAndPassword(auth, email, password); // Correct usage of signInWithEmailAndPassword
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
       // Get the ID token from Firebase
@@ -27,7 +27,7 @@ function AdminLogin() {
       // Send the ID token to your backend for verification
       const response = await axios.post(
         "https://aqueous-tor-91749-7319d44de38a.herokuapp.com/admin/login",
-        { idToken } // Send ID token instead of email and password
+        { idToken }
       );
 
       if (response.data.success) {
@@ -51,7 +51,7 @@ function AdminLogin() {
           <h1 className="text-headline-2 font-black font-montserrat text-white">
             Ad Beats Admin
           </h1>
-          <form onSubmit={handleAdminLogin} action="submit" className="flex flex-col gap-5">
+          <form onSubmit={handleAdminLogin} className="flex flex-col gap-5">
             <label
               htmlFor="email"
               className="text-subheadline-3 text-white font-montserrat font-bold mt-5 mb-2"
