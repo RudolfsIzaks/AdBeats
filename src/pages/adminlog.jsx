@@ -49,7 +49,7 @@ function AdminLogin() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="border-b border-blue outline-none text-white font-comic "
+              className="border-b border-blue outline-none text-white font-comic bg-transparent"
             />
             <label
               htmlFor="password"
@@ -63,7 +63,7 @@ function AdminLogin() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="border-b border-blue outline-none text-white font-comic"
+              className="border-b border-blue outline-none text-white font-comic bg-transparent"
             />
             <button className="bg-blue py-2 px-5 border-blue hover:bg-transparent hover:text-blue transition">
               Log In
