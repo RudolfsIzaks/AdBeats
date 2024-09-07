@@ -30,8 +30,8 @@ function AdminOrder() {
   }
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="w-3/5 bg-stone-900 border-stone-500 rounded-md p-12 flex flex-col gap-6">
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="w-3/5 bg-stone-950 border border-stone-500 rounded-md p-12 flex flex-col gap-6">
         <h1 className="font-comic text-headline-1 text-white">Order: {order.id}</h1>
         <p className="text-white font-bold font-montserrat text-subheadline-3">Brand: {order.brand}</p>
         <p className="text-white font-bold font-montserrat text-subheadline-3">Website: {order.website}</p>
