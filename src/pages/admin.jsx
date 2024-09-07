@@ -34,9 +34,14 @@ function AdminDashboard() {
           >
             <h1 className="text-2xl font-inter font-bold mb-5 text-white">{order.brand}</h1>
             <hr />
+            <div className="flex justify-between items-center p-5">
             <p className="text-xl text-stone-200 mt-5">
               {order.id}
             </p>
+            <p className="text-xl text-stone-200 mt-5">
+              Status: {order.status}
+            </p>
+            </div>
             <Link to={`/orders/${order.id}`} className="mt-5 bg-blue text-white font-inter w-80 py-2 px-4 text-center border border-blue hover:bg-transparent hover:text-blue transition">
               Read
             </Link>

@@ -57,6 +57,7 @@ function Home() {
     emotion: "",
     goal: "",
     additionalInfo: "",
+    status: "User Submitted",
   });
 
   const questions = [
@@ -280,6 +281,7 @@ function Home() {
         emotion: "",
         goal: "",
         additionalInfo: "",
+        status: "User Submitted",
       });
   
       console.log(response);
