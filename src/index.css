@@ -121,3 +121,10 @@ body {
 .black-shadow {
   box-shadow: -5px 5px 0px rgb(0, 0, 0);
 }
+
+.bg_comic {
+  background-image: url('./assets/bg_admin.webp');
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
