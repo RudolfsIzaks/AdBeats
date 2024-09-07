@@ -103,11 +103,11 @@ function AdminOrder() {
           Goal: {order.goal}
         </p>
         
-        <h1>Upload an Audio File</h1>
+        <h1 className="text-white font-montserrat font-black text-subheadline-3">Upload an Audio File</h1>
         <input type="file" accept="audio/*" onChange={handleAudioChange} />
-        <button onClick={handleUpload}>Upload</button>
+        <button onClick={handleUpload} className="text-white bg-blue py-2 px-5 rounded-md cursor-pointer">Upload</button>
         {uploadProgress > 0 && (
-          <p>Upload Progress: {uploadProgress}%</p>
+          <p className="text-white"> Upload Progress: {uploadProgress}%</p>
         )}
       </div>
     </div>
