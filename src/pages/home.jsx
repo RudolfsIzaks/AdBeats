@@ -260,13 +260,20 @@ function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+  
+    // Ensure the status field is always set to 'User Submitted'
+    const submissionData = {
+      ...formData,
+      status: "User Submitted", // Hardcoded status field
+    };
+  
+    console.log("Form Data Submitted:", submissionData);
   
     try {
-      // Make the POST request using async/await
+      // Make the POST request with the hardcoded status
       const response = await axios.post(
         'https://aqueous-tor-91749-7319d44de38a.herokuapp.com/form-submit', 
-        formData
+        submissionData
       );
   
       // Reset the form data after successful submission
@@ -281,7 +288,7 @@ function Home() {
         emotion: "",
         goal: "",
         additionalInfo: "",
-        status: "User Submitted",
+        status: "User Submitted", // Reset status field
       });
   
       console.log(response);
@@ -293,6 +300,7 @@ function Home() {
       console.error("Error submitting the form:", error);
     }
   };
+  
   
 
   // Calculate the progress as a percentage
