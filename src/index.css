@@ -124,7 +124,8 @@ body {
 
 .bg_comic {
   background-image: url('./assets/bg_admin.webp');
-  background-blend-mode: darken;
+  background-color: rgba(28, 28, 28, 0.764);
+  background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
 }
