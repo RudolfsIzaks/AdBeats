@@ -8,6 +8,7 @@ import AdminLogin from "../pages/adminlog";
 import PrivateRoute from "./PrivateRoute";
 import AdminDashboard from "../pages/admin";
 import AdminOrder from "../pages/adminorder";
+import OrderRecieve from "../pages/orderRecieve";
 
 function RouterSetup() {
   return (

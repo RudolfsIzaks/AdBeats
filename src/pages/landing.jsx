@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../index.css";
 import AdBeats from "../assets/AdBeats.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import thoughtbbl from "../assets/thoughtbbl.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark, faCircleCheck, faPlay, faMusic } from "@fortawesome/free-solid-svg-icons";
@@ -24,7 +24,7 @@ import splash_grey from '../assets/splash_grey.png';
 import splash_red from '../assets/splash_red.png';
 import splash_purple from '../assets/splash_purple.png';
 import comic_splash from '../assets/comic_splash.png';
-
+import { Link } from "react-router-dom";
 
 function Landing() {
 
@@ -81,6 +81,7 @@ function Landing() {
           <img src={AdBeats} className="w-48" />
         </nav>
         <div className="w-screen h-[1px] hr-gradient"></div>
+        <Link className="font-comic font-bold text-xl my-5 border-blue border bg-blue py-2 px-5 hover:bg-transparent hover:text-blue transition" to="/order-retrieval">Claim Orders Here</Link>
       </div>
       <div className="h-screen flex items-center justify-center">
         <div className="w-2/3 flex flex-col items-center">
