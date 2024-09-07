@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "../index.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../firebaseConfig"; // Import Firebase authentication
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // Import required auth functions
+import { auth } from "../../firebaseConfig"; // Import your Firebase auth instance
 
 function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -13,8 +14,8 @@ function AdminLogin() {
     e.preventDefault();
 
     try {
-      // Sign in with Firebase Authentication
-      const userCredential = await auth.signInWithEmailAndPassword(email, password);
+      // Sign in using Firebase Authentication (Modular SDK)
+      const userCredential = await signInWithEmailAndPassword(auth, email, password); // Correct usage of signInWithEmailAndPassword
       const user = userCredential.user;
 
       // Get the ID token from Firebase
