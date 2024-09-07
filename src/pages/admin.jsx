@@ -32,12 +32,12 @@ function AdminDashboard() {
             className="md:w-full flex flex-col p-10 shadow-lg border border-stone-600 mb-10 sm:mx-5"
             key={order.id}
           >
-            <h1 className="text-2xl font-inter font-bold mb-5">{order.brand}</h1>
+            <h1 className="text-2xl font-inter font-bold mb-5 text-white">{order.brand}</h1>
             <hr />
             <p className="text-xl text-stone-200 mt-5">
               {order.id}
             </p>
-            <Link to={`/orders/${order.id}`} className="mt-5 bg-blue text-white font-inter py-2 px-4 text-center border border-blue hover:bg-transparent hover:text-blue transition">
+            <Link to={`/orders/${order.id}`} className="mt-5 bg-blue text-white font-inter w-80 py-2 px-4 text-center border border-blue hover:bg-transparent hover:text-blue transition">
               Read
             </Link>
           </div>
