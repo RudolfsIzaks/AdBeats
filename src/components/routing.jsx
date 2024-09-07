@@ -7,6 +7,7 @@ import Confirm from "../pages/confirm";
 import AdminLogin from "../pages/adminlog";
 import PrivateRoute from "./PrivateRoute";
 import AdminDashboard from "../pages/admin";
+import AdminOrder from "../pages/adminorder";
 
 function RouterSetup() {
   return (
@@ -16,6 +17,7 @@ function RouterSetup() {
         <Route path="/qualify" element={<Home />}/>
         <Route path="/confirmation" element={<Confirm />}/>
         <Route path="/okvcvdsdv3wfdzx" element={<AdminLogin />} />
+        <Route path="/orders/:id" element={<AdminOrder />} />
         <Route
           path="/admin/dashboard"
           element={
