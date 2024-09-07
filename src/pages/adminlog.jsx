@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "../index.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebaseConfig"; // Import Firebase authentication
 
 function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -11,11 +11,21 @@ function AdminLogin() {
 
   const handleAdminLogin = async (e) => {
     e.preventDefault();
+
     try {
+      // Sign in with Firebase Authentication
+      const userCredential = await auth.signInWithEmailAndPassword(email, password);
+      const user = userCredential.user;
+
+      // Get the ID token from Firebase
+      const idToken = await user.getIdToken();
+
+      // Send the ID token to your backend for verification
       const response = await axios.post(
         "https://aqueous-tor-91749-7319d44de38a.herokuapp.com/admin/login",
-        { email, password }
+        { idToken } // Send ID token instead of email and password
       );
+
       if (response.data.success) {
         // Store authentication state
         localStorage.setItem("adminAuth", JSON.stringify(response.data.user));
@@ -29,6 +39,7 @@ function AdminLogin() {
       alert("Failed to log in. Please try again.");
     }
   };
+
   return (
     <>
       <div className="min-h-screen flex items-center justify-center">
