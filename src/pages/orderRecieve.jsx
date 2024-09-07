@@ -45,7 +45,7 @@ function OrderRecieve() {
         <div className="h-screen flex items-center justify-center">
           <div className="w-2/3 flex flex-col items-center">
             <p className="font-comic text-blue text-center text-2xl">
-              The Simplest And Easiest Way to…
+              If you got an email that your order is ready
             </p>
             <h2 className="font-montserrat text-headline-2 font-black text-white text-center">
               Claim Your Order Here
