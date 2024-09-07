@@ -33,10 +33,10 @@ function AdminLogin() {
     <>
       <div className="min-h-screen flex items-center justify-center">
         <div className="p-10 rounded-md flex flex-col gap-5">
-          <h1 className="text-headline-2 font-black font-montserrat">
+          <h1 className="text-headline-2 font-black font-montserrat text-white">
             Ad Beats Admin
           </h1>
-          <form onSubmit={handleAdminLogin} action="submit">
+          <form onSubmit={handleAdminLogin} action="submit" className="flex flex-col gap-5">
             <label
               htmlFor="email"
               className="text-subheadline-3 text-white font-montserrat font-bold mt-5 mb-2"
