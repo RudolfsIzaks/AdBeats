@@ -4,42 +4,30 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function AdminLogin() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-
-  const [formData, setFormData] = useState({
-    email: "",
-    password: ""
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const handleAdminLogin = async (e) => {
     e.preventDefault();
     try {
-        // Make the POST request using async/await
-        const response = await axios.post(
-          'https://aqueous-tor-91749-7319d44de38a.herokuapp.com/admin/login', 
-          formData
-        );
-    
-        setFormData({
-          email: "",
-          password: "",
-        });
-    
-        console.log(response);
+      const response = await axios.post(
+        "https://aqueous-tor-91749-7319d44de38a.herokuapp.com/admin/login",
+        { email, password }
+      );
+      if (response.data.success) {
+        // Store authentication state
+        localStorage.setItem("adminAuth", JSON.stringify(response.data.user));
+        // Redirect to admin dashboard
         navigate("/admin/dashboard");
-      } catch (error) {
-        // Handle any error that occurs during the API call
-        console.error("Error submitting the form:", error);
+      } else {
+        alert(response.data.message);
       }
-    };
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Failed to log in. Please try again.");
+    }
+  };
   return (
     <>
       <div className="min-h-screen flex items-center justify-center">
@@ -57,8 +45,8 @@ function AdminLogin() {
             <input
               type="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               className="border-b border-blue outline-none text-white font-comic "
             />
@@ -71,12 +59,14 @@ function AdminLogin() {
             <input
               type="password"
               name="password"
-              value={formData.password}
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
               className="border-b border-blue outline-none text-white font-comic"
             />
-            <button className="bg-blue py-2 px-5 border-blue hover:bg-transparent hover:text-blue transition">Log In</button>
+            <button className="bg-blue py-2 px-5 border-blue hover:bg-transparent hover:text-blue transition">
+              Log In
+            </button>
           </form>
         </div>
       </div>
