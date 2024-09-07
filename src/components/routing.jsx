@@ -17,7 +17,12 @@ function RouterSetup() {
         <Route path="/qualify" element={<Home />}/>
         <Route path="/confirmation" element={<Confirm />}/>
         <Route path="/okvcvdsdv3wfdzx" element={<AdminLogin />} />
-        <Route path="/orders/:id" element={<AdminOrder />} />
+        <Route path="/orders/:id" element={
+            <PrivateRoute>
+              <AdminDashboard />
+            </PrivateRoute>
+          }
+        />
         <Route
           path="/admin/dashboard"
           element={
