@@ -135,5 +135,5 @@ body {
 }
 
 .bg_blurry {
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(7px);
 }
