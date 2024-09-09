@@ -1,5 +1,10 @@
 import React from "react";
 import "../index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark, faCircleCheck, faPlay, faMusic } from "@fortawesome/free-solid-svg-icons";
+import splash_grey from '../assets/splash_grey.png';
+import splash_red from '../assets/splash_red.png';
+import splash_purple from '../assets/splash_purple.png';
 
 function PricingFree() {
   return (

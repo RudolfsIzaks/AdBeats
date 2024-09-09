@@ -20,9 +20,6 @@ import Equinox_logo from '../assets/Equinox-Logo-1.svg';
 import Equinox from '../assets/Equinox.png';
 import Nike from '../assets/Nike.webp';
 import Nike_logo from '../assets/Nike_logo.svg';
-import splash_grey from '../assets/splash_grey.png';
-import splash_red from '../assets/splash_red.png';
-import splash_purple from '../assets/splash_purple.png';
 import comic_splash from '../assets/comic_splash.png';
 
 function Landing() {
