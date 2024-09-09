@@ -206,7 +206,7 @@ function Landing() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-4 mb-20 sm:w-full">
+          <div className="flex flex-col items-center gap-4 mb-5 sm:w-full">
             <div className="flex flex-col gap-5 md:w-2/3 text-center m-5">
               <p className="text-stone-300 font-bold font-comic sm:text-md md:text-subheadline-3">
                 So, how do you get your dream customer's attention?
@@ -216,7 +216,9 @@ function Landing() {
                 Show-Stopper
               </h2>
             </div>
-            <div className="md:flex sm:flex sm:overflow-x-auto flex-nowrap items-center gap-2 md:gap-10 sm:h-[50dvh] md:h-[80dvh] sm:w-auto md:w-[110%]">
+            </div>
+            <div className="flex flex-col items-center gap-4 mb-20 sm:overflow-x-auto sm:w-full">
+            <div className="md:flex sm:flex sm:overflow-x-auto flex-nowrap items-center sm:gap-5 md:gap-10 sm:h-[50dvh] md:h-[40dvh] mx-10 sm:w-auto md:w-[110%]">
               {cards.map((q, i) => (
                 <div
                   key={i}
