@@ -114,21 +114,21 @@ function Landing() {
         </p>
       </div>
       <div className="flex items-center gap-5 justify-center  mt-5 mx-32">
-        <div className="p-5 flex items-center gap-5 bg-[#3A3A3A] red-shadow w-96">
+        <div className="p-5 flex items-center gap-5 bg-red-400 red-shadow w-96">
           <FontAwesomeIcon 
           icon={faCircleXmark}
-          className="text-red-600 text-3xl"
+          className="text-blue text-3xl"
           />
           <p className="text-white">It’s not their endless budget</p>
         </div>
-        <div className="p-5 flex items-center gap-5 bg-[#3A3A3A] red-shadow w-96">
+        <div className="p-5 flex items-center gap-5 bg-red-400 red-shadow w-96">
           <FontAwesomeIcon 
           icon={faCircleXmark}
-          className="text-red-600 text-3xl"
+          className="text-blue text-3xl"
           />
           <p className="text-white">It’s not their “brand”</p>
         </div>
-        <div className="p-5 flex items-center gap-5 bg-[#3A3A3A] red-shadow w-96">
+        <div className="p-5 flex items-center gap-5 bg-red-400 red-shadow w-96">
           <FontAwesomeIcon 
           icon={faCircleXmark}
           className="text-red-600 text-3xl"
