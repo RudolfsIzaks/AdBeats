@@ -9,9 +9,9 @@ import splash_purple from '../assets/splash_purple.png';
 function PricingFree() {
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center relative">
       <div className="flex items-center justify-center h-full w-full absolute z-50 text-center bg-stone-700 bg-opacity-25 bg_blurry">
-        <p className="font-montserrat font-back text-white text-headline-1">For FREE!</p>
+        <p className="font-montserrat font-black text-white text-headline-1">For FREE!</p>
       </div>
       <div className="z-0">
         <div className="flex justify-evenly items-center h-auto">
