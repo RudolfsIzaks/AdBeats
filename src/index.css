@@ -10,8 +10,10 @@ body {
   @apply bg-backgroundblack
 }
 
-.flowin {
-  overflow-x: hidden;
+@media only screen and (min-width: 762px) {
+  .flowin {
+    overflow-x: hidden;
+  }
 }
 
 
@@ -137,3 +139,4 @@ body {
 .bg_blurry {
   backdrop-filter: blur(7px);
 }
+
