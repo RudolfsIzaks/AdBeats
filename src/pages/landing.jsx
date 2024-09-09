@@ -142,7 +142,7 @@ function Landing() {
         </p>
       </div>
       <div className="flex flex-col gap-10 items-center">
-        <div className="flex flex-col items-center gap-5 text-center">
+        <div className="flex flex-col items-center gap-5 text-center md:mt-20">
             <p className="font-comic font-bold text-blue z-10 text-subheadline-3">
             If you’re a business that advertises online…
             </p>
@@ -153,7 +153,7 @@ function Landing() {
             And their attention is directly responsible for:
             </p>
         </div>
-        <div className="flex justify-center items-center gap-12 my-40 h-[50dvh]">
+        <div className="flex justify-center items-center gap-12 my-40 md:h-[50dvh]">
             <div className="relative flex items-center justify-center">
                 <img src={rectred} alt="" className="absolute md:w-[500px] z-0"/>
                 <div className="z-10 w-3/5">
