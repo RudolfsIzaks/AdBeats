@@ -78,28 +78,28 @@ function AdminOrder() {
         <Link className="text-blue font-montserrat" to="/admin/dashboard">
           Go Back
         </Link>
-        <h1 className="font-comic text-headline-1 text-white">
+        <h1 className="font-comic md:text-headline-1 sm:text-subheadline-2 text-white">
           Order: {order.id}
         </h1>
-        <p className="text-white font-bold font-montserrat text-subheadline-3">
+        <p className="text-white font-bold font-montserrat md:text-subheadline-3 sm:text-subheadline-4">
           Brand: {order.brand}
         </p>
-        <p className="text-white font-bold font-montserrat text-subheadline-3">
+        <p className="text-white font-bold font-montserrat md:text-subheadline-3 sm:text-subheadline-4">
           Website: {order.website}
         </p>
-        <p className="text-stone-200 font-montserrat text-subheadline-4">
+        <p className="text-stone-200 font-montserrat md:text-subheadline-4">
           Email: {order.email}
         </p>
-        <p className="text-stone-200 font-montserrat text-subheadline-4">
+        <p className="text-stone-200 font-montserrat md:text-subheadline-4">
           Name: {order.name}
         </p>
-        <p className="text-stone-200 font-montserrat text-subheadline-4">
+        <p className="text-stone-200 font-montserrat md:text-subheadline-4">
           Emotion: {order.emotion}
         </p>
-        <p className="text-stone-200 font-montserrat text-subheadline-4">
+        <p className="text-stone-200 font-montserrat md:text-subheadline-4">
           Problem: {order.problem}
         </p>
-        <p className="text-stone-200 font-montserrat text-subheadline-4">
+        <p className="text-stone-200 font-montserrat md:text-subheadline-4">
           Goal: {order.goal}
         </p>
         

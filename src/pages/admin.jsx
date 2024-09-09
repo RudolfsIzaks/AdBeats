@@ -26,7 +26,7 @@ function AdminDashboard() {
     return(
         <>
         <div className="flex h-screen justify-center items-center">
-        <div className="flex flex-col gap-10 items-center w-1/2">
+        <div className="flex flex-col gap-10 items-center md:w-1/2">
         {Orders.map((order) => (
           <div
             className="md:w-full flex flex-col p-10 shadow-lg border border-stone-600 mb-10 sm:mx-5"
@@ -34,8 +34,8 @@ function AdminDashboard() {
           >
             <h1 className="text-2xl font-inter font-bold mb-5 text-white">{order.brand}</h1>
             <hr />
-            <div className="flex justify-between items-center p-5">
-            <p className="text-xl text-stone-200 mt-5">
+            <div className="flex sm:flex-col md:justify-between sm:items-start md:items-center p-5">
+            <p className="md:text-xl text-stone-200 mt-5">
               {order.id}
             </p>
             <p className="text-xl text-stone-200 mt-5">
