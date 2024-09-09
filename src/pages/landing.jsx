@@ -218,7 +218,7 @@ function Landing() {
             </div>
             </div>
             <div className="flex flex-col items-center gap-4 mb-20 sm:overflow-x-auto sm:w-full">
-            <div className="md:flex sm:flex sm:overflow-x-auto flex-nowrap items-center sm:gap-5 md:gap-10 sm:h-[50dvh] md:h-[40dvh] mx-10 sm:w-auto md:w-[110%]">
+            <div className="md:flex sm:flex sm:overflow-x-auto flex-nowrap items-center sm:gap-5 md:gap-10 sm:h-[70dvh] md:h-[40dvh] mx-10 sm:w-auto md:w-[110%]">
               {cards.map((q, i) => (
                 <div
                   key={i}
