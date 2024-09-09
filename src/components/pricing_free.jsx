@@ -10,15 +10,11 @@ function PricingFree() {
   return (
     <>
       <div className="flex items-center justify-center">
-      <div className="h-full w-full absolute z-50 text-center bg-stone-700 bg-opacity-50">
-        For FREE!
+      <div className="flex items-center justify-center h-full w-full absolute z-50 text-center bg-stone-700 bg-opacity-25 bg_blurry">
+        <p className="font-montserrat font-back text-white text-headline-1">For FREE!</p>
       </div>
       <div className="z-0">
-        <p className="font-montserrat text-white font-black text-headline-1 text-center mb-5">
-          PRICING
-        </p>
-        <hr className="bg-stone-400 h-0 border-stone-700" />
-        <div className="flex justify-evenly items-center h-screen">
+        <div className="flex justify-evenly items-center h-auto">
           <div className="bg-stone-800 py-5 px-10 w-96 min-h-[60dvh] flex flex-col justify-between relative">
             <div>
               <p className="font-bold font-comic text-purple-400 text-headline-2">

@@ -50,7 +50,7 @@ function Confirm() {
 
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center my-10">
         <div className="p-10 flex flex-col gap-5 bg-stone-800 border-stone-600">
           <h1 className="text-blue font-comic font-bold text-headline-2">
             Free Song Order Confirmed!
