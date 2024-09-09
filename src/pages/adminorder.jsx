@@ -74,11 +74,11 @@ function AdminOrder() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg_comic">
-      <div className="w-3/5 bg-stone-950 border border-stone-500 rounded-md p-12 flex flex-col gap-6">
+      <div className="md:w-3/5 sm:w-full bg-stone-950 border border-stone-500 rounded-md p-12 flex flex-col gap-6">
         <Link className="text-blue font-montserrat" to="/admin/dashboard">
           Go Back
         </Link>
-        <h1 className="font-comic md:text-headline-1 sm:text-subheadline-2 text-white">
+        <h1 className="font-comic md:text-headline-1 sm:text-subheadline-4 text-blue">
           Order: {order.id}
         </h1>
         <p className="text-white font-bold font-montserrat md:text-subheadline-3 sm:text-subheadline-4">
