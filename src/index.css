@@ -112,6 +112,10 @@ body {
   box-shadow: -5px 5px 0px rgb(9, 216, 239);
 }
 
+.redish-shadow {
+  box-shadow: -5px 5px 0px rgb(241, 26, 33);
+}
+
 .green-shadow {
   box-shadow: -5px 5px 0px rgb(1, 180, 1);
 }
