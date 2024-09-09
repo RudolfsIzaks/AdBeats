@@ -11,7 +11,7 @@ function PricingFree() {
     <>
       <div className="flex items-center justify-center relative p-10">
       <div className="flex justify-center h-full w-full absolute z-50 text-center bg_blurry">
-        <p className="font-montserrat font-black text-white text-headline-1">No Pricings, Simply For Free!</p>
+        <p className="font-montserrat font-black text-white text-headline-3">No Pricings, Simply For Free!</p>
       </div>
       <div className="z-0 scale-50">
         <div className="flex justify-evenly items-center h-auto">
