@@ -318,14 +318,14 @@ function Home() {
         </div>
       ) : (
         <div className="relative bg-black">
-          <img src={exl} className="absolute md:top-10 sm:top-[20%] md:left-10 md:w-32 sm:w-20" alt="" />
+          <img src={exl} className="absolute md:top-10 md:left-10 md:w-32 sm:hidden" alt="" />
           <div className="fixed inset-0 bg-black z-50 animate-split"></div>
           <div className="fixed inset-0 flex items-center justify-center bg-black z-50 animate-split-reverse">
             <div className="animate-pulse-slow">
               <img src={Adbeats} alt="Logo" className="w-64" />
             </div>
           </div>
-          <div className="md:h-screen md:w-screen bg-stone-900 flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
+          <div className="h-screen w-screen bg-stone-900 flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
             <img
               src={questions[currentQuestion].sideImg}
               alt=""
@@ -333,9 +333,9 @@ function Home() {
             />
             <form
               onSubmit={handleSubmit}
-              className="md:p-10 sm:p-2 rounded-md sm:h-screen text-left sm:w-11/12 md:w-1/2"
+              className="md:p-10 sm:p-2 rounded-md text-left sm:w-11/12 md:w-1/2"
             >
-              <div className="md:w-full sm:w-4/5 bg-stone-700 h-2 rounded-full mb-6 md:mx-10 sm:mx-0">
+              <div className="w-full bg-stone-700 h-2 rounded-full mb-6 md:mx-10 sm:mx-0">
                 <div
                   className="bg-blue h-2 rounded-full transition-all duration-300"
                   style={{ width: `${progress}%` }}
