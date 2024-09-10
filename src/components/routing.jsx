@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import AdminDashboard from "../pages/admin";
 import AdminOrder from "../pages/adminorder";
 import OrderRecieve from "../pages/orderRecieve";
+import Pricing from "./pricing";
 
 function RouterSetup() {
   return (
@@ -25,6 +26,7 @@ function RouterSetup() {
             </PrivateRoute>
           }
         />
+        <Route path="/pricing" element={<Pricing />}/>
         <Route
           path="/admin/dashboard"
           element={
