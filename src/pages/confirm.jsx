@@ -79,7 +79,9 @@ function Confirm() {
           </form>
         </div>
       </div>
+      <div className="sm:hidden">
       <PricingFree/>
+      </div>
     </>
   );
 }
