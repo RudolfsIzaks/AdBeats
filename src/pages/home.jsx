@@ -294,7 +294,7 @@ function Home() {
       console.log(response);
   
       // Navigate to the confirmation page with the response data
-      navigate("/confirmation", { state: { response: response.data } });
+      navigate("/pricing", { state: { response: response.data } });
     } catch (error) {
       // Handle any error that occurs during the API call
       console.error("Error submitting the form:", error);
