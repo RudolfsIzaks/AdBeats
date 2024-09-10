@@ -29,7 +29,8 @@ import comic_splash from "../assets/comic_splash.png";
 import seesaw_1 from "../assets/seesaw_1.webp";
 import seesaw_2 from "../assets/seesaw_2.webp";
 import engagement from "../assets/engagement.png";
-import seesaw_4 from '../assets/seesaw_4.webp';
+import seesaw_4 from "../assets/seesaw_4.webp";
+import bang from '../assets/bang.png';
 
 function Landing() {
   const navigate = useNavigate();
@@ -265,7 +266,10 @@ function Landing() {
           <div className="relative flex items-center justify-center w-1/2">
             <div className="absolute w-80 h-auto bg-stone-900 rounded-md p-3 -rotate-12 z-50">
               <div className="relative flex items-center justify-center select-none">
-                <img src={seesaw_1} className="z-50 w-72 h-80 rounded-md select-none" />
+                <img
+                  src={seesaw_1}
+                  className="z-50 w-72 h-80 rounded-md select-none"
+                />
                 <img
                   src={seesaw_1}
                   className="absolute z-0 blur-3xl animate-pulse select-none"
@@ -376,11 +380,54 @@ function Landing() {
           <div className="relative flex items-center justify-center w-1/2">
             <div className="flex items-center justify-center relative p-5 bg-stone-800 rounded-md -rotate-6">
               <img src={seesaw_4} className="rounded-md w-96 z-50" />
-              <img src={seesaw_4} className="absolute rounded-md z-0 blur-3xl animate-pulse" />
+              <img
+                src={seesaw_4}
+                className="absolute rounded-md z-0 blur-3xl animate-pulse"
+              />
             </div>
           </div>
         </div>
-        <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
+        <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mt-32" />
+        <div className="bg-white min-h-screen flex items-center justify-center">
+          <div className="md:w-3/5">
+            <p className="font-comic text-blue text-headline-3 text-center">
+              Tired of Making Ordinary Ads with Ordinary Results?
+            </p>
+            <h1 className="text-headline-2 font-black font-montserrat text-center mb-10">
+              The Next 10 Businesses To Request A Custom Track, Get It 100% For
+              FREE!
+            </h1>
+            <div className="relative bg-stone-800 p-10">
+              <img src={bang} alt="" className="absolute w-64 z-10 -top-24 rotate-12 -right-24"/>
+              <h2 className="text-red-500 font-comic font-bold text-headline-3">
+                Yes, you read that right!
+              </h2>
+              <p className="text-stone-200 font-comic">
+                Our “100% Off for 10” is finally back!
+                <br />
+                <br />
+                We’re offering the next 10 businesses a 100% discount on our
+                starter offer. 
+                <br />
+                <br />
+                So if there was ever an incentive to improve your ads, it’s
+                here. 
+                <br />
+                <br />
+                Remember… 
+                <br />
+                <br />
+                <b className="text-blue">When it comes to getting attention;</b>
+                <br />
+                <br />
+                <b className="text-blue">Nobody beats, Adbeats. </b>
+              </p>
+              <button onClick={handleCTA} className="bg-red-500 text-white px-5 py-2 font-comic font-bold text-subheadline-4 mt-10 red-shadow">
+              Claim Your Starter Adbeats Track!  
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

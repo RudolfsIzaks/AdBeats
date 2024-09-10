@@ -318,24 +318,24 @@ function Home() {
         </div>
       ) : (
         <div className="relative bg-black">
-          <img src={exl} className="absolute top-10 left-10 w-32" alt="" />
+          <img src={exl} className="absolute md:top-10 sm:top-[20%] md:left-10 md:w-32 sm:w-20" alt="" />
           <div className="fixed inset-0 bg-black z-50 animate-split"></div>
           <div className="fixed inset-0 flex items-center justify-center bg-black z-50 animate-split-reverse">
             <div className="animate-pulse-slow">
               <img src={Adbeats} alt="Logo" className="w-64" />
             </div>
           </div>
-          <div className="min-h-screen w-screen bg-stone-900 flex flex-row-reverse items-center justify-between">
+          <div className="h-screen w-screen bg-stone-900 flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
             <img
               src={questions[currentQuestion].sideImg}
               alt=""
-              className="h-screen md:w-1/2"
+              className="md:h-screen md:w-1/2 sm:hidden"
             />
             <form
               onSubmit={handleSubmit}
-              className="p-10 rounded-md text-left w-1/2"
+              className="md:p-10 sm:p-2 rounded-md text-left sm:w-11/12 md:w-1/2"
             >
-              <div className="w-full bg-stone-700 h-2 rounded-full mb-6 mx-10">
+              <div className="md:w-full w-96 bg-stone-700 h-2 rounded-full mb-6 md:mx-10 sm:mx-0">
                 <div
                   className="bg-blue h-2 rounded-full transition-all duration-300"
                   style={{ width: `${progress}%` }}
@@ -343,7 +343,7 @@ function Home() {
               </div>
 
               {currentQuestion < questions.length ? (
-                <div className="flex flex-col justify-between h-[60dvh] p-10">
+                <div className="flex flex-col md:justify-between md:h-[60dvh] md:p-10">
                   <div className="mb-4">
                     <label className="block text-left text-white text-3xl font-bold mb-10">
                       {questions[currentQuestion].question}
