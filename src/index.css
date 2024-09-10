@@ -12,7 +12,7 @@ body {
 
 @media only screen and (min-width: 762px) {
   .flowin {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 
