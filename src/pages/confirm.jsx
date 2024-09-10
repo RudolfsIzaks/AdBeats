@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../index.css";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Confirm() {
   const navigate = useNavigate();
