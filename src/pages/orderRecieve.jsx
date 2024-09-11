@@ -9,11 +9,13 @@ function OrderRecieve() {
   const [audioUrl, setAudioUrl] = useState("");
   const [feedBack, setFeedback] = useState(false);
   const [discount, setDiscount] = useState(false);
+  const [feedWidth, setFeedWidth] = useState(false);
   const [errorMessage, setErrorMessage] = useState(""); // State for error handling
   const [loading, setLoading] = useState(false); // State for loading status
 
   const handleReviews = () => {
     setDiscount(true);
+    setFeedWidth(true);
   };
 
   const handleCTA = async () => {
@@ -44,6 +46,7 @@ function OrderRecieve() {
 
   // Conditionally render feedDisplay and discountDisplay based on state
   const feedDisplay = feedBack ? 'flex' : 'hidden';
+  const widthFeed = feedWidth ? 'w-3/5' : 'w-2/5';
   const discountDisplay = discount ? 'block' : 'hidden';
 
   return (
@@ -107,11 +110,11 @@ function OrderRecieve() {
           </div>
         </div>
         <div className="flex items-center justify-center">
-        <div className={`md:w-3/5 bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-betwee m-10`}>
+        <div className={`md:${widthFeed} bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-betwee m-10`}>
           <div className="flex flex-col gap-5">
             <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
             <p className="font-comic text-blue">Write Your opinion on Our product And Get A 50% discount on your next order!</p>
-            <textarea name="" rows="5" placeholder="Write Your Feedback here..." className="appearance-none bg-transparent outline-none border border-white p-3 placeholder:text-gray-500"></textarea>
+            <textarea name="" rows="5" placeholder="Write Your Feedback here..." className="appearance-none bg-transparent text-stone-200 outline-none border border-white p-3 placeholder:text-gray-500"></textarea>
             <button onClick={handleReviews} className="text-white text-subheadline-3 w-64 font-comic bg-red-500 py-2 px-4">Submit Review</button>
           </div>
           <span className={`h-96 w-[2px] bg-white rounded-md ${discountDisplay}`}></span>
