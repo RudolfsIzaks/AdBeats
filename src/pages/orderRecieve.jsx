@@ -15,8 +15,6 @@ function OrderRecieve() {
   const [loading, setLoading] = useState(false); // State for loading status
 
   const handleReviews = async (e) => {
-    e.preventDefault();
-
     setDiscount(true);
   }
  
