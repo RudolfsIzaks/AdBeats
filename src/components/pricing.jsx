@@ -22,9 +22,9 @@ function Pricing() {
     navigate("/confirmation", { state: { id: apiResponse.id } });
   };
 
-  if(apiResponse.id == null) {
-    navigate("/qualify")
-  }
+  // if(apiResponse.id == null) {
+  //   navigate("/qualify")
+  // }
 
   // Handle Stripe Checkout for Pro and Elite plans
   const handleCheckout = async (priceId) => {
