@@ -19,7 +19,7 @@ function Confirm() {
 
   return (
     <>
-      <div className="flex h-screen items-center justify-center my-10">
+      <div className="flex h-screen items-center justify-center">
         <div className="p-10 flex flex-col gap-5 bg-stone-800 border-stone-600">
           <h1 className="text-blue font-comic font-bold sm:text-subheadline-3 md:text-headline-2">
             {orderId ? "Your Order is Confirmed!" : "No Order Found!"}

@@ -31,6 +31,7 @@ import seesaw_2 from "../assets/seesaw_2.webp";
 import engagement from "../assets/engagement.png";
 import seesaw_4 from "../assets/seesaw_4.webp";
 import bang from '../assets/bang.png';
+import Footer from "../components/footer";
 
 function Landing() {
   const navigate = useNavigate();
@@ -429,6 +430,7 @@ function Landing() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
