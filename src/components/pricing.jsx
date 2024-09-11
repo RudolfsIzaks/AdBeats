@@ -69,7 +69,7 @@ function Pricing() {
               <p className="font-bold font-comic text-purple-400 text-headline-2">Starter</p>
               <div className="flex items-center justify-start relative">
               <p className="font-black font-montserrat text-white text-headline-1 z-0">77$</p>
-              <span className="absolute z-10 left-0 w-64 h-1 bg-red-500 -rotate-45"></span>
+              <span className="absolute z-10 -left-10 w-32 h-1 bg-red-500 -rotate-45"></span>
               </div>
             </div>
             <ul className="mt-10 flex flex-col gap-5">
