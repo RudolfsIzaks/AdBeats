@@ -325,7 +325,7 @@ function Home() {
               <img src={Adbeats} alt="Logo" className="w-64" />
             </div>
           </div>
-          <div className="h-screen w-screen bg-stone-900 flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
+          <div className="w-full h-full bg-stone-900 m-10 rounded-md flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
             <img
               src={questions[currentQuestion].sideImg}
               alt=""
