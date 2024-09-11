@@ -22,6 +22,10 @@ function Pricing() {
     navigate("/confirmation", { state: { id: apiResponse.id } });
   };
 
+  if(apiResponse.id == null) {
+    navigate("/qualify")
+  }
+
   // Handle Stripe Checkout for Pro and Elite plans
   const handleCheckout = async (priceId) => {
     const stripe = await stripePromise;
@@ -46,6 +50,7 @@ function Pricing() {
     }
   };
 
+
   return (
     <>
       <div>
@@ -62,9 +67,10 @@ function Pricing() {
           <div className="bg-stone-800 py-5 px-10 w-96 min-h-[60dvh] flex flex-col justify-between relative">
             <div>
               <p className="font-bold font-comic text-purple-400 text-headline-2">Starter</p>
-              <p className="font-black font-montserrat text-white text-headline-1">
-                <span className="text-red-500"><del>77$</del></span>
-              </p>
+              <div className="flex items-center justify-start relative">
+              <p className="font-black font-montserrat text-white text-headline-1 z-0">77$</p>
+              <span className="absolute z-10 left-0 w-64 h-1 bg-red-500 -rotate-45"></span>
+              </div>
             </div>
             <ul className="mt-10 flex flex-col gap-5">
               <div className="flex gap-3 items-center">
