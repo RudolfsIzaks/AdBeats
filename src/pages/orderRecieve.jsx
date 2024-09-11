@@ -112,9 +112,9 @@ function OrderRecieve() {
             <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
             <p className="font-comic text-blue">Write Your opinion on Our product And Get A 50% discount on your next order!</p>
             <textarea name="" rows="5" placeholder="Write Your Feedback here..." className="appearance-none bg-transparent outline-none border border-white p-3 placeholder:text-gray-500"></textarea>
-            <button onClick={handleReviews} className="text-white text-subheadline-3 font-comic bg-red-500 py-2 px-4">Submit Review</button>
+            <button onClick={handleReviews} className="text-white text-subheadline-3 w-64 font-comic bg-red-500 py-2 px-4">Submit Review</button>
           </div>
-          <span className={`h-96 w-1 bg-white rounded-md ${discountDisplay}`}></span>
+          <span className={`h-96 w-[2px] bg-white rounded-md ${discountDisplay}`}></span>
           <img src={discountis} className={`h-96 w-auto ${discountDisplay}`} alt="Discount offer"/>
         </div>
         </div>
