@@ -71,8 +71,8 @@ function Pricing() {
               <p className="font-black font-montserrat text-stone-200 text-headline-1 z-0">77$</p>
               <span className="absolute z-10 -left-3 w-36 h-2 rounded-md bg-red-500 -rotate-12"></span>
               </div>
+              <p className="font-black font-montserrat text-white text-headline-3 z-0">0$</p>
             </div>
-            <p className="font-black font-montserrat text-white text-headline-3 z-0">0$</p>
             <ul className="mt-10 flex flex-col gap-5">
               <div className="flex gap-3 items-center">
                 <FontAwesomeIcon icon={faMusic} className="text-2xl text-white" />
