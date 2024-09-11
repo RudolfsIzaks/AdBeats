@@ -11,7 +11,7 @@ function Footer() {
          <hr className="bg-stone-400 h-0 border-stone-700" />
          <nav className="flex justify-between p-10">
             <img src={AdBeats} className="w-1/6" />
-            <div className="flex gap-10 flex-grow">
+            <div className="flex gap-10">
             <div className="flex flex-col items-center gap-2">
                 <Link className="text-stone-300 text-left md:w-96" to="/faq">FAQs</Link>
                 <Link className="text-stone-300 text-left md:w-96" to="/privacy">Privacy Policy</Link>
