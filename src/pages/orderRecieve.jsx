@@ -106,7 +106,8 @@ function OrderRecieve() {
             )}
           </div>
         </div>
-        <div className={`md:w-3/5 bg-stone-700 p-10 ${feedDisplay} gap-5 items-center justify-betwee m-10`}>
+        <div className="flex items-center justify-center">
+        <div className={`md:w-3/5 bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-betwee m-10`}>
           <div className="flex flex-col gap-5">
             <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
             <p className="font-comic text-blue">Write Your opinion on Our product And Get A 50% discount on your next order!</p>
@@ -115,6 +116,7 @@ function OrderRecieve() {
           </div>
           <span className={`h-96 w-1 bg-white rounded-md ${discountDisplay}`}></span>
           <img src={discountis} className={`h-96 w-auto ${discountDisplay}`} alt="Discount offer"/>
+        </div>
         </div>
       </div>
     </>
