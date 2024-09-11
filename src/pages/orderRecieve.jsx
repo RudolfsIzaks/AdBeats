@@ -14,7 +14,7 @@ function OrderRecieve() {
   const [errorMessage, setErrorMessage] = useState(""); // State for error handling
   const [loading, setLoading] = useState(false); // State for loading status
 
-  const handleReviews = async (e) => {
+  const handleReviews = () => {
     setDiscount(true);
   }
  
