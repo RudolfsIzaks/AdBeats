@@ -2,14 +2,26 @@ import React, { useState } from "react";
 import '../index.css';
 import axios from "axios";
 import AdBeats from "../assets/AdBeats.png"; // Add path to your logo image
+import discountis from '../assets/discountis.png';
 
 function OrderRecieve() {
   const [orderId, setOrderId] = useState(""); // State to store order ID
-  const [audioUrl, setAudioUrl] = useState(""); // State to store audio URL
+  const [audioUrl, setAudioUrl] = useState("");
+  const [feedBack, setFeedback] = useState(false);
+  const [discount, setDiscount] = useState(false);
+  const [discountDisplay, setDiscountDisplay] = useState(''); // State to store audio URL
+  const [feedDisplay, setFeedDisplay] = useState(""); // State to store audio URL
   const [errorMessage, setErrorMessage] = useState(""); // State for error handling
   const [loading, setLoading] = useState(false); // State for loading status
 
+  const handleReviews = async (e) => {
+    e.preventDefault();
+
+    setDiscount(true);
+  }
+ 
   const handleCTA = async () => {
+    setFeedback(false);
     setLoading(true); // Start loading spinner
     setErrorMessage(""); // Clear previous errors
     setAudioUrl(""); // Clear previous audio URL
@@ -22,6 +34,7 @@ function OrderRecieve() {
       // Check if the response contains the audio URL
       if (response.data.audioUrl) {
         setAudioUrl(response.data.audioUrl);
+        setFeedback(true)
       } else {
         setErrorMessage("No audio file found for this order.");
       }
@@ -32,6 +45,22 @@ function OrderRecieve() {
 
     setLoading(false); // Stop loading spinner
   };
+
+  if(feedBack == false) {
+    setFeedDisplay('hidden');
+  } else if(feedBack == true ) {
+    setFeedDisplay('flex');
+  } else {
+    setFeedDisplay('hidden')
+  }
+
+  if(discount == true) {
+    setDiscountDisplay('block');
+  } else {
+    setDiscountDisplay('hidden');
+  }
+
+
 
   return (
     <>
@@ -92,6 +121,16 @@ function OrderRecieve() {
               </div>
             )}
           </div>
+        </div>
+        <div className={`bg-stone-700 p-10 ${feedDisplay} gap-5 items-center justify-between`}>
+           <div className="flex flex-col gap-5">
+            <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
+            <p className="font-comic text-blue">Write Your opinion on Our product And Get A 50% discount on your next order!</p>
+            <textarea name="" rows="5" placeholder="Write Your Feedback here..." className="appearance-none bg-transparent outline-none border border-white p-3 placeholder:text-gray-500" id=""></textarea>
+            <button onClick={handleReviews} className="text-white text-subheadline-3 font-comic bg-red-500 py-2 px-4">Submit Review</button>
+           </div>
+           <span className={`h-96 w-1 bg-white rounded-md ${discountDisplay}`}></span>
+           <img src={discountis} className={`h-96 w-auto ${discountDisplay}`}></img>
         </div>
       </div>
     </>
