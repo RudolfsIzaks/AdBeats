@@ -4,7 +4,7 @@ import axios from "axios";
 import AdBeats from "../assets/AdBeats.png"; // Add path to your logo image
 import discountis from '../assets/discountis.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 function OrderRecieve() {
   const [orderId, setOrderId] = useState(""); // State to store order ID
@@ -123,18 +123,18 @@ function OrderRecieve() {
                 <div className="flex items-center gap-5 justify-start">
                 <button
                   onClick={handlePlayPause}
-                  className="py-2 px-10 mt-4 bg-stone-100 text-black font-comic font-bold text-headline-3 text-center border border-stone-100 transition hover:bg-transparent hover:text-stone-100"
+                  className=""
                 >
                   <FontAwesomeIcon 
-                    icon={isPlaying ? faPlay : faDownload}
-                    className=""
+                    icon={isPlaying ? faPause : faPlay}
+                    className="text-blue text-2xl hover:cursor-pointer hover:scale-110 transition"
                   />
                 </button>
                 <audio ref={audioRef} src={audioUrl} className="hidden" />
                 <a href={audioRef}>
                   <FontAwesomeIcon 
                      icon={faDownload}
-                     className="p-3 text-stone-200 text-2xl rounded-md hover:scale-110 transition"
+                     className="p-3 text-stone-200 text-2xl rounded-md hover:cursor-pointer hover:scale-110 transition"
                   />
                 </a>
                 </div>
