@@ -12,10 +12,25 @@ function OrderRecieve() {
   const [feedWidth, setFeedWidth] = useState(false);
   const [errorMessage, setErrorMessage] = useState(""); // State for error handling
   const [loading, setLoading] = useState(false); // State for loading status
+  const [feedbackText, setFeedbackText] = useState(""); // State for feedback text
 
-  const handleReviews = () => {
+  const handleReviews = async () => {
     setDiscount(true);
     setFeedWidth(true);
+
+    // Create formData object
+    const formData = {
+      feedback: feedbackText,
+      orderId: orderId
+    };
+
+    try {
+      // Placeholder Axios POST request for form submission
+      await axios.post("https://yourapi.com/submitFeedback", formData);
+      console.log("Feedback submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting feedback:", error);
+    }
   };
 
   const handleCTA = async () => {
@@ -110,11 +125,18 @@ function OrderRecieve() {
           </div>
         </div>
         <div className="flex items-center justify-center">
-        <div className={`md:${widthFeed} bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-betwee m-10 transition`}>
+        <div className={`md:${widthFeed} bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-betwee m-10 transition-all duration-500 ease-in-out`}>
           <div className="flex flex-col gap-5">
             <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
             <p className="font-comic text-blue">Write Your opinion on Our product And Get A 50% discount on your next order!</p>
-            <textarea name="" rows="5" placeholder="Write Your Feedback here..." className="appearance-none bg-transparent text-stone-200 outline-none border border-white p-3 placeholder:text-gray-500"></textarea>
+            <textarea 
+              name="" 
+              rows="5" 
+              placeholder="Write Your Feedback here..." 
+              value={feedbackText} 
+              onChange={(e) => setFeedbackText(e.target.value)} 
+              className="appearance-none bg-transparent text-stone-200 outline-none border border-white p-3 placeholder:text-gray-500"
+            ></textarea>
             <button onClick={handleReviews} className="text-white text-subheadline-3 w-64 font-comic bg-red-500 py-2 px-4">Submit Review</button>
           </div>
           <span className={`h-96 w-[2px] bg-white rounded-md ${discountDisplay}`}></span>
