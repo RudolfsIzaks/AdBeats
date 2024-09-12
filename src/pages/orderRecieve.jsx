@@ -67,13 +67,13 @@ function OrderRecieve() {
   return (
     <>
       <div className="">
-        <div className="absolute">
+        <div className="absolute z-50">
           <nav className="flex justify-center items-center p-5">
             <img src={AdBeats} className="w-48" alt="AdBeats Logo" />
           </nav>
           <div className="w-screen h-[1px] hr-gradient"></div>
         </div>
-        <div className="h-[80dvh] flex items-end justify-center z-10 bg-backgroundblack relative">
+        <div className="h-[60dvh] flex items-end justify-center z-10 bg-backgroundblack relative">
           <div className="md:w-2/3 flex flex-col items-center">
             <p className="font-comic text-blue text-center text-2xl">
               If you got an email that your order is ready
