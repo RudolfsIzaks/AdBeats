@@ -60,7 +60,7 @@ function OrderRecieve() {
   };
 
   // Conditionally render feedDisplay and discountDisplay based on state
-  const feedDisplay = feedBack ? 'flex' : 'hidden';
+  const feedDisplay = feedBack ? '-translate-y-[0%] z-0' : '-translate-y-[200%] z-0';
   const widthFeed = feedWidth ? 'w-3/5' : 'w-2/5';
   const discountDisplay = discount ? 'block' : 'hidden';
 
@@ -73,7 +73,7 @@ function OrderRecieve() {
           </nav>
           <div className="w-screen h-[1px] hr-gradient"></div>
         </div>
-        <div className="h-[60dvh] flex items-end mt-12 justify-center">
+        <div className="h-[60dvh] flex items-end mt-12 justify-center z-10 relative">
           <div className="md:w-2/3 flex flex-col items-center">
             <p className="font-comic text-blue text-center text-2xl">
               If you got an email that your order is ready
@@ -125,7 +125,7 @@ function OrderRecieve() {
           </div>
         </div>
         <div className="flex items-center justify-center">
-        <div className={`md:${widthFeed} bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-betwee m-10 transition-all duration-500 ease-in-out`}>
+        <div className={`md:${widthFeed} relative bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-between m-10 transition-all duration-500 ease-in-out`}>
           <div className="flex flex-col gap-5">
             <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
             <p className="font-comic text-blue">Write Your opinion on Our product And Get A 50% discount on your next order!</p>
