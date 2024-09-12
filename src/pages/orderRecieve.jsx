@@ -4,7 +4,7 @@ import axios from "axios";
 import AdBeats from "../assets/AdBeats.png"; // Add path to your logo image
 import discountis from '../assets/discountis.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 function OrderRecieve() {
   const [orderId, setOrderId] = useState(""); // State to store order ID
@@ -118,23 +118,26 @@ function OrderRecieve() {
             )}
 
             {audioUrl && (
-              <div className="mt-6">
-                <p className="text-green-500 font-comic">
-                  Your song is ready! Click below to listen:
-                </p>
+              <div className="mt-6 flex flex-col gap-2 w-96 p-3 rounded-md bg-stone-900">
+                <p className="text-stone-200 font-comic">Song Order: {orderId}</p>
+                <div className="flex items-center gap-5 justify-start">
                 <button
                   onClick={handlePlayPause}
                   className="py-2 px-10 mt-4 bg-stone-100 text-black font-comic font-bold text-headline-3 text-center border border-stone-100 transition hover:bg-transparent hover:text-stone-100"
                 >
-                  {isPlaying ? "Pause" : "Play"} Song
+                  <FontAwesomeIcon 
+                    icon={isPlaying ? faPlay : faDownload}
+                    className=""
+                  />
                 </button>
                 <audio ref={audioRef} src={audioUrl} className="hidden" />
                 <a href={audioRef}>
                   <FontAwesomeIcon 
                      icon={faDownload}
-                     className="p-3 bg-blue text-white text-2xl rounded-md hover:scale-110 transition"
+                     className="p-3 text-stone-200 text-2xl rounded-md hover:scale-110 transition"
                   />
                 </a>
+                </div>
               </div>
             )}
           </div>
