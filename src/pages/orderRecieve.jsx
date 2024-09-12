@@ -66,7 +66,7 @@ function OrderRecieve() {
 
   return (
     <>
-      <div className="flowin">
+      <div className="">
         <div className="absolute">
           <nav className="flex justify-center items-center p-5">
             <img src={AdBeats} className="w-48" alt="AdBeats Logo" />
