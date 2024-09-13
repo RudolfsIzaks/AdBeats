@@ -132,8 +132,8 @@ function OrderRecieve() {
                 </button>
                 <audio ref={audioRef} src={audioUrl} className="hidden" />
                 <a
-                download
-                href={audioRef}
+                download={audioUrl}
+                href={audioUrl}
                 >
                   <FontAwesomeIcon 
                      icon={faDownload}
