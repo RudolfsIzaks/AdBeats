@@ -230,12 +230,12 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex gap-10 items-center md:mx-32">
-          <div className="w-1/2">
-            <p className="text-blue font-comic text-subheadline-3 my-2 select-none">
+        <div className="flex sm:flex-col-reverse gap-10 items-center sm:mx-5 md:mx-32">
+          <div className="md:w-1/2">
+            <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2 select-none">
               Take the first step towards transforming your ad performance.
             </p>
-            <h1 className="text-white font-montserrat font-black text-headline-2 my-5 select-none">
+            <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5 select-none">
               Your Ads Can Be Unforgettable
             </h1>
             <p className="text-stone-400 select-none">
@@ -264,12 +264,12 @@ function Landing() {
               Sign up now and experience the AdBeats difference!
             </Link>
           </div>
-          <div className="relative flex items-center justify-center w-1/2">
-            <div className="absolute w-80 h-auto bg-stone-900 rounded-md p-3 -rotate-12 z-50">
+          <div className="relative flex items-center justify-center sm:mb-32 sm:mt-10 md:w-1/2">
+            <div className="absolute sm:w-48 md:w-80 h-auto bg-stone-900 rounded-md p-3 -rotate-12 z-50">
               <div className="relative flex items-center justify-center select-none">
                 <img
                   src={seesaw_1}
-                  className="z-50 w-72 h-80 rounded-md select-none"
+                  className="z-50 md:w-72 md:h-80 rounded-md select-none"
                 />
                 <img
                   src={seesaw_1}
@@ -277,20 +277,20 @@ function Landing() {
                 />
               </div>
             </div>
-            <div className="flex items-center absolute w-80 h-96 bg-stone-800 rounded-md p-3 rotate-12 right-10 z-0">
+            <div className="flex items-center absolute sm:w-20 sm:h-32 md:w-80 md:h-96 bg-stone-800 rounded-md p-3 sm:-rotate-45 md:rotate-12 sm:right-16 md:right-10 z-0">
               <div className="relative flex items-center justify-center">
-                <img src={AdBeats} className="z-50 w-72  rounded-md" />
+                <img src={AdBeats} className="z-50 md:w-72  rounded-md" />
               </div>
             </div>
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex flex-row-reverse gap-10 items-center md:mx-32">
-          <div className="w-1/2">
-            <p className="text-blue font-comic text-subheadline-3 my-2">
+        <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 items-center md:mx-32 sm:mx-5">
+          <div className="md:w-1/2">
+            <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Attention is the new currency in the world of advertising.
             </p>
-            <h1 className="text-white font-montserrat font-black text-headline-2 my-5">
+            <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
               Stand Out with Unique, Attention-Grabbing Ads
             </h1>
             <p className="text-stone-400">
@@ -309,23 +309,23 @@ function Landing() {
               meant to persuade! The result? Ads that can't be ignored.
             </p>
           </div>
-          <div className="relative flex items-center justify-center w-1/2">
+          <div className="relative flex items-center justify-center md:w-1/2">
             <div className="flex items-center justify-center relative">
-              <img src={seesaw_2} className="w-3/5 rounded-md z-50" />
+              <img src={seesaw_2} className="sm:w-full sm:mx-5 md:w-3/5 rounded-md z-50" />
               <img
                 src={seesaw_2}
-                className="absolute w-3/5 z-0 blur-3xl animate-pulse"
+                className="absolute sm:w-full sm:mx-5 md:w-3/5 z-0 sm:blur-xl md:blur-3xl animate-pulse"
               />
             </div>
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex gap-10 items-center md:mx-32">
-          <div className="w-1/2">
-            <p className="text-blue font-comic text-subheadline-3 my-2">
+        <div className="flex sm:flex-col-reverse gap-10 items-center md:mx-32 sm:mx-5">
+          <div className="md:w-1/2">
+            <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Transform Mere Attention into Laser-Focused Interest…
             </p>
-            <h1 className="text-white font-montserrat font-black text-headline-2 my-5">
+            <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
               Boost Engagement and Retention, Instantly
             </h1>
             <p className="text-stone-400">
@@ -346,7 +346,7 @@ function Landing() {
               costs- exponentially boosting your ROI!
             </p>
           </div>
-          <div className="relative flex items-center justify-center w-1/2">
+          <div className="relative flex items-center justify-center md:w-1/2">
             <div className="flex items-center justify-center relative">
               <img src={engagement} className="rounded-md z-50" />
               <img src={engagement} className="absolute rounded-md z-0" />
@@ -354,9 +354,9 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex flex-row-reverse gap-10 items-center md:mx-32">
-          <div className="w-1/2">
-            <h1 className="text-white font-montserrat font-black text-headline-2 my-5">
+        <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 items-center md:mx-32 sm:mx-5">
+          <div className="md:w-1/2">
+            <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
               Create Timeless Ads that Defy Ad Fatigue
             </h1>
             <p className="text-stone-400">
@@ -378,12 +378,12 @@ function Landing() {
               your marketing efforts yield long-term results.
             </p>
           </div>
-          <div className="relative flex items-center justify-center w-1/2">
+          <div className="relative flex items-center justify-center md:w-1/2">
             <div className="flex items-center justify-center relative p-5 bg-stone-800 rounded-md -rotate-6">
-              <img src={seesaw_4} className="rounded-md w-96 z-50" />
+              <img src={seesaw_4} className="rounded-md sm:w-64 md:w-96 z-50" />
               <img
                 src={seesaw_4}
-                className="absolute rounded-md z-0 blur-3xl animate-pulse"
+                className="absolute rounded-md z-0 sm:blur-xl md:blur-3xl animate-pulse"
               />
             </div>
           </div>
@@ -391,15 +391,15 @@ function Landing() {
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mt-32" />
         <div className="bg-white min-h-screen flex items-center justify-center">
           <div className="md:w-3/5">
-            <p className="font-comic text-blue text-headline-3 text-center">
+            <p className="font-comic text-blue md:text-headline-3 text-center sm:py-5">
               Tired of Making Ordinary Ads with Ordinary Results?
             </p>
-            <h1 className="text-headline-2 font-black font-montserrat text-center mb-10">
-              The Next 10 Businesses To Request A Custom Track, Get It 100% For
+            <h1 className="md:text-headline-2 sm:text-subheadline-3 font-black font-montserrat text-center mb-10">
+              The Next 10 Businesses To Request A Custom Track, <br /> Get It 100% For
               FREE!
             </h1>
             <div className="relative bg-stone-800 p-10">
-              <img src={bang} alt="" className="absolute w-64 z-10 -top-24 rotate-12 -right-24"/>
+              <img src={bang} alt="" className="absolute sm:w-20 md:w-64 z-10 sm:-top-12 md:-top-24 rotate-12 md:-right-24"/>
               <h2 className="text-red-500 font-comic font-bold text-headline-3">
                 Yes, you read that right!
               </h2>
