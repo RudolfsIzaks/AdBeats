@@ -86,7 +86,7 @@ function OrderRecieve() {
           </nav>
           <div className="w-screen h-[1px] hr-gradient"></div>
         </div>
-        <div className="h-[60dvh] flex items-end justify-center z-10 bg-backgroundblack relative">
+        <div className="min-h-[100dvh] flex items-end justify-center z-10 bg-backgroundblack relative">
           <div className="w-2/3 flex flex-col items-center">
             <p className="font-comic text-blue text-center text-2xl">
               If you got an email that your order is ready
