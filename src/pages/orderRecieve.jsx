@@ -73,7 +73,7 @@ function OrderRecieve() {
   };
 
   // Conditionally render feedDisplay and discountDisplay based on state
-  const feedDisplay = feedBack ? '-translate-y-[0%] z-0' : '-translate-y-[200%] z-0';
+  const feedDisplay = feedBack ? 'md:-translate-y-[50%] z-0' : '-translate-y-[200%] z-0';
   const widthFeed = feedWidth ? 'w-3/5' : 'w-2/5';
   const discountDisplay = discount ? 'block' : 'hidden';
 
