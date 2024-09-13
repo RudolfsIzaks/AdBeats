@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../index.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import { faMusic, faTag } from "@fortawesome/free-solid-svg-icons";
 import splash_grey from '../assets/splash_grey.png';
 import splash_red from '../assets/splash_red.png';
 import splash_purple from '../assets/splash_purple.png';
@@ -17,24 +17,24 @@ function Pricing() {
   const location = useLocation();
   const apiResponse = location.state?.response; // Pre-generated Order ID
 
+  const [starterCoupon, setStarterCoupon] = useState(""); // Coupon for Starter Plan
+  const [proCoupon, setProCoupon] = useState(""); // Coupon for Pro Plan
+
   // Handle Free Starter Pack (navigate directly to confirmation page)
   const handleFreeStarterPack = () => {
     navigate("/confirmation", { state: { id: apiResponse.id } });
   };
 
-  // if(apiResponse.id == null) {
-  //   navigate("/qualify")
-  // }
-
   // Handle Stripe Checkout for Pro and Elite plans
-  const handleCheckout = async (priceId) => {
+  const handleCheckout = async (priceId, couponCode) => {
     const stripe = await stripePromise;
 
     try {
       // Create a payment session from the backend
       const { data } = await axios.post("https://aqueous-tor-91749-7319d44de38a.herokuapp.com/create-checkout-session", {
         priceId, // Pass the Stripe Price ID
-        orderId: apiResponse.id, // Pass the pre-generated Order ID for tracking
+        orderId: apiResponse.id,
+        couponCode, // Pass the coupon code entered by the user
       });
 
       // Redirect to Stripe's checkout page
@@ -50,7 +50,6 @@ function Pricing() {
     }
   };
 
-
   return (
     <>
       <div>
@@ -58,9 +57,6 @@ function Pricing() {
           PRICING
         </p>
         <hr className="bg-stone-400 h-0 border-stone-700" />
-        <p className="text-sm font-normal text-white text-center">
-          Potential order id: {apiResponse?.id}
-        </p>
         <div className="flex justify-evenly items-center h-screen">
           
           {/* Starter Plan (Free) */}
@@ -85,6 +81,16 @@ function Pricing() {
               <div className="flex gap-3 items-center">
                 <FontAwesomeIcon icon={faMusic} className="text-2xl text-white" />
                 <p className="font-comic text-white">100% SoundSuccess* Guarantee</p>
+              </div>
+              <div className="flex gap-3 items-center">
+                <FontAwesomeIcon icon={faTag} className="text-2xl text-white" />
+                <input
+                  placeholder="Coupon Code..."
+                  type="text"
+                  className="bg-stone-700 border-stone-400 rounded-md p-3 placeholder:text-stone-300"
+                  value={starterCoupon}
+                  onChange={(e) => setStarterCoupon(e.target.value)} // Set coupon value for Starter plan
+                />
               </div>
             </ul>
             <button 
@@ -119,9 +125,19 @@ function Pricing() {
                   <FontAwesomeIcon icon={faMusic} className="text-2xl text-white" />
                   <p className="font-comic text-white">100% SoundSuccess* Guarantee</p>
                 </div>
+                <div className="flex gap-3 items-center">
+                  <FontAwesomeIcon icon={faTag} className="text-2xl text-white" />
+                  <input
+                    placeholder="Coupon Code..."
+                    type="text"
+                    className="bg-stone-700 border-stone-400 rounded-md p-3 placeholder:text-stone-300"
+                    value={proCoupon}
+                    onChange={(e) => setProCoupon(e.target.value)} // Set coupon value for Pro plan
+                  />
+                </div>
               </ul>
               <button 
-                onClick={() => handleCheckout('price_1PxSVxLpY4qbPyJ5mPb2eRFR')} // Use correct Stripe Price ID
+                onClick={() => handleCheckout('price_1PxSVxLpY4qbPyJ5mPb2eRFR', proCoupon)} // Pass coupon to handleCheckout
                 className="bg-blue px-5 py-3 font-comic font-bold text-subheadline-4 mt-10 redish-shadow">
                 Get Pro (50% OFF)
               </button>
