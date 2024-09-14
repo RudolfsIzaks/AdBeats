@@ -230,7 +230,7 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex sm:flex-col-reverse gap-10 items-center sm:mx-5 md:mx-32">
+        <div className="flex sm:flex-col-reverse gap-10 md:justify-center items-center sm:mx-5 md:mx-32">
           <div className="md:w-1/2">
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2 select-none">
               Take the first step towards transforming your ad performance.
@@ -285,7 +285,7 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 items-center md:mx-32 sm:mx-5">
+        <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 md:justify-center items-center md:mx-32 sm:mx-5">
           <div className="md:w-1/2">
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Attention is the new currency in the world of advertising.
@@ -320,7 +320,7 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex sm:flex-col-reverse gap-10 items-center md:mx-32 sm:mx-5">
+        <div className="flex sm:flex-col-reverse gap-10 md:justify-center md:mx-32 sm:mx-5">
           <div className="md:w-1/2">
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Transform Mere Attention into Laser-Focused Interest…
@@ -354,7 +354,7 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 items-center md:mx-32 sm:mx-5">
+        <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 md:justify-center items-center md:mx-32 sm:mx-5">
           <div className="md:w-1/2">
             <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
               Create Timeless Ads that Defy Ad Fatigue
@@ -394,7 +394,7 @@ function Landing() {
             <p className="font-comic text-blue md:text-headline-3 text-center sm:py-5">
               Tired of Making Ordinary Ads with Ordinary Results?
             </p>
-            <h1 className="md:text-headline-2 sm:text-subheadline-3 font-black font-montserrat text-center mb-10">
+            <h1 className="md:text-headline-2 sm:text-subheadline-3 text-white font-black font-montserrat text-center mb-10">
               The Next 10 Businesses To Request A Custom Track, <br /> Get It 100% For
               FREE!
             </h1>
