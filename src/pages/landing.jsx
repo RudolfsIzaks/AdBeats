@@ -32,6 +32,8 @@ import engagement from "../assets/engagement.png";
 import seesaw_4 from "../assets/seesaw_4.webp";
 import bang from '../assets/bang.png';
 import Footer from "../components/footer";
+import grinman from '../assets/grinman.png';
+import bomb from '../assets/bomb.png';
 
 function Landing() {
   const navigate = useNavigate();
@@ -126,12 +128,25 @@ function Landing() {
             (That allows them to get 50% of online traffic, dirt cheap…)
           </p>
         </div>
-        <div className="flex items-center justify-center relative min-h-[80dvh] sm:scale-75">
-          <img src={comic_splash} alt="" className="absolute z-0 select-none" />
-          <p className="z-10 font-comic w-64 text-2xl font-bold -rotate-12">
-            {" "}
-            It’s all about grabbing and holding attention!
-          </p>
+        <div className="flex justify-center items-center">
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-3">
+              <img src={bomb} alt="" className="w-20" />
+              <p className="text-headline-3 text-red-500 font-comic font-bold"> It’s not their endless budget</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <img src={bomb} alt="" className="w-20" />
+              <p className="text-headline-3 text-red-500 font-comic font-bold">  It’s not their “brand”</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <img src={bomb} alt="" className="w-20" />
+              <p className="text-headline-3 text-red-500 font-comic font-bold"> And it’s not the quality of their product.</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center relative">
+            <img src={grinman} className="relative z-10" />
+            <img src={grinman} className="absolute z-0 blur-2xl animate-pulse"/>
+          </div>
         </div>
         <div className="flex flex-col gap-10 items-center">
           <div className="flex flex-col items-center gap-5 text-center md:mt-20">
