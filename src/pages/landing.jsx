@@ -389,7 +389,7 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mt-32" />
-        <div className="bg-white min-h-screen flex items-center justify-center">
+        <div className="bg-backgroundblack min-h-screen flex items-center justify-center">
           <div className="md:w-3/5">
             <p className="font-comic text-blue md:text-headline-3 text-center sm:py-5">
               Tired of Making Ordinary Ads with Ordinary Results?
