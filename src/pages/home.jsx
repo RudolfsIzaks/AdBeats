@@ -325,15 +325,15 @@ function Home() {
               <img src={Adbeats} alt="Logo" className="w-64" />
             </div>
           </div>
-          <div className="md:w-auto sm:h-screen sm:w-screen md:h-full bg-stone-900 m-10 rounded-md flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
+          <div className="md:w-auto sm:h-[80dvh] sm:w-full sm:p-5 md:h-full bg-stone-900 md:m-10 rounded-md flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
             <img
               src={questions[currentQuestion].sideImg}
               alt=""
-              className="md:h-full md:w-1/2 sm:hidden rounded-r-md"
+              className="h-full md:w-1/2 sm:hidden rounded-r-md"
             />
             <form
               onSubmit={handleSubmit}
-              className="md:p-10 sm:p-2 rounded-md text-left sm:w-11/12 md:w-1/2"
+              className="md:p-10 sm:p-2 rounded-md text-left sm:w-full md:w-1/2"
             >
               <div className="w-full bg-stone-700 h-2 rounded-full mb-6 md:mx-10 sm:mx-0">
                 <div

@@ -118,6 +118,7 @@ function Landing() {
             </Link>
           </div>
         </div>
+        <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mb-32" />
         <div className="relative text-center md:mx-32 sm:mx-5">
           <p className="font-comic font-bold text-blue z-10 md:text-subheadline-3 sm:text-lg">
             Ever wondered, what’s…
@@ -164,6 +165,7 @@ function Landing() {
             />
           </div>
         </div>
+        <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mb-32" />
         <div className="flex flex-col gap-10 items-center">
           <div className="flex flex-col items-center gap-5 text-center md:mt-20">
             <p className="font-comic font-bold text-blue z-10 sm:text-lg md:text-subheadline-3">

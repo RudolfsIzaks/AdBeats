@@ -53,14 +53,14 @@ function Pricing() {
   return (
     <>
       <div>
-        <p className="font-montserrat text-white font-black text-headline-1 text-center mb-5">
+        <p className="font-montserrat text-white font-black sm:text-subheadline-2 md:text-headline-1 text-center my-5">
           PRICING
         </p>
         <hr className="bg-stone-400 h-0 border-stone-700" />
-        <div className="flex justify-evenly items-center h-screen">
+        <div className="flex sm:flex-col gap-20 md:justify-evenly items-center min-h-screen">
           
           {/* Starter Plan (Free) */}
-          <div className="bg-stone-800 py-5 px-10 w-96 min-h-[60dvh] flex flex-col justify-between relative">
+          <div className="bg-stone-800 py-5 px-10 w-96 min-h-[60dvh] flex flex-col justify-between relative sm:mt-10">
             <div>
               <p className="font-bold font-comic text-purple-400 text-headline-2">Starter</p>
               <div className="flex items-center justify-start relative">
@@ -98,7 +98,7 @@ function Pricing() {
               className="bg-amber-400 px-5 py-3 font-comic font-bold text-subheadline-4 mt-10 purple-shadow">
               Get Starter For Free
             </button>
-            <img src={splash_purple} alt="" className="absolute -top-10 -right-10" />
+            <img src={splash_purple} alt="" className="sm:w-16 absolute sm:top-1 md:-top-10 sm:right-1 md:-right-10" />
           </div>
 
           {/* Pro Plan (Stripe Checkout) */}
@@ -141,7 +141,7 @@ function Pricing() {
                 className="bg-blue px-5 py-3 font-comic font-bold text-subheadline-4 mt-10 redish-shadow">
                 Get Pro (50% OFF)
               </button>
-              <img src={splash_red} alt="" className="absolute -top-10 -right-10" />
+              <img src={splash_red} alt="" className="sm:w-16 absolute sm:top-1 md:-top-10 sm:right-1 md:-right-10" />
             </div>
             <div className="bg-red-500 p-3 text-center rounded-b-md">
               <p className="text-white font-semibold font-comic text-xl">Most Popular</p>
@@ -149,8 +149,8 @@ function Pricing() {
           </div>
 
           {/* Elite Plan (Placeholder for now) */}
-          <div className="bg-stone-800 py-5 px-10 w-96 min-h-[60dvh] flex flex-col justify-between relative">
-            <img src={splash_grey} alt="" className="absolute -top-10 -right-10" />
+          <div className="bg-stone-800 py-5 px-10 w-96 min-h-[60dvh] flex flex-col justify-between relative sm:mb-10">
+            <img src={splash_grey} alt="" className="sm:w-16 absolute sm:top-1 md:-top-10 sm:right-1 md:-right-10" />
             <div>
               <p className="font-bold font-comic text-white text-headline-2">Elite</p>
               <p className="font-black font-montserrat text-white text-headline-3 mt-8">By Contract</p>
