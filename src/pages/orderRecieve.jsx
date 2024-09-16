@@ -150,7 +150,7 @@ function OrderRecieve() {
             className={`${widthFeed} flex sm:flex-col relative bg-stone-900 p-10 ${feedDisplay} gap-5 sm:mx-5 items-center justify-between m-10 transition-all duration-500 ease-in-out`}
           >
             <div className="flex flex-col gap-5">
-              <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
+              <h2 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-3">Feedback Spotlight</h2>
               <p className="font-comic text-blue">Write Your opinion on Our product And Get A 50% discount on your next order!</p>
               <textarea
                 name=""
