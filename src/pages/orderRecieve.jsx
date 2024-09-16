@@ -118,7 +118,7 @@ function OrderRecieve() {
             )}
 
             {audioUrl && (
-              <div className="mt-6 flex flex-col gap-2 w-96 p-10 rounded-md bg-stone-900">
+              <div className="mt-6 flex flex-col gap-2 md:w-96 p-10 sm:w-full sm:mx-5 rounded-md bg-stone-900">
                 <p className="text-stone-200 font-comic">Song Order: {orderId}</p>
                 <div className="flex items-center gap-5 justify-start">
                 <button
