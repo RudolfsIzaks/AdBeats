@@ -27,7 +27,7 @@ function Footer() {
             </div>
          </nav>
          <hr className="bg-stone-400 h-0 border-stone-700" />
-         <p className="text-center text-stone-400 py-4">All Rights Reserved. Since 2024. Truly Yours, Adbeats :)</p>
+         <p className="text-center text-stone-400 py-4 sm:text-xs">All Rights Reserved. Since 2024. Truly Yours, Adbeats :)</p>
         </>
     )
 }

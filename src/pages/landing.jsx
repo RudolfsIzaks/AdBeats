@@ -30,10 +30,11 @@ import seesaw_1 from "../assets/seesaw_1.webp";
 import seesaw_2 from "../assets/seesaw_2.webp";
 import engagement from "../assets/engagement.png";
 import seesaw_4 from "../assets/seesaw_4.webp";
-import bang from '../assets/bang.png';
+import bang from "../assets/bang.png";
 import Footer from "../components/footer";
-import grinman from '../assets/grinman.png';
-import bomb from '../assets/bomb.png';
+import grinman from "../assets/grinman.png";
+import bomb from "../assets/bomb.png";
+import light from '../assets/light.png';
 
 function Landing() {
   const navigate = useNavigate();
@@ -86,7 +87,7 @@ function Landing() {
       <div className="flowin">
         <div className="absolute">
           <nav className="flex justify-center items-center p-5">
-            <img src={AdBeats} className="w-48" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/adbeats-e1fd0.appspot.com/o/email-images%2FAdBeats.png?alt=media&token=7a97447e-5bac-4750-b298-cd24e7810b5f" className="w-48" />
           </nav>
           <div className="w-screen h-[1px] hr-gradient"></div>
         </div>
@@ -128,24 +129,39 @@ function Landing() {
             (That allows them to get 50% of online traffic, dirt cheap…)
           </p>
         </div>
-        <div className="flex justify-center items-center">
-          <div className="flex flex-col gap-5">
+        <div className="flex sm:flex-col-reverse justify-center items-center md:my-32">
+          <div className="flex flex-col gap-5 sm:mb-20 mx-5">
             <div className="flex items-center gap-3">
-              <img src={bomb} alt="" className="w-20" />
-              <p className="text-headline-3 text-red-500 font-comic font-bold"> It’s not their endless budget</p>
+              <img src={bomb} alt="" className="md:w-20 w-16" />
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
+                 It’s not their endless budget
+              </p>
             </div>
             <div className="flex items-center gap-3">
-              <img src={bomb} alt="" className="w-20" />
-              <p className="text-headline-3 text-red-500 font-comic font-bold">  It’s not their “brand”</p>
+              <img src={bomb} alt="" className="md:w-20 w-16" />
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
+                  It’s not their “brand”
+              </p>
             </div>
             <div className="flex items-center gap-3">
-              <img src={bomb} alt="" className="w-20" />
-              <p className="text-headline-3 text-red-500 font-comic font-bold"> And it’s not the quality of their product.</p>
+              <img src={bomb} alt="" className="md:w-20 w-16" />
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
+                 And it’s not the quality of their product.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 mt-10">
+              <img src={light} alt="" className="md:w-20 w-16" />
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-blue font-comic font-black italic" >
+                 It's about grabbing and holding attention
+              </p>
             </div>
           </div>
-          <div className="flex items-center justify-center relative">
-            <img src={grinman} className="relative z-10" />
-            <img src={grinman} className="absolute z-0 blur-2xl animate-pulse"/>
+          <div className="flex items-center justify-center relative sm:my-10">
+            <img src={grinman} className="relative z-10 sm:w-64" />
+            <img
+              src={grinman}
+              className="absolute z-0 blur-2xl animate-pulse sm:w-64"
+            />
           </div>
         </div>
         <div className="flex flex-col gap-10 items-center">
@@ -326,7 +342,10 @@ function Landing() {
           </div>
           <div className="relative flex items-center justify-center md:w-1/2">
             <div className="flex items-center justify-center relative">
-              <img src={seesaw_2} className="sm:w-full sm:mx-5 md:w-3/5 rounded-md z-50" />
+              <img
+                src={seesaw_2}
+                className="sm:w-full sm:mx-5 md:w-3/5 rounded-md z-50"
+              />
               <img
                 src={seesaw_2}
                 className="absolute sm:w-full sm:mx-5 md:w-3/5 z-0 sm:blur-xl md:blur-3xl animate-pulse"
@@ -410,11 +429,15 @@ function Landing() {
               Tired of Making Ordinary Ads with Ordinary Results?
             </p>
             <h1 className="md:text-headline-2 sm:text-subheadline-3 text-white font-black font-montserrat text-center mb-10">
-              The Next 10 Businesses To Request A Custom Track, <br /> Get It 100% For
-              FREE!
+              The Next 10 Businesses To Request A Custom Track, <br /> Get It
+              100% For FREE!
             </h1>
             <div className="relative bg-stone-800 p-10">
-              <img src={bang} alt="" className="absolute sm:w-20 md:w-64 z-10 sm:-top-12 md:-top-24 rotate-12 md:-right-24"/>
+              <img
+                src={bang}
+                alt=""
+                className="absolute sm:w-20 md:w-64 z-10 sm:-top-12 md:-top-24 rotate-12 md:-right-24"
+              />
               <h2 className="text-red-500 font-comic font-bold text-headline-3">
                 Yes, you read that right!
               </h2>
@@ -438,14 +461,17 @@ function Landing() {
                 <br />
                 <b className="text-blue">Nobody beats, Adbeats. </b>
               </p>
-              <button onClick={handleCTA} className="bg-red-500 text-white px-5 py-2 font-comic font-bold text-subheadline-4 mt-10 red-shadow">
-              Claim Your Starter Adbeats Track!  
+              <button
+                onClick={handleCTA}
+                className="bg-red-500 text-white px-5 py-2 font-comic font-bold text-subheadline-4 mt-10 red-shadow"
+              >
+                Claim Your Starter Adbeats Track!
               </button>
             </div>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

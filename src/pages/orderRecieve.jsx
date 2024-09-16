@@ -53,7 +53,7 @@ function OrderRecieve() {
         setAudioUrl(response.data.audioUrl);
         setFeedback(true);
       } else {
-        setErrorMessage("No audio file found for this order.");
+        setErrorMessage("No audio file found for this order. It's likely that your order isn't finished yet.");
       }
     } catch (error) {
       console.error("Error retrieving order:", error);
@@ -87,14 +87,14 @@ function OrderRecieve() {
           <div className="w-screen h-[1px] hr-gradient"></div>
         </div>
         <div className="h-[100dvh] flex items-center justify-center z-10 relative">
-          <div className="w-2/3 bg-backgroundblack flex flex-col items-center">
-            <p className="font-comic text-blue text-center text-2xl">
+          <div className="md:w-2/3 sm:mx-5 bg-backgroundblack flex flex-col items-center">
+            <p className="font-comic text-blue text-center sm:text-md md:text-2xl">
               If you got an email that your order is ready
             </p>
-            <h2 className="font-montserrat text-headline-2 font-black text-white text-center">
+            <h2 className="font-montserrat sm:text-subheadline-2 md:text-headline-2 font-black text-white text-center">
               Claim Your Order Here
             </h2>
-            <p className="font-comic text-stone-400 text-center mt-6 text-subheadline-3">
+            <p className="font-comic text-stone-400 text-center mt-6 sm:text-md md:text-subheadline-3">
               Copy and paste your Order ID from the email we sent you after making the order.
             </p>
 
@@ -102,13 +102,13 @@ function OrderRecieve() {
               type="text"
               value={orderId}
               onChange={(e) => setOrderId(e.target.value)}
-              className="mt-6 px-4 py-2 w-2/3 border border-stone-100 bg-transparent text-white font-comic"
+              className="mt-6 px-4 py-2 md:w-2/3 sm:w-full border border-stone-100 bg-transparent text-white font-comic"
               placeholder="Enter Your Order ID"
             />
 
             <button
               onClick={handleCTA}
-              className="py-2 px-10 mt-6 bg-stone-100 text-black font-comic font-bold text-headline-3 text-center border border-stone-100 transition hover:bg-transparent hover:text-stone-100"
+              className="py-2 px-10 mt-6 bg-stone-100 text-black font-comic font-bold md:text-headline-3 sm:text-subheadline-3 text-center border border-stone-100 transition hover:bg-transparent hover:text-stone-100"
             >
               {loading ? "Loading..." : "Claim Your Song!"}
             </button>
