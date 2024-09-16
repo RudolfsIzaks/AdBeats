@@ -74,7 +74,7 @@ function OrderRecieve() {
 
   // Conditionally render feedDisplay and discountDisplay based on state
   const feedDisplay = feedBack ? 'md:-translate-y-[50%] z-0 opacity-100' : '-translate-y-[200%] z-0 opacity-0';
-  const widthFeed = feedWidth ? 'md:w-3/5 sm:w-full sm:h-screen' : 'md:w-2/5 sm:w-full sm:h-[50dvh]';
+  const widthFeed = feedWidth ? 'md:w-3/5 sm:w-full sm:h-screen' : 'md:w-2/5 sm:w-full sm:h-auto';
   const discountDisplay = discount ? 'block' : 'hidden';
 
   return (
