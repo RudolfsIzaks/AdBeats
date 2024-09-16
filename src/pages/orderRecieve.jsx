@@ -74,7 +74,7 @@ function OrderRecieve() {
 
   // Conditionally render feedDisplay and discountDisplay based on state
   const feedDisplay = feedBack ? 'md:-translate-y-[50%] z-0 opacity-100' : '-translate-y-[200%] z-0 opacity-0';
-  const widthFeed = feedWidth ? 'w-3/5' : 'w-2/5';
+  const widthFeed = feedWidth ? 'md:w-3/5 sm:w-full sm:h-screen' : 'md:w-2/5 sm:w-full sm:h-[50dvh]';
   const discountDisplay = discount ? 'block' : 'hidden';
 
   return (
@@ -147,7 +147,7 @@ function OrderRecieve() {
         </div>
         <div className="flex items-center justify-center">
           <div
-            className={`${widthFeed} flex relative bg-stone-900 p-10 ${feedDisplay} gap-5 items-center justify-between m-10 transition-all duration-500 ease-in-out`}
+            className={`${widthFeed} flex sm:flex-col relative bg-stone-900 p-10 ${feedDisplay} gap-5 sm:mx-5 items-center justify-between m-10 transition-all duration-500 ease-in-out`}
           >
             <div className="flex flex-col gap-5">
               <h2 className="text-white font-montserrat font-black text-headline-3">Feedback Spotlight</h2>
@@ -167,7 +167,7 @@ function OrderRecieve() {
                 Submit Review
               </button>
             </div>
-            <span className={`h-96 w-[2px] bg-white rounded-md ${discountDisplay}`}></span>
+            <span className={`md:h-96 sm:h-[2px] sm:w-96 md:w-[2px] bg-white rounded-md ${discountDisplay}`}></span>
             <img src={discountis} className={`h-96 w-auto ${discountDisplay}`} alt="Discount offer" />
           </div>
         </div>
