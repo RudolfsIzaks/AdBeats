@@ -329,7 +329,7 @@ function Home() {
             <img
               src={questions[currentQuestion].sideImg}
               alt=""
-              className="h-full md:w-1/2 sm:hidden rounded-r-md"
+              className="h-full sm:hidden rounded-r-md"
             />
             <form
               onSubmit={handleSubmit}
