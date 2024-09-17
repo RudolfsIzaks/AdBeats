@@ -28,6 +28,7 @@ module.exports = {
       },
       screens: {
         'sm': { 'max': '762px' },
+        'lg': { 'min': '2200px' },
       },
     },
   },

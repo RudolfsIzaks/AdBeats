@@ -141,25 +141,25 @@ function Landing() {
         </div>
         <div className="flex sm:flex-col-reverse justify-center items-center md:my-32">
           <div className="flex flex-col gap-5 sm:mb-20 mx-5">
-            <div data-aos="fade-right" data-aos-delay="200" className="flex items-center gap-3">
+            <div data-aos="fade-right" className="flex items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
                  It’s not their endless budget
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="500" className="flex items-center gap-3">
+            <div data-aos="fade-right" data-aos-delay="200" className="flex items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
                   It’s not their “brand”
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="800" className="flex items-center gap-3">
+            <div data-aos="fade-right" data-aos-delay="400" className="flex items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
                  And it’s not the quality of their product.
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="1100" className="flex items-center gap-3 mt-10">
+            <div data-aos="fade-right" data-aos-delay="600" className="flex items-center gap-3 mt-10">
               <img src={light} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-blue font-comic font-black italic" >
                It’s how they grab and hold attention!
@@ -272,9 +272,10 @@ function Landing() {
           </div>
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-        <div className="flex sm:flex-col-reverse gap-10 md:justify-center items-center sm:mx-5 md:mx-32">
-          <div data-aos="fade-in" className="md:w-1/2">
-            <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2 select-none">
+        <div className="flex sm:flex-col-reverse gap-10 md:justify-around items-center sm:mx-5 md:mx-32">
+          <div data-aos="fade-in" className="md:w-1/2 md:flex md:flex-col md:items-end">
+           <div>
+           <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2 select-none">
               Take the first step towards transforming your ad performance.
             </p>
             <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5 select-none">
@@ -305,6 +306,7 @@ function Landing() {
             >
               Sign up now and experience the AdBeats difference!
             </Link>
+           </div>
           </div>
           <div className="relative flex items-center justify-center sm:mb-32 sm:mt-10 md:w-1/2">
             <div data-aos="flip-right" className="absolute sm:w-48 md:w-80 h-auto bg-stone-900 rounded-md p-3 -rotate-12 z-50">
@@ -319,7 +321,7 @@ function Landing() {
                 />
               </div>
             </div>
-            <div data-aos="flip-left" className="flex items-center absolute sm:w-20 sm:h-32 md:w-80 md:h-96 bg-stone-800 rounded-md p-3 sm:-rotate-45 md:rotate-12 sm:right-16 md:right-10 z-0">
+            <div data-aos="flip-left" className="flex items-center absolute sm:w-20 sm:h-32 md:w-80 md:h-96 bg-stone-800 rounded-md p-3 sm:-rotate-45 md:rotate-12 sm:right-[10%] md:right-[10%] z-0">
               <div className="relative flex items-center justify-center">
                 <img src={AdBeats} className="z-50 md:w-72  rounded-md" />
               </div>
@@ -366,8 +368,9 @@ function Landing() {
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
         <div className="flex sm:flex-col-reverse gap-10 md:justify-center md:mx-32 sm:mx-5">
-          <div data-aos="fade-in" className="md:w-1/2">
-            <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
+          <div data-aos="fade-in" className="lg:w-1/3 md:w-1/2 md:flex md:flex-col ">
+          <div>
+          <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Transform Mere Attention into Laser-Focused Interest…
             </p>
             <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
@@ -391,7 +394,8 @@ function Landing() {
               costs- exponentially boosting your ROI!
             </p>
           </div>
-          <div data-aos="zoom-in-left" className="relative flex items-center justify-center md:w-1/2">
+          </div>
+          <div data-aos="zoom-in-left" className="relative flex items-center justify-start">
             <div className="flex items-center justify-center relative">
               <img src={engagement} className="rounded-md z-50" />
               <img src={engagement} className="absolute rounded-md z-0" />
@@ -422,7 +426,7 @@ function Landing() {
               Prolonged ad performance and sustained audience interest, ensuring
               your marketing efforts yield long-term results.
             </p>
-            <div className="flex justify-between items-center my-10">
+            <div className="flex md:justify-between lg:justify-start lg:gap-10 items-center my-10">
               <div data-aos="fade-up" data-aos-delay="500" className="flex flex-col gap-3 justify-between">
                 <div className="flex items-center gap-2">
                   <FontAwesomeIcon 
@@ -455,7 +459,7 @@ function Landing() {
               </div>
             </div>
           </div>
-          <div className="relative flex items-center justify-center md:w-1/2">
+          <div className="relative flex items-center lg:justify-end lg:gap-10  justify-center md:w-1/2">
             <div className="flex items-center justify-center relative p-5 bg-stone-800 rounded-md -rotate-6">
               <img src={seesaw_4} className="rounded-md sm:w-64 md:w-96 z-50" />
               <img
