@@ -32,6 +32,9 @@ import sampleAudio from "../assets/sample.mp3";
 import Petco_audio from '../assets/Petco_audio.mp3';
 import NorthFace_audio from '../assets/NorthFace.mp3';
 import Equinox_audio from '../assets/Equinox.mp3';
+import SkillshareAudio from '../assets/SkillshareAudio.mp3';
+import UberAudio from  '../assets/UberAudio.mp3';
+import AG1Audio from '../assets/AG1Audio.mp3';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
@@ -69,7 +72,7 @@ function Home() {
       imageLogo: AG1Logo,
       songName: "AG1 Supplements",
       sideImg: sideImg1,
-      audio: sampleAudio,
+      audio: AG1Audio,
     },
     {
       question: "What’s your best email?",
@@ -99,6 +102,7 @@ function Home() {
       image: Skillshare,
       imageLogo: Skillshare_logo,
       songName: "Skillshare Education",
+      audio: SkillshareAudio,
     },
     {
       question: "What’s your primary target audience?",
@@ -128,6 +132,7 @@ function Home() {
       image: Uber,
       imageLogo: Uber_logo,
       songName: "Uber Transportation",
+      audio: UberAudio,
     },
     {
       question: "What emotion should the ad/track convey?",
