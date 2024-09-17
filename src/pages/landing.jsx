@@ -9,6 +9,8 @@ import {
   faCircleCheck,
   faPlay,
   faMusic,
+  faArrowDown,
+  faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
 import rectred from "../assets/rect-red.svg";
 import rectblue from "../assets/rect-blue.svg";
@@ -86,13 +88,13 @@ function Landing() {
     <>
       <div className="flowin">
         <div className="absolute">
-          <nav className="flex justify-center items-center p-5">
+          <nav data-aos="fade-down" className="flex justify-center items-center p-5">
             <img src="https://firebasestorage.googleapis.com/v0/b/adbeats-e1fd0.appspot.com/o/email-images%2FAdBeats.png?alt=media&token=7a97447e-5bac-4750-b298-cd24e7810b5f" className="w-48" />
           </nav>
-          <div className="w-screen h-[1px] hr-gradient"></div>
+          <div data-aos="fade-down"  className="w-screen h-[1px] hr-gradient"></div>
         </div>
         <div className="h-screen flex items-center justify-center">
-          <div className="md:w-2/3 flex flex-col items-center sm:m-5">
+          <div data-aos="fade-in" className="md:w-2/3 flex flex-col items-center sm:m-5">
             <p className="font-comic text-blue text-center sm:text-lg md:text-2xl">
               The Simplest And Easiest Way to…
             </p>
@@ -132,28 +134,28 @@ function Landing() {
         </div>
         <div className="flex sm:flex-col-reverse justify-center items-center md:my-32">
           <div className="flex flex-col gap-5 sm:mb-20 mx-5">
-            <div className="flex items-center gap-3">
+            <div data-aos="fade-right" data-aos-delay="200" className="flex items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
                  It’s not their endless budget
               </p>
             </div>
-            <div className="flex items-center gap-3">
+            <div data-aos="fade-right" data-aos-delay="500" className="flex items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
                   It’s not their “brand”
               </p>
             </div>
-            <div className="flex items-center gap-3">
+            <div data-aos="fade-right" data-aos-delay="800" className="flex items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
                  And it’s not the quality of their product.
               </p>
             </div>
-            <div className="flex items-center gap-3 mt-10">
+            <div data-aos="fade-right" data-aos-delay="1100" className="flex items-center gap-3 mt-10">
               <img src={light} alt="" className="md:w-20 w-16" />
               <p className="md:text-headline-3 sm:text-subheadline-4 text-blue font-comic font-black italic" >
-                 It's about grabbing and holding attention
+               It’s how they grab and hold attention!
               </p>
             </div>
           </div>
@@ -180,7 +182,7 @@ function Landing() {
             </p>
           </div>
           <div className="flex justify-between items-center sm:flex-col gap-12 sm:mx-5 my-40 sm:min-h-screen md:h-[50dvh]">
-            <div className="relative flex items-center justify-center">
+            <div data-aos="fade-down-right" className="relative flex items-center justify-center">
               <img src={rectred} alt="" className="absolute md:w-[500px] z-0" />
               <div className="z-10 w-3/5">
                 <h2 className="font-black font-montserrat text-white text-subheadline-3">
@@ -191,7 +193,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="relative flex items-center justify-center">
+            <div data-aos="flip-up" className="relative flex items-center justify-center">
               <img
                 src={rectblue}
                 alt=""
@@ -206,7 +208,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="relative flex items-center justify-center">
+            <div data-aos="fade-down-left" className="relative flex items-center justify-center">
               <img
                 src={rectyellow}
                 alt=""
@@ -223,7 +225,7 @@ function Landing() {
             </div>
           </div>
           <div className="flex flex-col items-center gap-4 mb-5 sm:w-full">
-            <div className="flex flex-col gap-5 md:w-2/3 text-center m-5">
+            <div data-aos="fade-in" className="flex flex-col gap-5 md:w-2/3 text-center m-5">
               <p className="text-stone-300 font-bold font-comic sm:text-md md:text-subheadline-3">
                 So, how do you get your dream customer's attention?
               </p>
@@ -264,7 +266,7 @@ function Landing() {
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
         <div className="flex sm:flex-col-reverse gap-10 md:justify-center items-center sm:mx-5 md:mx-32">
-          <div className="md:w-1/2">
+          <div data-aos="fade-in" className="md:w-1/2">
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2 select-none">
               Take the first step towards transforming your ad performance.
             </p>
@@ -298,7 +300,7 @@ function Landing() {
             </Link>
           </div>
           <div className="relative flex items-center justify-center sm:mb-32 sm:mt-10 md:w-1/2">
-            <div className="absolute sm:w-48 md:w-80 h-auto bg-stone-900 rounded-md p-3 -rotate-12 z-50">
+            <div data-aos="flip-right" className="absolute sm:w-48 md:w-80 h-auto bg-stone-900 rounded-md p-3 -rotate-12 z-50">
               <div className="relative flex items-center justify-center select-none">
                 <img
                   src={seesaw_1}
@@ -310,7 +312,7 @@ function Landing() {
                 />
               </div>
             </div>
-            <div className="flex items-center absolute sm:w-20 sm:h-32 md:w-80 md:h-96 bg-stone-800 rounded-md p-3 sm:-rotate-45 md:rotate-12 sm:right-16 md:right-10 z-0">
+            <div data-aos="flip-left" className="flex items-center absolute sm:w-20 sm:h-32 md:w-80 md:h-96 bg-stone-800 rounded-md p-3 sm:-rotate-45 md:rotate-12 sm:right-16 md:right-10 z-0">
               <div className="relative flex items-center justify-center">
                 <img src={AdBeats} className="z-50 md:w-72  rounded-md" />
               </div>
@@ -319,7 +321,7 @@ function Landing() {
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
         <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 md:justify-center items-center md:mx-32 sm:mx-5">
-          <div className="md:w-1/2">
+          <div data-aos="fade-in" className="md:w-1/2">
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Attention is the new currency in the world of advertising.
             </p>
@@ -342,7 +344,7 @@ function Landing() {
               meant to persuade! The result? Ads that can't be ignored.
             </p>
           </div>
-          <div className="relative flex items-center justify-center md:w-1/2">
+          <div data-aos="fade-in" className="relative flex items-center justify-center md:w-1/2">
             <div className="flex items-center justify-center relative">
               <img
                 src={seesaw_2}
@@ -357,7 +359,7 @@ function Landing() {
         </div>
         <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
         <div className="flex sm:flex-col-reverse gap-10 md:justify-center md:mx-32 sm:mx-5">
-          <div className="md:w-1/2">
+          <div data-aos="fade-in" className="md:w-1/2">
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Transform Mere Attention into Laser-Focused Interest…
             </p>
@@ -382,7 +384,7 @@ function Landing() {
               costs- exponentially boosting your ROI!
             </p>
           </div>
-          <div className="relative flex items-center justify-center md:w-1/2">
+          <div data-aos="zoom-in-left" className="relative flex items-center justify-center md:w-1/2">
             <div className="flex items-center justify-center relative">
               <img src={engagement} className="rounded-md z-50" />
               <img src={engagement} className="absolute rounded-md z-0" />
@@ -413,6 +415,38 @@ function Landing() {
               Prolonged ad performance and sustained audience interest, ensuring
               your marketing efforts yield long-term results.
             </p>
+            <div className="flex justify-between items-center my-10">
+              <div data-aos="fade-up" data-aos-delay="500" className="flex flex-col gap-3 justify-between">
+                <div className="flex items-center gap-2">
+                  <FontAwesomeIcon 
+                    icon={faArrowUp}
+                    className="text-blue text-5xl"
+                  />
+                  <p className="text-headline-1 font-black font-montserrat text-white">64%</p>
+                </div>
+                <p className="text-blue font-comic font-bold text-center">Average Watch Time</p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="1000" className="flex flex-col gap-3 justify-evenly">
+                <div className="flex items-center gap-2">
+                  <FontAwesomeIcon 
+                    icon={faArrowDown}
+                    className="text-blue text-5xl"
+                  />
+                  <p className="text-headline-1 font-black font-montserrat text-white">44%</p>
+                </div>
+                <p className="text-blue font-comic font-bold text-center">Average Cost Per View</p>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="1500" className="flex flex-col gap-3 justify-evenly">
+                <div className="flex items-center gap-2">
+                  <FontAwesomeIcon 
+                    icon={faArrowDown}
+                    className="text-blue text-5xl"
+                  />
+                  <p className="text-headline-1 font-black font-montserrat text-white">87%</p>
+                </div>
+                <p className="text-blue font-comic font-bold text-center">Average Cost Per Click</p>
+              </div>
+            </div>
           </div>
           <div className="relative flex items-center justify-center md:w-1/2">
             <div className="flex items-center justify-center relative p-5 bg-stone-800 rounded-md -rotate-6">
@@ -469,6 +503,7 @@ function Landing() {
               >
                 Claim Your Starter Adbeats Track!
               </button>
+              <p className="text-stone-400 mt-5">(7 slots left, get yours before it’s too late!)</p>
             </div>
           </div>
         </div>

@@ -326,11 +326,13 @@ function Home() {
             </div>
           </div>
           <div className="md:w-auto sm:h-[80dvh] sm:w-full sm:p-5 md:h-full bg-stone-900 md:m-10 rounded-md flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
+            <div className="flex-1 h-[90dvh] ml-5">
             <img
               src={questions[currentQuestion].sideImg}
               alt=""
-              className="h-full sm:hidden rounded-r-md"
+              className="h-full md:w-full object-cover sm:hidden rounded-r-md"
             />
+            </div>
             <form
               onSubmit={handleSubmit}
               className="md:p-10 sm:p-2 rounded-md text-left sm:w-full md:w-1/2"
