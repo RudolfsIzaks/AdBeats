@@ -426,7 +426,7 @@ function Landing() {
               Prolonged ad performance and sustained audience interest, ensuring
               your marketing efforts yield long-term results.
             </p>
-            <div className="flex md:justify-between lg:justify-start lg:gap-10 items-center my-10">
+            <div className="flex md:justify-between sm:flex-col sm:items-start sm:gap-10 lg:justify-start lg:gap-10 items-center my-10">
               <div data-aos="fade-up" data-aos-delay="500" className="flex flex-col gap-3 justify-between">
                 <div className="flex items-center gap-2">
                   <FontAwesomeIcon 
@@ -479,7 +479,7 @@ function Landing() {
               The Next 10 Businesses To Request A Custom Track, <br /> Get It
               100% For FREE!
             </h1>
-            <div className="relative bg-stone-800 p-10">
+            <div className="relative bg-stone-800 sm:p-5 md:p-10 sm:mx-5">
               <img
                 src={bang}
                 alt=""
