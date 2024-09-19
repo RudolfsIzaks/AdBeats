@@ -420,7 +420,51 @@ function Home() {
                       />
                     ) : null}
                   </div>
-                  <div>
+                  <div className="">
+                    {currentQuestion > 0 && (
+                      <button
+                        type="button"
+                        onClick={handlePrevQuestion}
+                        className="bg-amber-500 comic_btn_inv font-comic text-2xl font-black px-5 py-2 hover:bg-black border border-amber-500 transition hover:text-amber-500 mr-10"
+                      >
+                        Back
+                      </button>
+                    )}
+
+                    <button
+                      type={
+                        currentQuestion === questions.length - 1
+                          ? "submit"
+                          : "button"
+                      }
+                      onClick={
+                        currentQuestion === questions.length
+                          ? handleSubmit
+                          : handleNextQuestion
+                      }
+                      className="bg-blue comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-blue transition hover:text-blue hover:scale-110"
+                    >
+                      {currentQuestion === questions.length
+                        ? "Submit"
+                        : "Continue"}
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center">
+                  <p className="mb-4 text-gray-700">
+                    Thank you for completing the quiz!
+                  </p>
+                  <button
+                    type="submit"
+                    className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 focus:outline-none"
+                  >
+                    Submit
+                  </button>
+                </div>
+              )}
+            </form>
+            <div>
                     <h2 className="text-white md:text-2xl font-inter font-bold mb-3">
                       Ads That <i className="font-black text-blue">Beat</i> The
                       System...
@@ -473,73 +517,6 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="">
-                    {currentQuestion > 0 && (
-                      <button
-                        type="button"
-                        onClick={handlePrevQuestion}
-                        className="bg-amber-500 comic_btn_inv font-comic text-2xl font-black px-5 py-2 hover:bg-black border border-amber-500 transition hover:text-amber-500 mr-10"
-                      >
-                        Back
-                      </button>
-                    )}
-
-                    <button
-                      type={
-                        currentQuestion === questions.length - 1
-                          ? "submit"
-                          : "button"
-                      }
-                      onClick={
-                        currentQuestion === questions.length
-                          ? handleSubmit
-                          : handleNextQuestion
-                      }
-                      className="bg-blue comic_btn font-comic text-2xl font-bold px-5 py-2 border hover:bg-black border-blue transition hover:text-blue hover:scale-110"
-                    >
-                      {currentQuestion === questions.length
-                        ? "Submit"
-                        : "Continue"}
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <div className="text-center">
-                  <p className="mb-4 text-gray-700">
-                    Thank you for completing the quiz!
-                  </p>
-                  <button
-                    type="submit"
-                    className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 focus:outline-none"
-                  >
-                    Submit
-                  </button>
-                </div>
-              )}
-            </form>
-            <div className="carousel">
-              {questions.map((q, index) => (
-                <div
-                  key={index}
-                  className={`carousel-item ${
-                    index === carouselIndex ? "active" : ""
-                  }`}
-                >
-                  <img src={q.image} alt="Carousel Image" />
-                  {q.audio && (
-                    <div>
-                      <audio
-                        ref={(el) => (audioRefs.current[index] = el)}
-                        src={q.audio}
-                      ></audio>
-                      <button onClick={() => handleAudioPlayPause(index)}>
-                        {isPlaying === index ? "Pause" : "Play"}
-                      </button>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       )}
