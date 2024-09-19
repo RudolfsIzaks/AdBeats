@@ -160,6 +160,10 @@ function Home() {
       type: "textarea",
       name: "additionalInfo",
       sideImg: sideIMG10,
+      image: Petco,
+      imageLogo: Petco_logo,
+      songName: "Petco Goods",
+      audio: Petco_audio,
     },
   ];
 
