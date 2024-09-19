@@ -5,18 +5,18 @@ import AG1 from "../assets/ag1.webp";
 import AG1Logo from "../assets/ag1logo.svg";
 import Manscaped from "../assets/Manscaped.avif";
 import Manscaped_logo from "../assets/Manscaped_logo.svg";
-import Equinox_logo from '../assets/Equinox-Logo-1.svg';
-import Equinox from '../assets/Equinox.png';
-import Skillshare from '../assets/Skillshare.png';
-import Skillshare_logo from '../assets/Skillshare_logo.svg';
-import Petco from '../assets/Petco.png';
-import Petco_logo from '../assets/Petco_logo.svg';
-import Northface from '../assets/Northface.webp';
-import Northface_logo from '../assets/Northface_logo.svg';
-import Uber from '../assets/Uber.webp';
-import Uber_logo from '../assets/Uber_logo.svg';
-import Nike from '../assets/Nike.webp';
-import Nike_logo from '../assets/Nike_logo.svg';
+import Equinox_logo from "../assets/Equinox-Logo-1.svg";
+import Equinox from "../assets/Equinox.png";
+import Skillshare from "../assets/Skillshare.png";
+import Skillshare_logo from "../assets/Skillshare_logo.svg";
+import Petco from "../assets/Petco.png";
+import Petco_logo from "../assets/Petco_logo.svg";
+import Northface from "../assets/Northface.webp";
+import Northface_logo from "../assets/Northface_logo.svg";
+import Uber from "../assets/Uber.webp";
+import Uber_logo from "../assets/Uber_logo.svg";
+import Nike from "../assets/Nike.webp";
+import Nike_logo from "../assets/Nike_logo.svg";
 import sideImg1 from "../assets/sideImg1.png";
 import email_img from "../assets/email.png";
 import exl from "../assets/exl.png";
@@ -29,19 +29,19 @@ import sideIMG8 from "../assets/sideIMG8.png";
 import sideIMG9 from "../assets/sideIMG9.png";
 import sideIMG10 from "../assets/sideIMG10.png";
 import sampleAudio from "../assets/sample.mp3";
-import Petco_audio from '../assets/Petco_audio.mp3';
-import NorthFace_audio from '../assets/NorthFace.mp3';
-import Equinox_audio from '../assets/Equinox.mp3';
-import SkillshareAudio from '../assets/SkillshareAudio.mp3';
-import UberAudio from  '../assets/UberAudio.mp3';
-import AG1Audio from '../assets/AG1Audio.mp3';
+import Petco_audio from "../assets/Petco_audio.mp3";
+import NorthFace_audio from "../assets/NorthFace.mp3";
+import Equinox_audio from "../assets/Equinox.mp3";
+import SkillshareAudio from "../assets/SkillshareAudio.mp3";
+import UberAudio from "../assets/UberAudio.mp3";
+import AG1Audio from "../assets/AG1Audio.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -156,7 +156,8 @@ function Home() {
       audio: SkillshareAudio,
     },
     {
-      question: "Is there anything else we need to know about the ad? (Optional)",
+      question:
+        "Is there anything else we need to know about the ad? (Optional)",
       type: "textarea",
       name: "additionalInfo",
       sideImg: sideIMG10,
@@ -252,19 +253,18 @@ function Home() {
 
   const handleNextQuestion = () => {
     const currentField = questions[currentQuestion].name;
-    
+
     // Check if the current field is required and if it is empty
     if (!formData[currentField]) {
       alert("Please fill out this field before continuing.");
       return; // Stop here if the field is empty
     }
-    
+
     setCurrentQuestion((prevQuestion) =>
       Math.min(prevQuestion + 1, questions.length - 1)
     );
     setIsPlaying(false); // Stop playing when moving to the next question
   };
-  
 
   const handlePrevQuestion = () => {
     setCurrentQuestion((prevQuestion) => Math.max(prevQuestion - 1, 0));
@@ -273,22 +273,22 @@ function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     // Ensure the status field is always set to 'User Submitted'
     const submissionData = {
       ...formData,
       status: "User Submitted", // Hardcoded status field
     };
-  
+
     console.log("Form Data Submitted:", submissionData);
-  
+
     try {
       // Make the POST request with the hardcoded status
       const response = await axios.post(
-        'https://aqueous-tor-91749-7319d44de38a.herokuapp.com/form-submit', 
+        "https://aqueous-tor-91749-7319d44de38a.herokuapp.com/form-submit",
         submissionData
       );
-  
+
       // Reset the form data after successful submission
       setFormData({
         name: "",
@@ -303,9 +303,9 @@ function Home() {
         additionalInfo: "",
         status: "User Submitted", // Reset status field
       });
-  
+
       console.log(response);
-  
+
       // Navigate to the confirmation page with the response data
       navigate("/pricing", { state: { response: response.data } });
     } catch (error) {
@@ -313,8 +313,6 @@ function Home() {
       console.error("Error submitting the form:", error);
     }
   };
-  
-  
 
   // Calculate the progress as a percentage
   const progress = (currentQuestion / (questions.length - 1)) * 100;
@@ -331,7 +329,11 @@ function Home() {
         </div>
       ) : (
         <div className="relative bg-black">
-          <img src={exl} className="absolute md:top-10 md:left-10 md:w-32 sm:hidden" alt="" />
+          <img
+            src={exl}
+            className="absolute md:top-10 md:left-10 md:w-32 sm:hidden"
+            alt=""
+          />
           <div className="fixed inset-0 bg-black z-50 animate-split"></div>
           <div className="fixed inset-0 flex items-center justify-center bg-black z-50 animate-split-reverse">
             <div className="animate-pulse-slow">
@@ -340,11 +342,11 @@ function Home() {
           </div>
           <div className="md:w-auto sm:h-[80dvh] sm:w-full sm:p-5 md:h-full bg-stone-900 md:m-10 rounded-md flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
             <div className="flex-1 h-[90dvh] ml-5">
-            <img
-              src={questions[currentQuestion].sideImg}
-              alt=""
-              className="h-full md:w-full object-cover sm:hidden rounded-r-md"
-            />
+              <img
+                src={questions[currentQuestion].sideImg}
+                alt=""
+                className="h-full md:w-full object-cover sm:hidden rounded-r-md"
+              />
             </div>
             <form
               onSubmit={handleSubmit}
@@ -437,14 +439,17 @@ function Home() {
                             className="flex-shrink-0 flex w-full items-center"
                           >
                             <div className="flex items-center justify-center relative">
-                            <img
-                              src={q.image}
-                              alt=""
-                              className="w-20 h-20 object-cover rounded-md mr-4 opacity-50"
-                            />
-                            {q.audio && (
+                              <img
+                                src={q.image}
+                                alt=""
+                                className="w-20 h-20 object-cover rounded-md mr-4 opacity-50"
+                              />
+                              {q.audio && (
                                 <div className="absolute right-[40%]">
-                                  <audio ref={(el) => (audioRefs.current[i] = el)} src={q.audio} />
+                                  <audio
+                                    ref={(el) => (audioRefs.current[i] = el)}
+                                    src={q.audio}
+                                  />
                                   <FontAwesomeIcon
                                     icon={isPlaying === i ? faPause : faPlay}
                                     onClick={() => handleAudioPlayPause(i)}
@@ -465,7 +470,6 @@ function Home() {
                             </div>
                           </div>
                         ))}
-
                       </div>
                     </div>
                   </div>
@@ -512,8 +516,30 @@ function Home() {
                   </button>
                 </div>
               )}
-              
             </form>
+            <div className="carousel">
+              {questions.map((q, index) => (
+                <div
+                  key={index}
+                  className={`carousel-item ${
+                    index === carouselIndex ? "active" : ""
+                  }`}
+                >
+                  <img src={q.image} alt="Carousel Image" />
+                  {q.audio && (
+                    <div>
+                      <audio
+                        ref={(el) => (audioRefs.current[index] = el)}
+                        src={q.audio}
+                      ></audio>
+                      <button onClick={() => handleAudioPlayPause(index)}>
+                        {isPlaying === index ? "Pause" : "Play"}
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
