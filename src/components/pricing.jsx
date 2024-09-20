@@ -16,13 +16,12 @@ function Pricing() {
   const navigate = useNavigate();
   const location = useLocation();
   const apiResponse = location.state?.response; // Pre-generated Order ID
-
-  const [starterCoupon, setStarterCoupon] = useState(""); // Coupon for Pro Plan
+ // Coupon for Pro Plan
   const [proCoupon, setProCoupon] = useState(""); // Coupon for Pro Plan
 
   // Handle Free Starter Pack (navigate directly to confirmation page)
   const handleFreeStarterPack = () => {
-    navigate(`/confirmation?=${apiResponse.id}`, { state: { id: apiResponse.id } });
+    navigate(`/confirmation?orderId=${apiResponse.id}`, { state: { id: apiResponse.id } });
   };
 
   // Handle Stripe Checkout for Pro and Elite plans
@@ -88,9 +87,7 @@ function Pricing() {
                 <input
                   placeholder="Coupon Code..."
                   type="text"
-                  className="bg-stone-700 border-stone-400 rounded-md p-3 placeholder:text-stone-300"
-                  value={starterCoupon}
-                  onChange={(e) => setStarterCoupon(e.target.value)} // Set coupon value for Starter plan
+                  className="bg-stone-700 border-stone-400 rounded-md p-3 placeholder:text-stone-300" // Set coupon value for Starter plan
                 />
               </div>
             </ul>
