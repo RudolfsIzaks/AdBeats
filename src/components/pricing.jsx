@@ -20,7 +20,7 @@ function Pricing() {
 
   // Handle Free Starter Pack (navigate directly to confirmation page)
   const handleFreeStarterPack = () => {
-    navigate("/confirmation", { state: { id: apiResponse.id } });
+    navigate(`/confirmation?=${apiResponse.id}`, { state: { id: apiResponse.id } });
   };
 
   // Handle Stripe Checkout for Pro and Elite plans
