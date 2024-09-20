@@ -16,6 +16,8 @@ function Pricing() {
   const navigate = useNavigate();
   const location = useLocation();
   const apiResponse = location.state?.response; // Pre-generated Order ID
+
+  const [starterCoupon, setStarterCoupon] = useState(""); // Coupon for Pro Plan
   const [proCoupon, setProCoupon] = useState(""); // Coupon for Pro Plan
 
   // Handle Free Starter Pack (navigate directly to confirmation page)
