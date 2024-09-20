@@ -16,8 +16,6 @@ function Pricing() {
   const navigate = useNavigate();
   const location = useLocation();
   const apiResponse = location.state?.response; // Pre-generated Order ID
-
-  const [starterCoupon, setStarterCoupon] = useState(""); // Coupon for Starter Plan
   const [proCoupon, setProCoupon] = useState(""); // Coupon for Pro Plan
 
   // Handle Free Starter Pack (navigate directly to confirmation page)
@@ -56,6 +54,7 @@ function Pricing() {
         <p className="font-montserrat text-white font-black sm:text-subheadline-2 md:text-headline-1 text-center my-5">
           PRICING
         </p>
+        <p className="text-white">{apiResponse.id}</p>
         <hr className="bg-stone-400 h-0 border-stone-700" />
         <div className="flex sm:flex-col gap-20 md:justify-evenly items-center min-h-screen">
           
