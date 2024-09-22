@@ -20,8 +20,19 @@ function Pricing() {
   const [proCoupon, setProCoupon] = useState(""); // Coupon for Pro Plan
 
   // Handle Free Starter Pack (navigate directly to confirmation page)
-  const handleFreeStarterPack = () => {
-    navigate(`/confirmation?orderId=${apiResponse.id}`, { state: { id: apiResponse.id } });
+  const handleFreeStarterPack = async () => {
+
+    try {
+
+      
+      await axios.post("https://aqueous-tor-91749-7319d44de38a.herokuapp.com/free-order-fullfillment", {
+        orderId: apiResponse.id,
+      });
+
+      navigate(`/confirmation?orderId=${apiResponse.id}`, { state: { id: apiResponse.id } });
+    } catch (error) {
+      console.error("Error initiating checkout:", error);
+    }
   };
 
   // Handle Stripe Checkout for Pro and Elite plans
