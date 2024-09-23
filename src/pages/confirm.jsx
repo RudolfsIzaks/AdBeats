@@ -19,7 +19,7 @@ function Confirm() {
 
   return (
     <>
-      <div className="flex h-screen items-center justify-center">
+      <div className="flex h-screen mx-5 items-center justify-center">
         <div className="p-10 flex flex-col gap-5 bg-stone-800 border-stone-600">
           <h1 className="text-blue font-comic font-bold sm:text-subheadline-3 md:text-headline-2">
             {orderId ? "Your Order is Confirmed!" : "No Order Found!"}
@@ -31,7 +31,7 @@ function Confirm() {
             We have recieved your order and are working on your song right now! <br /><br /> 
             We will send you an email when the song is complete and ready to be claimed.
           </p>
-          <Link className="py-2 px-5 bg-red-500 text-white font-comic font-bold text-center red-shadow w-96" to="/">Continue Browsing</Link>
+          <Link className="py-2 px-5 bg-red-500 text-white font-comic font-bold text-center red-shadow sm:w-64 md:w-96" to="/">Continue Browsing</Link>
         </div>
       </div>
     </>
