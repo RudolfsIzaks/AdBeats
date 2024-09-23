@@ -141,27 +141,27 @@ function Landing() {
         </div>
         <div className="flex sm:flex-col-reverse justify-center items-center md:my-32">
           <div className="flex flex-col gap-5 sm:mb-20 mx-5">
-            <div data-aos="fade-right" className="flex items-center gap-3">
+            <div data-aos="fade-right" className="flex border border-red-500 p-5 items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-bold">
                  It’s not their endless budget
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="200" className="flex items-center gap-3">
+            <div data-aos="fade-right" data-aos-delay="200" className="flex border border-red-500 p-5 items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-bold">
                   It’s not their “brand”
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="400" className="flex items-center gap-3">
+            <div data-aos="fade-right" data-aos-delay="400" className="flex border border-red-500 p-5 items-center gap-3">
               <img src={bomb} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-red-500 font-comic font-bold">
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-bold">
                  And it’s not the quality of their product.
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="600" className="flex items-center gap-3 mt-10">
+            <div data-aos="fade-right" data-aos-delay="600" className="flex border border-blue p-5 items-center gap-3 mt-10">
               <img src={light} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-blue font-comic font-black italic" >
+              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-black italic" >
                It’s how they grab and hold attention!
               </p>
             </div>
