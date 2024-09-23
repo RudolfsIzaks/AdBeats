@@ -305,6 +305,7 @@ function Home() {
         additionalInfo: "",
         status: "User Submitted", // Reset status field
       });
+      
 
       setLoading(false);
   
@@ -341,7 +342,7 @@ function Home() {
               <img src={Adbeats} alt="Logo" className="w-64" />
             </div>
           </div>
-          <div className="md:w-auto sm:h-[80dvh] sm:w-full sm:p-5 md:h-full bg-stone-900 md:m-10 rounded-md flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
+          <div className="md:w-auto sm:h-[90dvh] sm:w-full sm:p-5 md:h-full bg-stone-900 md:m-10 rounded-md flex sm:flex-col-reverse md:flex-row-reverse items-center sm:justify-center md:justify-between">
             <div className="flex-1 h-[90dvh] ml-5">
             <img
               src={questions[currentQuestion].sideImg}

@@ -23,8 +23,6 @@ function Pricing() {
   const handleFreeStarterPack = async () => {
 
     try {
-
-      
       await axios.post("https://aqueous-tor-91749-7319d44de38a.herokuapp.com/free-order-fullfillment", {
         orderId: apiResponse.id,
       });
@@ -66,11 +64,9 @@ function Pricing() {
         <p className="font-montserrat text-white font-black sm:text-subheadline-2 md:text-headline-1 text-center my-5">
           PRICING
         </p>
-        <p className="text-white">{apiResponse.id}</p>
         <hr className="bg-stone-400 h-0 border-stone-700" />
         <div className="flex sm:flex-col gap-20 md:justify-evenly items-center min-h-screen">
           
-          {/* Starter Plan (Free) */}
           <div className="bg-stone-800 py-5 px-10 w-96 min-h-[60dvh] flex flex-col justify-between relative sm:mt-10">
             <div>
               <p className="font-bold font-comic text-purple-400 text-headline-2">Starter</p>
@@ -92,14 +88,6 @@ function Pricing() {
               <div className="flex gap-3 items-center">
                 <FontAwesomeIcon icon={faMusic} className="text-2xl text-white" />
                 <p className="font-comic text-white">100% SoundSuccess* Guarantee</p>
-              </div>
-              <div className="flex gap-3 items-center">
-                <FontAwesomeIcon icon={faTag} className="text-2xl text-white" />
-                <input
-                  placeholder="Coupon Code..."
-                  type="text"
-                  className="bg-stone-700 border-stone-400 rounded-md p-3 placeholder:text-stone-300" // Set coupon value for Starter plan
-                />
               </div>
             </ul>
             <button 

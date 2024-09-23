@@ -433,7 +433,7 @@ function Landing() {
                     icon={faArrowUp}
                     className="text-blue text-5xl"
                   />
-                  <p className="text-headline-1 font-black font-montserrat flex text-white"><Counter end={64} duration={3000} />%</p>
+                  <div className="text-headline-1 font-black font-montserrat flex text-white"><Counter end={64} duration={3000} />%</div>
                 </div>
                 <p className="text-blue font-comic font-bold text-center">Average Watch Time</p>
               </div>
@@ -443,7 +443,7 @@ function Landing() {
                     icon={faArrowDown}
                     className="text-blue text-5xl"
                   />
-                  <p className="text-headline-1 font-black font-montserrat flex text-white"><Counter end={44} duration={2000} />%</p>
+                  <div className="text-headline-1 font-black font-montserrat flex text-white"><Counter end={44} duration={2000} />%</div>
                 </div>
                 <p className="text-blue font-comic font-bold text-center">Average Cost Per View</p>
               </div>
@@ -453,7 +453,7 @@ function Landing() {
                     icon={faArrowDown}
                     className="text-blue text-5xl"
                   />
-                  <p className="text-headline-1 font-black font-montserrat flex text-white"><Counter end={87} duration={4000} />%</p>
+                  <div className="text-headline-1 font-black font-montserrat flex text-white"><Counter end={87} duration={4000} />%</div>
                 </div>
                 <p className="text-blue font-comic font-bold text-center">Average Cost Per Click</p>
               </div>
