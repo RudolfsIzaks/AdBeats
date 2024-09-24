@@ -5,12 +5,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Contact() {
-  const [descriptionText, setdescriptionText] = useState("");
-  const [nameText, setnameText] = useState("");
-  const [emailText, setemailText] = useState("");
+  const [descriptionText, setDescriptionText] = useState("");
+  const [nameText, setNameText] = useState("");
+  const [emailText, setEmailText] = useState("");
 
   const navigate = useNavigate();
-   // State for feedback text
 
   const handleContactSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +49,7 @@ function Contact() {
         ></div>
       </div>
       <div className="flex items-center justify-center h-screen w-full">
-        <form className="flex flex-col gap-5 border border-stone-600 p-10 redish2-shadow">
+        <form className="flex flex-col gap-5 border border-stone-600 p-10 redish2-shadow" onSubmit={handleContactSubmit}>
           <div>
             <p className="font-monsterrat font-black text-white text-headline-2">
               Contact Us
@@ -67,7 +66,8 @@ function Contact() {
             <input
               type="email"
               className="border-b p-3 text-stone-300 border-blue outline-none bg-transparent"
-              onChange={setemailText}
+              value={emailText}
+              onChange={(e) => setEmailText(e.target.value)}
             />
           </div>
           <div className="flex flex-col">
@@ -77,7 +77,8 @@ function Contact() {
             <input
               type="text"
               className="border-b p-3 text-stone-300 border-blue outline-none bg-transparent"
-              onChange={setnameText}
+              value={nameText}
+              onChange={(e) => setNameText(e.target.value)}
             />
           </div>
           <div className="flex flex-col">
@@ -87,12 +88,13 @@ function Contact() {
             <textarea
               rows="5"
               type="text"
-              onChange={setdescriptionText}
+              value={descriptionText}
+              onChange={(e) => setDescriptionText(e.target.value)}
               className="border-b p-3 text-stone-300 border-blue outline-none bg-transparent"
             />
           </div>
           <button
-            onClick={handleContactSubmit}
+            type="submit"
             className="border-blue border bg-blue text-white font-comic text-headline-3 font-bold hover:bg-transparent hover:text-blue hover:scale-110 transition"
           >
             Submit
