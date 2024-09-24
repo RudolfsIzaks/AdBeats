@@ -10,6 +10,7 @@ import AdminDashboard from "../pages/admin";
 import AdminOrder from "../pages/adminorder";
 import OrderRecieve from "../pages/orderRecieve";
 import Pricing from "./pricing";
+import Contact from "../support/contact";
 
 function RouterSetup() {
   return (
@@ -20,6 +21,8 @@ function RouterSetup() {
         <Route path="/confirmation" element={<Confirm />}/>
         <Route path="/okvcvdsdv3wfdzx" element={<AdminLogin />} />
         <Route path="/order-retrieval" element={<OrderRecieve />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/thanks-contact" element={<Contact />} />
         <Route path="/orders/:id" element={
             <PrivateRoute>
               <AdminOrder />

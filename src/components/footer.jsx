@@ -20,7 +20,7 @@ function Footer() {
             </div>
             <div className="flex flex-col items-center gap-2">
                 <Link className="text-stone-300 text-left md:w-96" to="/partners">Helping Hands</Link>
-                <Link className="text-stone-300 text-left md:w-96" to="/contanct-help">Contact For Help</Link>
+                <Link className="text-stone-300 text-left md:w-96" to="/contact">Contact For Help</Link>
                 <Link className="text-stone-300 text-left md:w-96" to="/affiliates">Affiliate Program</Link>
                 <Link className="text-stone-300 text-left md:w-96" to="/qualify">Purchase AdBeats Plan</Link>
             </div>
