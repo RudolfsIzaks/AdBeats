@@ -15,7 +15,7 @@ function TermsConditions() {
     return(
         <>
         <div className="">
-          <nav data-aos="fade-down" className="flex justify-center items-center p-5">
+          <nav data-aos="fade-down" className="flex justify-center items-center py-5">
             <img src="https://firebasestorage.googleapis.com/v0/b/adbeats-e1fd0.appspot.com/o/email-images%2FAdBeats.png?alt=media&token=7a97447e-5bac-4750-b298-cd24e7810b5f" className="w-48" />
           </nav>
           <div data-aos="fade-down"  className="w-screen h-[1px] hr-gradient"></div>

@@ -81,7 +81,7 @@ function OrderRecieve() {
     <>
       <div className="">
         <div className="absolute z-50">
-          <nav className="flex justify-center items-center p-5">
+          <nav className="flex justify-center items-center py-5">
             <a href="/"><img src={AdBeats} className="w-48" alt="AdBeats Logo" /></a>
           </nav>
           <div className="w-screen h-[1px] hr-gradient"></div>
