@@ -46,7 +46,6 @@ function Landing() {
     AOS.init({ duration: 1200 }); // Initialize AOS
   }, []);
   const navigate = useNavigate();
-  const [carouselIndex, setCarouselIndex] = useState(0);
 
   const cards = [
     {
@@ -87,21 +86,47 @@ function Landing() {
     },
   ];
 
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [carouselCards, setCarouselCards] = useState(cards);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCarouselIndex((prevIndex) => {
         if (prevIndex === cards.length - 1) {
-          // If we reach the end, reset back to 0 without a jump
           setTimeout(() => {
             setCarouselIndex(0);
-          }, 500); // Delay to allow for a smooth transition
+          }, 500);
           return prevIndex;
         }
         return prevIndex + 1;
       });
-    }, 3000); // 3 seconds per swipe
+    }, 3000);
     return () => clearInterval(interval);
   }, [cards.length]);
+
+  const [isSwiping, setIsSwiping] = useState(false);
+
+  const rotateCards = () => {
+    setCarouselCards((prevCards) => {
+      const [first, ...rest] = prevCards;
+      return [...rest, first];
+    });
+  };
+
+  const handleSwipe = () => {
+    setIsSwiping(true);
+    setTimeout(() => {
+      rotateCards();
+      setIsSwiping(false);
+    }, 500);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleSwipe();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleCTA = () => {
     navigate("/qualify");
@@ -333,18 +358,19 @@ function Landing() {
           )}
         </div>
       </div>
-      <div className="p-4 sm:hidden md:flex lg:flex rounded-md mb-6 overflow-hidden justify-center">
+      <div className="p-4 sm:hidden md:inline-block lg:flex rounded-md mb-6 overflow-hidden justify-center">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className={`flex transition-transform duration-500 ease-in-out ${
+            isSwiping ? "transform -translate-x-[20%]" : ""
+          }`}
           style={{
-            transform: `translateX(-${carouselIndex * (100 / 5)}%)`, // Adjust to handle 3 cards at a time on larger screens
-            width: `${(cards.length / 5) * 100}%`, // Adjust width for 3 cards on larger screens
+            width: `${carouselCards.length * (100 / 5)}%`, // Adjust width for 5 cards
           }}
         >
-          {cards.map((q, i) => (
+          {carouselCards.map((q, i) => (
             <div
               key={i}
-              className={`flex-shrink-0 flex w-full items-center md:w-1/3`} // Set to 1/3 width for 3 items on larger screens
+              className={`flex-shrink-0 flex w-full items-center md:w-1/5`} // 1/5 width for 5 items on larger screens
               onClick={handleCTA}
             >
               <div className="w-auto m-5 flex flex-col items-center">
@@ -366,7 +392,6 @@ function Landing() {
           ))}
         </div>
       </div>
-
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
       <div className="flex sm:flex-col-reverse gap-10 md:justify-around items-center sm:mx-5 md:mx-32">
         <div
