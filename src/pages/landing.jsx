@@ -277,50 +277,32 @@ function Landing() {
       </div>
       <div className="carousel-container">
         <div className="carousel-track">
-          {cards.map((q, i) => (
-            <div
-              key={i}
-              className={`card h-[200px] w-[200px] transition-all duration-500 ease-in-out hover:scale-125 hover:cursor-pointer hover:z-50 ${q.translate}`}
-              onClick={handleCTA}
-            >
-              <img src={q.logo} className="md:w-36 sm:w-24 md:p-5 sm:mb-2" />
+          {[...cards, ...cards].map(
+            (
+              q,
+              i // Clone the cards for infinite looping
+            ) => (
               <div
-                className={`md:p-5 sm:p-1 rounded-md ${q.color} relative flex items-center justify-center`}
+                key={i}
+                className={`card transition-all duration-500 ease-in-out hover:scale-125 hover:cursor-pointer hover:z-50 ${q.translate}`}
+                onClick={handleCTA}
               >
-                <img
-                  src={q.main_img}
-                  className="rounded-md opacity-50 transition-all duration-500 ease-in-out"
-                />
-                <FontAwesomeIcon
-                  icon={faPlay}
-                  className="text-stone-200 absolute sm:text-xl md:text-4xl"
-                />
+                <img src={q.logo} className="md:w-36 sm:w-24 md:p-5 sm:mb-2" />
+                <div
+                  className={`md:p-5 sm:p-1 rounded-md ${q.color} relative flex items-center justify-center`}
+                >
+                  <img
+                    src={q.main_img}
+                    className="rounded-md opacity-50 transition-all duration-500 ease-in-out"
+                  />
+                  <FontAwesomeIcon
+                    icon={faPlay}
+                    className="text-stone-200 absolute sm:text-xl md:text-4xl"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="carousel-track">
-          {cards.map((q, i) => (
-            <div
-              key={i}
-              className={`card h-[200px] w-[200px] transition-all duration-500 ease-in-out hover:scale-125 hover:cursor-pointer hover:z-50 ${q.translate}`}
-              onClick={handleCTA}
-            >
-              <img src={q.logo} className="md:w-36 sm:w-24 md:p-5 sm:mb-2" />
-              <div
-                className={`md:p-5 sm:p-1 rounded-md ${q.color} relative flex items-center justify-center`}
-              >
-                <img
-                  src={q.main_img}
-                  className="md:w-[300px] sm:w-[200px] rounded-md opacity-50 transition-all duration-500 ease-in-out"
-                />
-                <FontAwesomeIcon
-                  icon={faPlay}
-                  className="text-stone-200 absolute sm:text-xl md:text-4xl"
-                />
-              </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />

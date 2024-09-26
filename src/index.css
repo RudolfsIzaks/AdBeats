@@ -182,40 +182,32 @@ body {
 }
 
 @keyframes scroll-right {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-100%); /* Move by half the track's width */
   }
 }
 
 .carousel-container {
   overflow: hidden;
   white-space: nowrap;
+  height: 70dvh;
+  padding-top: 100px;
 }
 
 .carousel-track {
-  width: 100%;
-  display: inline-block; 
-  animation: scroll-right 10s linear infinite;
+  display: flex;
+  gap: 0; /* Ensure no gaps */
+  animation: scroll-right 2s linear infinite; /* Adjust timing for speed */
 }
 
 .card {
-  display: inline-block;
-  margin: 40px;
-  opacity: 0;
-  transform: scale(1);
-  animation: fade-in 1s ease forwards;
+  flex-shrink: 0;
+  width: 300px; /* Keep the size fixed */
+  height: 300px;
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
