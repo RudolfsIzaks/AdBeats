@@ -200,7 +200,7 @@ body {
 .carousel-track {
   display: flex;
   gap: 0; /* Ensure no gaps */
-  animation: scroll-right 20s linear infinite; /* Adjust timing for speed */
+  animation: scroll-right 10s linear infinite; /* Adjust timing for speed */
 }
 
 .card {
@@ -211,4 +211,3 @@ body {
   opacity: 1;
   transition: all 0.5s ease;
 }
-
