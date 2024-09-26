@@ -12,6 +12,8 @@ import OrderRecieve from "../pages/orderRecieve";
 import Pricing from "./pricing";
 import Contact from "../support/contact";
 import ThanksSupport from "../support/thanks-contact";
+import PrivacyPolicy from "../support/privacy";
+import TermsConditions from "../support/terms";
 
 function RouterSetup() {
   return (
@@ -31,6 +33,8 @@ function RouterSetup() {
           }
         />
         <Route path="/pricing" element={<Pricing />}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+        <Route path="/terms-conditions" element={<TermsConditions />}/>
         <Route
           path="/admin/dashboard"
           element={

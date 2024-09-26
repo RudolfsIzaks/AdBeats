@@ -14,8 +14,8 @@ function Footer() {
             <div className="flex sm:flex-col gap-10">
             <div className="flex flex-col items-center gap-2">
                 <Link className="text-stone-300 text-left md:w-96" to="/faq">FAQs</Link>
-                <Link className="text-stone-300 text-left md:w-96" to="/privacy">Privacy Policy</Link>
-                <Link className="text-stone-300 text-left md:w-96" to="/terms">Terms & Conditions</Link>
+                <Link className="text-stone-300 text-left md:w-96" to="/privacy-policy">Privacy Policy</Link>
+                <Link className="text-stone-300 text-left md:w-96" to="/terms-conditions">Terms & Conditions</Link>
                 <Link className="text-stone-300 text-left md:w-96" to="/">Homepage</Link>
             </div>
             <div className="flex flex-col items-center gap-2">
