@@ -59,7 +59,7 @@ function Landing() {
       logo: AG1Logo,
       main_img: AG1,
       translate: "translate-y-20",
-      color: "bg-red-400",
+      color: "bg-[#DC2625]",
     },
     {
       logo: Skillshare_logo,
@@ -77,7 +77,7 @@ function Landing() {
       logo: Equinox_logo,
       main_img: Equinox,
       translate: "-translate-y-10",
-      color: "bg-red-400",
+      color: "bg-[#DC2625]",
     },
     {
       logo: Nike_logo,
@@ -141,27 +141,27 @@ function Landing() {
         </div>
         <div className="flex sm:flex-col-reverse justify-center items-center md:my-32">
           <div className="flex flex-col gap-5 sm:mb-20 mx-5">
-            <div data-aos="fade-right" className="flex border border-red-500 p-5 items-center gap-3">
-              <img src={bomb} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-bold">
+            <div data-aos="fade-right" className="flex border border-red-600 bg-red-600 p-5 items-center gap-3">
+              <img src={bomb} alt="" className="md:w-12 w-8" />
+              <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-bold">
                  It’s not their endless budget
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="200" className="flex border border-red-500 p-5 items-center gap-3">
-              <img src={bomb} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-bold">
+            <div data-aos="fade-right" data-aos-delay="200" className="flex border bg-red-600  border-red-600 p-5 items-center gap-3">
+              <img src={bomb} alt="" className="md:w-12 w-8" />
+              <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-bold">
                   It’s not their “brand”
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="400" className="flex border border-red-500 p-5 items-center gap-3">
-              <img src={bomb} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-bold">
+            <div data-aos="fade-right" data-aos-delay="400" className="flex border bg-red-600  border-red-600 p-5 items-center gap-3 hover:scale-110 transition">
+              <img src={bomb} alt="" className="md:w-12 w-8" />
+              <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-bold">
                  And it’s not the quality of their product.
               </p>
             </div>
-            <div data-aos="fade-right" data-aos-delay="600" className="flex border border-blue p-5 items-center gap-3 mt-10">
-              <img src={light} alt="" className="md:w-20 w-16" />
-              <p className="md:text-headline-3 sm:text-subheadline-4 text-white font-comic font-black italic" >
+            <div data-aos="fade-right" data-aos-delay="600" className="flex border bg-blue border-blue p-5 items-center gap-3 mt-10">
+              <img src={light} alt="" className="md:w-12 w-8" />
+              <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-black italic" >
                It’s how they grab and hold attention!
               </p>
             </div>
@@ -510,7 +510,7 @@ function Landing() {
               </p>
               <button
                 onClick={handleCTA}
-                className="bg-red-500 text-white px-5 py-2 font-comic font-bold text-subheadline-4 mt-10 red-shadow"
+                className="bg-[#DC2625] text-white px-5 py-2 font-comic font-bold text-subheadline-4 mt-10 red-shadow"
               >
                 Claim Your Starter Adbeats Track!
               </button>

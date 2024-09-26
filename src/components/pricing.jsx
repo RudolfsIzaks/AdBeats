@@ -140,7 +140,7 @@ function Pricing() {
               </button>
               <img src={splash_red} alt="" className="sm:w-16 absolute sm:top-1 md:-top-10 sm:right-1 md:-right-10" />
             </div>
-            <div className="bg-red-500 p-3 text-center rounded-b-md">
+            <div className="bg-[#DC2625] p-3 text-center rounded-b-md">
               <p className="text-white font-semibold font-comic text-xl">Most Popular</p>
             </div>
           </div>
