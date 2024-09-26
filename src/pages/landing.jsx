@@ -118,7 +118,7 @@ function Landing() {
     setTimeout(() => {
       rotateCards();
       setIsSwiping(false);
-    }, 500);
+    }, 600);
   };
 
   useEffect(() => {
@@ -360,8 +360,8 @@ function Landing() {
       </div>
       <div className="p-4 sm:hidden md:inline-block lg:flex rounded-md mb-6 overflow-hidden justify-center">
         <div
-          className={`flex transition-transform duration-500 ease-in-out ${
-            isSwiping ? "transform -translate-x-[20%]" : ""
+          className={`flex ${
+            isSwiping ? "transition duration-500 -translate-x-[20%]" : ""
           }`}
           style={{
             width: `${carouselCards.length * (100 / 5)}%`, // Adjust width for 5 cards
