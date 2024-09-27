@@ -40,7 +40,7 @@ function Pricing() {
     try {
       // Create a payment session from the backend
       const { data } = await axios.post("https://aqueous-tor-91749-7319d44de38a.herokuapp.com/create-checkout-session", {
-        priceId, // Pass the Stripe Price ID
+        priceId,
         orderId: apiResponse.id,
         couponCode, // Pass the coupon code entered by the user
       });
@@ -134,7 +134,7 @@ function Pricing() {
                 </div>
               </ul>
               <button 
-                onClick={() => handleCheckout('price_1PxSVxLpY4qbPyJ5mPb2eRFR', proCoupon)} // Pass coupon to handleCheckout
+                onClick={() => handleCheckout('price_1Q3M7DLpY4qbPyJ5iXShqmfd', proCoupon)} // Pass coupon to handleCheckout
                 className="bg-blue px-5 py-3 font-comic font-bold text-subheadline-4 mt-10 redish-shadow">
                 Get Pro (50% OFF)
               </button>

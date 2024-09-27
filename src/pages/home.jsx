@@ -516,7 +516,7 @@ function Home() {
                   </button>
                 </div>
               )}
-              <div className="mx-10 flex gap-3 items-center relative md:top-10">
+              <div className="md:mx-10 flex gap-3 items-center relative top-10">
               <input type="checkbox" required/>
               <p className="text-stone-200 text-sm">I agree to <Link to="/privacy-policy" className="text-blue underline">Privacy Policy</Link> and <Link to="/terms-conditions" className="text-blue underline">Terms & Conditions</Link> of Adbeats website.</p>
               </div>
