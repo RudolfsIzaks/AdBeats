@@ -134,7 +134,7 @@ function Pricing() {
                 </div>
               </ul>
               <button 
-                onClick={() => handleCheckout('price_1Q46YuLpY4qbPyJ5BiYVlVhv', proCoupon)} // Pass coupon to handleCheckout
+                onClick={() => handleCheckout('price_1Q46pBLpY4qbPyJ56rEjbHni', proCoupon)} // Pass coupon to handleCheckout
                 className="bg-blue px-5 py-3 font-comic font-bold text-subheadline-4 mt-10 redish-shadow">
                 Get Pro (50% OFF)
               </button>
