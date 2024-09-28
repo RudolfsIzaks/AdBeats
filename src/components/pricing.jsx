@@ -10,7 +10,7 @@ import splash_purple from '../assets/splash_purple.png';
 import { loadStripe } from "@stripe/stripe-js";
 
 // Initialize Stripe with your publishable key
-const stripePromise = loadStripe("pk_test_51O0SSFLpY4qbPyJ5MYTt1NVM1KHQJEMFFdngJ5lOcoV8YxYLp8NEYfcd758Ffpxn0IRTuoQhyHSH7P68VMQVArnX00hSmeOIaE");
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 function Pricing() {
   const navigate = useNavigate();
@@ -134,7 +134,7 @@ function Pricing() {
                 </div>
               </ul>
               <button 
-                onClick={() => handleCheckout('price_1Q3M7DLpY4qbPyJ5iXShqmfd', proCoupon)} // Pass coupon to handleCheckout
+                onClick={() => handleCheckout('price_1Q456lLpY4qbPyJ5RFVBhWK1', proCoupon)} // Pass coupon to handleCheckout
                 className="bg-blue px-5 py-3 font-comic font-bold text-subheadline-4 mt-10 redish-shadow">
                 Get Pro (50% OFF)
               </button>
