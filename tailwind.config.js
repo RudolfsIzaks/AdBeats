@@ -27,6 +27,7 @@ module.exports = {
         'subheadline-4': '20px',
       },
       screens: {
+        'xs': { 'max': '550px' },
         'sm': { 'max': '762px' },
         'lg': { 'min': '2200px' },
       },

@@ -159,6 +159,7 @@ function Landing() {
           className="w-screen h-[1px] hr-gradient"
         ></div>
       </div>
+      <div className="sm:overflow-hidden xs:overflow-hidden">
       <div className="min-h-screen flex sm:flex-col sm:pt-32 items-center justify-center md:mx-32">
         <div
           data-aos="fade-in"
@@ -281,10 +282,10 @@ function Landing() {
           >
             <img src={rectred} alt="" className="absolute md:w-[500px] z-0" />
             <div className="z-10 w-3/5">
-              <h2 className="font-black font-montserrat text-white text-subheadline-3">
+              <h2 className="font-black font-montserrat text-white sm:text-subheadline-4 md:text-subheadline-3 xs:text-sm">
                 Reducing CPA’s
               </h2>
-              <p className="text-white font-comic sm:text-lg md:text-subheadline-4">
+              <p className="text-white font-comic sm:text-lg md:text-subheadline-4 xs:text-xs">
                 Spending Significantly Less to Gain Each New Customer
               </p>
             </div>
@@ -295,10 +296,10 @@ function Landing() {
           >
             <img src={rectblue} alt="" className="absolute md:w-[500px] z-0" />
             <div className="z-10 w-3/5">
-              <h2 className="font-black font-montserrat text-white text-subheadline-3">
+              <h2 className="font-black font-montserrat text-white sm:text-subheadline-4 md:text-subheadline-3 xs:text-sm">
                 Lowering CPC’s
               </h2>
-              <p className="text-white font-comic sm:text-lg md:text-subheadline-4">
+              <p className="text-white font-comic sm:text-lg md:text-subheadline-4 xs:text-xs">
                 Drastically Cheaper Traffic Flooding Into Your Website
               </p>
             </div>
@@ -313,17 +314,17 @@ function Landing() {
               className="absolute md:w-[500px] z-0"
             />
             <div className="z-10 w-3/5">
-              <h2 className="font-black font-montserrat text-white text-subheadline-3">
+              <h2 className="font-black font-montserrat text-white sm:text-subheadline-4 md:text-subheadline-3 xs:text-sm">
                 Cheaper CPM’s
               </h2>
-              <p className="text-white font-comic sm:text-lg md:text-subheadline-4">
+              <p className="text-white font-comic sm:text-lg md:text-subheadline-4 xs:text-xs">
                 Facebook Charging You Way Less For Ad Placements
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-4 mb-5 sm:w-full">
+      <div className="flex flex-col items-center gap-4 mb-5 sm:w-auto sm:overflow-hidden">
         <div
           data-aos="fade-in"
           className="flex flex-col gap-5 md:w-2/3 text-center m-5"
@@ -703,6 +704,7 @@ function Landing() {
         </div>
       </div>
       <Footer />
+      </div>
     </>
   );
 }
