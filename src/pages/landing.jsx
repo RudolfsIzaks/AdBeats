@@ -47,6 +47,16 @@ function Landing() {
   }, []);
   const navigate = useNavigate();
 
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Manually start video playback with autoplay enabled
+      videoRef.current.muted = true; // Ensure muted for autoplay policies
+      videoRef.current.play();
+    }
+  }, []);
+
   const cards = [
     {
       logo: Manscaped_logo,
@@ -149,18 +159,18 @@ function Landing() {
           className="w-screen h-[1px] hr-gradient"
         ></div>
       </div>
-      <div className="h-screen flex items-center justify-center">
+      <div className="min-h-screen flex sm:flex-col sm:pt-32 items-center justify-center md:mx-32">
         <div
           data-aos="fade-in"
-          className="md:w-2/3 flex flex-col items-center sm:m-5"
+          className="md:w-1/2 flex flex-col md:items-start sm:items-center sm:m-5"
         >
-          <p className="font-comic text-blue text-center sm:text-lg md:text-2xl">
+          <p className="font-comic text-blue sm:text-center sm:text-lg md:text-2xl">
             The Simplest And Easiest Way to…
           </p>
-          <h2 className="font-montserrat sm:text-xl md:text-headline-2 font-black text-white text-center">
+          <h2 className="font-montserrat sm:text-xl md:text-headline-2 font-black text-white sm:text-center">
             Transform Run-Of-The-Mill Video Ads Into Attention-Grabbing Monsters
           </h2>
-          <p className="font-comic text-stone-400 text-center mt-6 sm:text-lg md:text-subheadline-3">
+          <p className="font-comic text-stone-400 sm:text-center mt-6 sm:text-lg md:text-subheadline-3">
             That kidnap your dream customer's attention, and instantly converts
             them into loyal fans! 
           </p>
@@ -176,6 +186,16 @@ function Landing() {
           >
             Claim Orders Here
           </Link>
+        </div>
+        <div className="md:w-1/2">
+          <video
+            ref={videoRef}
+            className=""
+            src="https://firebasestorage.googleapis.com/v0/b/adbeats-e1fd0.appspot.com/o/mock%2Fmockupfinal.mp4?alt=media&token=d0e4b41c-010c-4f18-8d1b-f2c6d12f6413"
+            playsInline
+            loop
+            muted
+          />
         </div>
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mb-32" />
