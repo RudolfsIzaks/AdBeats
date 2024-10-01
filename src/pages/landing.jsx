@@ -11,6 +11,8 @@ import {
   faMusic,
   faArrowDown,
   faArrowUp,
+  faXmark,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import rectred from "../assets/rect-red.svg";
 import rectblue from "../assets/rect-blue.svg";
@@ -40,6 +42,11 @@ import light from "../assets/light.png";
 import Counter from "../components/counter";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import grid1 from '../assets/grid1.png';
+import grid2 from '../assets/grid2.png';
+import grid3 from '../assets/grid3.png';
+import grid4 from '../assets/grid4.png';
+import LogoGroup from '../assets/logogroup.png';
 
 function Landing() {
   useEffect(() => {
@@ -191,7 +198,7 @@ function Landing() {
         <div className="md:w-1/2">
           <video
             ref={videoRef}
-            className=""
+            className="mix-blend-screen"
             src="https://firebasestorage.googleapis.com/v0/b/adbeats-e1fd0.appspot.com/o/mock%2Fmockupfinal.mp4?alt=media&token=d0e4b41c-010c-4f18-8d1b-f2c6d12f6413"
             playsInline
             loop
@@ -211,54 +218,43 @@ function Landing() {
           (That allows them to get 50% of online traffic, dirt cheap…)
         </p>
       </div>
-      <div className="flex sm:flex-col-reverse justify-center items-center md:my-32">
-        <div className="flex flex-col gap-5 sm:mb-20 mx-5">
-          <div
-            data-aos="fade-right"
-            className="flex border border-red-600 bg-red-600 p-5 items-center gap-3"
-          >
-            <img src={bomb} alt="" className="md:w-12 w-8" />
-            <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-bold">
-               It’s not their endless budget
-            </p>
+      <div className="flex sm:flex-col-reverse sm:mx-5 md:items-center my-20 md:gap-20 md:mx-32 lg:mx-48">
+        <div className="flex flex-col gap-10 justify-between md:w-1/2 bg-[#171717] border border-[#680019] md:p-10 sm:p-5 h-max">
+          <h2 className="md:text-headline-3 sm:text-subheadline-3 font-black text-white">Reality Of Advertising</h2>
+          <div className="flex flex-col gap-5">
+            <div className="flex gap-5 items-center">
+            <FontAwesomeIcon
+            icon={faXmark}
+            className="text-red-500 md:text-headline-2 sm:text-subheadline-2"
+            />
+            <p className="text-white md:text-subheadline-3">It’s Not Their Endless Budget</p>
+            </div>
+            <div className="flex gap-5 items-center">
+            <FontAwesomeIcon
+            icon={faXmark}
+            className="text-red-500 md:text-headline-2 sm:text-subheadline-2"
+            />
+            <p className="text-white md:text-subheadline-3">It’s Not Their “brand”</p>
+            </div>
+            <div className="flex gap-5 items-center">
+            <FontAwesomeIcon
+            icon={faXmark}
+            className="text-red-500 md:text-headline-2 sm:text-subheadline-2"
+            />
+            <p className="text-white md:text-subheadline-3">It’s Not The Quality of Their Product.</p>
+            </div>
+            <div className="flex gap-5 items-center">
+            <FontAwesomeIcon
+            icon={faCheck}
+            className="text-blue md:text-headline-2 sm:text-subheadline-2"
+            />
+            <p className="text-white md:text-subheadline-3 font-bold">It’s Grabbing and Holding Attention!</p>
+            </div>
           </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="200"
-            className="flex border bg-red-600  border-red-600 p-5 items-center gap-3"
-          >
-            <img src={bomb} alt="" className="md:w-12 w-8" />
-            <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-bold">
-                It’s not their “brand”
-            </p>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="400"
-            className="flex border bg-red-600  border-red-600 p-5 items-center gap-3 hover:scale-110 transition"
-          >
-            <img src={bomb} alt="" className="md:w-12 w-8" />
-            <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-bold">
-               And it’s not the quality of their product.
-            </p>
-          </div>
-          <div
-            data-aos="fade-right"
-            data-aos-delay="600"
-            className="flex border bg-blue border-blue p-5 items-center gap-3 mt-10"
-          >
-            <img src={light} alt="" className="md:w-12 w-8" />
-            <p className="md:text-subheadline-3 sm:text-subheadline-4 text-white font-comic font-black italic">
-               It’s how they grab and hold attention!
-            </p>
-          </div>
+          <button className="text-white border border-red-500 bg-red-500 py-2 px-5 w-48 hover:bg-transparent hover:text-red-500 hover:scale-110 transition">Become The 2%</button>
         </div>
-        <div className="flex items-center justify-center relative sm:my-10">
-          <img src={grinman} className="relative z-10 sm:w-64" />
-          <img
-            src={grinman}
-            className="absolute z-0 blur-2xl animate-pulse sm:w-64"
-          />
+        <div className="md:w-1/2 md:my-20 flex-grow">
+          <img src={LogoGroup} />
         </div>
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mb-32" />
