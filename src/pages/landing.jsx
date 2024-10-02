@@ -251,7 +251,7 @@ function Landing() {
             <p className="text-white md:text-subheadline-3 font-bold">It’s Grabbing and Holding Attention!</p>
             </div>
           </div>
-          <button className="text-white border border-red-500 bg-red-500 py-2 px-5 w-48 hover:bg-transparent hover:text-red-500 hover:scale-110 transition">Become The 2%</button>
+          <button onClick={handleCTA} className="text-white border border-red-500 bg-red-500 py-2 px-5 w-48 hover:bg-transparent hover:text-red-500 hover:scale-110 transition">Become The 2%</button>
         </div>
         <div className="md:w-1/2 md:my-20 flex-grow">
           <img src={LogoGroup} />
