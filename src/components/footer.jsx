@@ -9,7 +9,7 @@ function Footer() {
     return(
         <>
          <hr className="bg-stone-400 h-0 border-stone-700" />
-         <nav className="flex sm:flex-col sm:items-center justify-between px-10 sm:py-10 md:py-32">
+         <nav className="flex tablet:flex-wrap sm:flex-col sm:items-center justify-between px-10 sm:py-10 md:py-32">
             <img src={AdBeats} className="md:w-1/6 sm:w-64" />
             <div className="flex sm:flex-col gap-10">
             <div className="flex flex-col items-center gap-2">

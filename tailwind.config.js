@@ -29,6 +29,7 @@ module.exports = {
       screens: {
         'xs': { 'max': '550px' },
         'sm': { 'max': '762px' },
+        'tablet': {'max' : '1028px', 'min': '763px'},
         'lg': { 'min': '2200px' },
       },
     },

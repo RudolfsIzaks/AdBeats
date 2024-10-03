@@ -167,15 +167,15 @@ function Landing() {
         ></div>
       </div>
       <div className="sm:overflow-hidden xs:overflow-hidden">
-      <div className="min-h-screen flex sm:flex-col sm:pt-32 items-center justify-center md:mx-32">
+      <div className="min-h-screen flex tablet:flex-col sm:flex-col sm:pt-32 items-center justify-center md:mx-32">
         <div
           data-aos="fade-in"
-          className="md:w-1/2 flex flex-col md:items-start sm:items-center sm:m-5"
+          className="md:w-1/2 sm:w-full tablet:w-full tablet:mt-32 tablet:text-center flex flex-col tablet:items-center md:items-start sm:items-center sm:m-5"
         >
-          <p className="font-comic text-blue sm:text-center sm:text-lg md:text-2xl">
+          <p className="font-comic text-blue tablet:w-full sm:text-center sm:text-lg md:text-2xl">
             The Simplest And Easiest Way to…
           </p>
-          <h2 className="font-montserrat sm:text-xl md:text-headline-2 font-black text-white sm:text-center">
+          <h2 className="font-montserrat md:text-headline-2 font-black text-white tablet:text-headline-3 sm:text-xl sm:text-center">
             Transform Run-Of-The-Mill Video Ads Into Attention-Grabbing Monsters
           </h2>
           <p className="font-comic text-stone-400 sm:text-center mt-6 sm:text-lg md:text-subheadline-3">
@@ -189,7 +189,7 @@ function Landing() {
             Learn More
           </button>
           <Link
-            className="font-comic font-bold sm:text-lg md:text-xl my-5  border-blue border text-center bg-blue py-2 px-5 hover:bg-transparent hover:text-blue transition"
+            className="font-comic font-bold sm:text-lg md:text-xl my-5 border-blue border text-center bg-blue py-2 px-5 hover:bg-transparent hover:text-blue transition"
             to="/order-retrieval"
           >
             Claim Orders Here
@@ -211,15 +211,15 @@ function Landing() {
         <p className="font-comic font-bold text-blue z-10 md:text-subheadline-3 sm:text-lg">
           Ever wondered, what’s…
         </p>
-        <h2 className="font-montserrat sm:text-subheadline-3 md:text-headline-2 text-center font-black text-white z-10">
+        <h2 className="font-montserrat sm:text-subheadline- tablet:text-headline-3 md:text-headline-2 text-center font-black text-white z-10">
           The Secret Behind The Top 2% of Advertisers
         </h2>
         <p className="font-comic text-stone-300 sm:text-md md:text-subheadline-3 z-10">
           (That allows them to get 50% of online traffic, dirt cheap…)
         </p>
       </div>
-      <div className="flex sm:flex-col-reverse sm:mx-5 md:items-center my-20 md:gap-20 md:mx-32 lg:mx-48">
-        <div className="flex flex-col gap-10 justify-between md:w-1/2 bg-[#171717] border border-[#680019] md:p-10 sm:p-5 h-max">
+      <div className="fle tablet:flex-col-reverse sm:flex-col-reverse sm:mx-5 md:items-center my-20 md:gap-20 md:mx-32 lg:mx-48">
+        <div className="flex flex-col gap-10 justify-between tablet:w-full tablet:m-5 md:w-1/2 bg-[#171717] border border-[#680019] md:p-10 sm:p-5 h-max">
           <h2 className="md:text-headline-3 sm:text-subheadline-3 font-black text-white">Reality Of Advertising</h2>
           <div className="flex flex-col gap-5">
             <div className="flex gap-5 items-center">
@@ -253,7 +253,7 @@ function Landing() {
           </div>
           <button onClick={handleCTA} className="text-white border border-red-500 bg-red-500 py-2 px-5 w-48 hover:bg-transparent hover:text-red-500 hover:scale-110 transition">Become The 2%</button>
         </div>
-        <div className="md:w-1/2 md:my-20 flex-grow">
+        <div className="md:w-1/2 tablet:w-full md:my-20 flex-grow">
           <img src={LogoGroup} />
         </div>
       </div>
@@ -271,7 +271,7 @@ function Landing() {
             And their attention is directly responsible for:
           </p>
         </div>
-        <div className="flex justify-between items-center sm:flex-col gap-12 sm:mx-5 my-40 sm:min-h-screen md:h-[50dvh]">
+        <div className="flex justify-between items-center tablet:flex-col tablet:min-h-screen sm:flex-col gap-12 sm:mx-5 my-40 sm:min-h-screen md:h-[50dvh]">
           <div
             data-aos="fade-down-right"
             className="relative flex items-center justify-center"
@@ -328,7 +328,7 @@ function Landing() {
           <p className="text-stone-300 font-bold font-comic sm:text-md md:text-subheadline-3">
             So, how do you get your dream customer's attention?
           </p>
-          <h2 className="text-white font-black font-montserrat sm:text-xl md:text-headline-2">
+          <h2 className="text-white font-black font-montserrat sm:text-xl tablet:text-headline-3 md:text-headline-2">
             Meet AdBeats - The Fastest And Easiest Way To Make Your Brand a
             Show-Stopper
           </h2>
@@ -410,16 +410,16 @@ function Landing() {
         </div>
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-      <div className="flex sm:flex-col-reverse gap-10 md:justify-around items-center sm:mx-5 md:mx-32">
+      <div className="flex sm:flex-col-reverse tablet:flex-col-reverse gap-10 md:justify-around items-center tablet:mx-16 sm:mx-5 md:mx-32">
         <div
           data-aos="fade-in"
-          className="md:w-1/2 md:flex md:flex-col md:items-end"
+          className="md:w-1/2 tablet:w-full md:flex md:flex-col md:items-end"
         >
           <div>
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2 select-none">
               Take the first step towards transforming your ad performance.
             </p>
-            <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5 select-none">
+            <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 tablet:text-headline-3 md:text-headline-2 my-5 select-none">
               Your Ads Can Be Unforgettable
             </h1>
             <p className="text-stone-400 select-none">
@@ -449,7 +449,7 @@ function Landing() {
             </Link>
           </div>
         </div>
-        <div className="relative flex items-center justify-center sm:mb-32 sm:mt-10 md:w-1/2">
+        <div className="relative flex items-center justify-center tablet:mb-32 tablet:mt-10 tablet:h-[20dvh] sm:mb-32 sm:mt-10 md:w-1/2">
           <div
             data-aos="flip-right"
             className="absolute sm:w-48 md:w-80 h-auto bg-stone-900 rounded-md p-3 -rotate-12 z-50"
@@ -476,12 +476,12 @@ function Landing() {
         </div>
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-      <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 md:justify-center items-center md:mx-32 sm:mx-5">
-        <div data-aos="fade-in" className="md:w-1/2">
+      <div className="flex sm:flex-col-reverse tablet:flex-col-reverse md:flex-row-reverse gap-10 md:justify-center items-center tablet:mx-16 md:mx-32 sm:mx-5">
+        <div data-aos="fade-in" className="md:w-1/2 tablet:w-full">
           <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
             Attention is the new currency in the world of advertising.
           </p>
-          <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
+          <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 tablet:text-headline-3 md:text-headline-2 my-5">
             Stand Out with Unique, Attention-Grabbing Ads
           </h1>
           <p className="text-stone-400">
@@ -502,7 +502,7 @@ function Landing() {
         </div>
         <div
           data-aos="fade-in"
-          className="relative flex items-center justify-center md:w-1/2"
+          className="relative flex items-center justify-center tablet:w-full md:w-1/2"
         >
           <div className="flex items-center justify-center relative">
             <img
@@ -517,16 +517,16 @@ function Landing() {
         </div>
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-      <div className="flex sm:flex-col-reverse gap-10 md:justify-center md:mx-32 sm:mx-5">
+      <div className="flex tablet:flex-col-reverse sm:flex-col-reverse gap-10 md:justify-center tablet:mx-16 md:mx-32 sm:mx-5">
         <div
           data-aos="fade-in"
-          className="lg:w-1/3 md:w-1/2 md:flex md:flex-col "
+          className="lg:w-1/3 tablet:w-full md:w-1/2 md:flex md:flex-col "
         >
           <div>
             <p className="text-blue font-comic sm:text-subheadline-4 md:text-subheadline-3 my-2">
               Transform Mere Attention into Laser-Focused Interest…
             </p>
-            <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
+            <h1 className="text-white font-montserrat font-black tablet:text-headline-3 sm:text-subheadline-3 md:text-headline-2 my-5">
               Boost Engagement and Retention, Instantly
             </h1>
             <p className="text-stone-400">
@@ -559,9 +559,9 @@ function Landing() {
         </div>
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 my-32" />
-      <div className="flex sm:flex-col-reverse md:flex-row-reverse gap-10 md:justify-center items-center md:mx-32 sm:mx-5">
-        <div className="md:w-1/2">
-          <h1 className="text-white font-montserrat font-black sm:text-subheadline-3 md:text-headline-2 my-5">
+      <div className="flex tablet:flex-col-reverse sm:flex-col-reverse md:flex-row-reverse gap-10 md:justify-center items-center tablet:mx-16 md:mx-32 sm:mx-5">
+        <div className="md:w-1/2 tablet:w-full">
+          <h1 className="text-white font-montserrat font-black tablet:text-headline-3 sm:text-subheadline-3 md:text-headline-2 my-5">
             Create Timeless Ads that Defy Ad Fatigue
           </h1>
           <p className="text-stone-400">
@@ -651,11 +651,11 @@ function Landing() {
       </div>
       <hr className="h-[1px] bg-stone-500 border-none border-stone-500 mt-32" />
       <div className="bg-backgroundblack min-h-screen flex items-center justify-center">
-        <div className="md:w-3/5">
-          <p className="font-comic text-blue md:text-headline-3 text-center sm:py-5">
+        <div className="md:w-3/5 tablet:w-10/12">
+          <p className="font-comic text-blue tablet:text-subheadline-3 md:text-headline-3 text-center sm:py-5">
             Tired of Making Ordinary Ads with Ordinary Results?
           </p>
-          <h1 className="md:text-headline-2 sm:text-subheadline-3 text-white font-black font-montserrat text-center mb-10">
+          <h1 className="md:text-headline-2 tablet:text-subheadline-2 sm:text-subheadline-3 text-white font-black font-montserrat text-center mb-10">
             The Next 10 Businesses To Request A Custom Track, <br /> Get It 100%
             For FREE!
           </h1>
@@ -663,7 +663,7 @@ function Landing() {
             <img
               src={bang}
               alt=""
-              className="absolute sm:w-20 md:w-64 z-10 sm:-top-12 md:-top-24 rotate-12 md:-right-24"
+              className="absolute tablet:w-32 tablet:right-0 tablet:top-2 sm:w-20 md:w-64 z-10 sm:-top-12 md:-top-24 rotate-12 md:-right-24"
             />
             <h2 className="text-red-500 font-comic font-bold text-headline-3">
               Yes, you read that right!
