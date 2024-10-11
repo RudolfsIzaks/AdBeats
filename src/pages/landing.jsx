@@ -146,7 +146,7 @@ function Landing() {
   }, []);
 
   const handleCTA = () => {
-    navigate("/qualify");
+    navigate("/user/signup");
   };
 
   return (
@@ -186,13 +186,13 @@ function Landing() {
             onClick={handleCTA}
             className="py-2 px-10 mt-10 bg-stone-100 text-black font-comic font-bold md:text-headline-3 sm:text-xl text-center border border-stone-100 transition hover:bg-transparent hover:text-stone-100"
           >
-            Learn More
+            Sign Up
           </button>
           <Link
             className="font-comic font-bold sm:text-lg md:text-xl my-5 border-blue border text-center bg-blue py-2 px-5 hover:bg-transparent hover:text-blue transition"
-            to="/order-retrieval"
+            to="/qualify"
           >
-            Claim Orders Here
+            Log In
           </Link>
         </div>
         <div className="md:w-1/2">
@@ -253,7 +253,7 @@ function Landing() {
           </div>
           <button onClick={handleCTA} className="text-white border border-red-500 bg-red-500 py-2 px-5 w-48 hover:bg-transparent hover:text-red-500 hover:scale-110 transition">Become The 2%</button>
         </div>
-        <div className="md:w-1/2 tablet:w-full md:my-20 flex-grow">
+        <div className="md:w-2/5 tablet:w-full md:my-20 flex-grow">
           <img src={LogoGroup} />
         </div>
       </div>
