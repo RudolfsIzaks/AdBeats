@@ -218,7 +218,7 @@ function Landing() {
           (That allows them to get 50% of online traffic, dirt cheap…)
         </p>
       </div>
-      <div className="fle tablet:flex-col-reverse sm:flex-col-reverse sm:mx-5 md:items-center my-20 md:gap-20 md:mx-32 lg:mx-48">
+      <div className="flex tablet:flex-col-reverse sm:flex-col-reverse sm:mx-5 md:items-center my-20 md:gap-20 md:mx-32 lg:mx-48">
         <div className="flex flex-col gap-10 justify-between tablet:w-full tablet:m-5 md:w-1/2 bg-[#171717] border border-[#680019] md:p-10 sm:p-5 h-max">
           <h2 className="md:text-headline-3 sm:text-subheadline-3 font-black text-white">Reality Of Advertising</h2>
           <div className="flex flex-col gap-5">
