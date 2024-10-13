@@ -190,9 +190,9 @@ function Landing() {
           </button>
           <Link
             className="font-comic font-bold sm:text-lg md:text-xl my-5 border-blue border text-center bg-blue py-2 px-5 hover:bg-transparent hover:text-blue transition"
-            to="/qualify"
+            to="/order-retrieval"
           >
-            Log In
+            Recieve Order
           </Link>
         </div>
         <div className="md:w-1/2">
