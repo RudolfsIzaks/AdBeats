@@ -146,7 +146,7 @@ function Landing() {
   }, []);
 
   const handleCTA = () => {
-    navigate("/user/signup");
+    navigate("/qualify");
   };
 
   return (
