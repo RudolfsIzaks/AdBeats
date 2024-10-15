@@ -2,13 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import "../index.css";
 import AdBeats from "../assets/AdBeats.png";
 import { Link, useNavigate } from "react-router-dom";
-import thoughtbbl from "../assets/thoughtbbl.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCircleXmark,
-  faCircleCheck,
   faPlay,
-  faMusic,
   faArrowDown,
   faArrowUp,
   faXmark,
@@ -29,23 +25,15 @@ import Equinox_logo from "../assets/Equinox-Logo-1.svg";
 import Equinox from "../assets/Equinox.png";
 import Nike from "../assets/Nike.webp";
 import Nike_logo from "../assets/Nike_logo.svg";
-import comic_splash from "../assets/comic_splash.png";
 import seesaw_1 from "../assets/seesaw_1.webp";
 import seesaw_2 from "../assets/seesaw_2.webp";
 import engagement from "../assets/engagement.png";
 import seesaw_4 from "../assets/seesaw_4.webp";
 import bang from "../assets/bang.png";
 import Footer from "../components/footer";
-import grinman from "../assets/grinman.png";
-import bomb from "../assets/bomb.png";
-import light from "../assets/light.png";
 import Counter from "../components/counter";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import grid1 from '../assets/grid1.png';
-import grid2 from '../assets/grid2.png';
-import grid3 from '../assets/grid3.png';
-import grid4 from '../assets/grid4.png';
 import LogoGroup from '../assets/logogroup.png';
 
 function Landing() {

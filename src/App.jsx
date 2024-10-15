@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import React from 'react';
 import './index.css';
-import Home from './pages/home';
 import Landing from './pages/landing';
 import { useEffect } from 'react';
 import AOS from 'aos';
