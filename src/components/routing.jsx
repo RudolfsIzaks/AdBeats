@@ -15,8 +15,6 @@ import ThanksSupport from "../support/thanks-contact";
 import PrivacyPolicy from "../support/privacy";
 import TermsConditions from "../support/terms";
 import Cancel from "../pages/cancel";
-import SignUp from "../pages/signup";
-import Login from "../pages/login";
 
 function RouterSetup() {
   return (
@@ -39,8 +37,6 @@ function RouterSetup() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
         <Route path="/terms-conditions" element={<TermsConditions />}/>
         <Route path="/cancel" element={<Cancel />}/>
-        <Route path="/user/signup" element={<SignUp/>}/>
-        <Route path="/user/login" element={<Login/>}/>
         <Route
           path="/admin/dashboard"
           element={
